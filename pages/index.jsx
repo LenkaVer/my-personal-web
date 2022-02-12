@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import IntroSection from './../components/homepage/IntroSection';
-import Button from './../components/globals/Button';
+import ReservationBanner from './../components/homepage/ReservationBanner';
 import { loadImageData } from './../functions/imageLoader';
-import Link from 'next/link';
 
 const Home = ({ images }) => {
   return (
@@ -13,9 +12,7 @@ const Home = ({ images }) => {
       </Head>
       <main>
         <IntroSection images={images} />
-        <Link href="/" passHref>
-          <Button title="Rezervovat termín" />
-        </Link>
+        <ReservationBanner />
       </main>
     </>
   );

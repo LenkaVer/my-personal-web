@@ -1,0 +1,37 @@
+@use './../../styles/settings/variables.scss' as variables;
+
+.reservation-banner {
+  position:relative;
+
+  &:before {
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    left:0;
+    top:0;
+    background-color: variables.$terciary;
+    z-index:-5;
+  }
+  :global(.container) {
+    padding-top: variables.$spacing * 4;
+    padding-bottom: variables.$spacing * 4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    column-gap: variables.$spacing * 6;
+
+    img {
+      width:120px;
+
+      @media (max-width: 576px) {
+        width:88px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      row-gap: variables.$spacing * 4;
+    }
+  }
+}
