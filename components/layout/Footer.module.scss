@@ -1,4 +1,4 @@
-@use './settings/variables.scss' as variables;
+@use './../../styles/settings/variables.scss' as variables;
 
 .footer {
   display:flex;
@@ -10,8 +10,13 @@
   align-items:center;
   color:variables.$white;
   background-color: variables.$primary;
+  
   &:global(.container) {
     max-width:1920px;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 }
 
@@ -21,8 +26,8 @@
 
 .footer_contact {
 
-a {
-  text-decoration: underline;
-  text-underline-offset:1px;
-}
+  a {
+    text-decoration: underline;
+    text-underline-offset:1px;
+  }
 }
