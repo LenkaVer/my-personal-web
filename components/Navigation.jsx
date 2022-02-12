@@ -5,10 +5,12 @@ const Navigation = () => {
   return (
     <>
       <nav className={[styles.navigation, 'container'].join(' ')}>
-        <Link href="/">
-          <a className={styles['navigation__link-logo']}>
-            <img src={'/logo/logo-3.svg'} alt="logo" />
-          </a>
+        <Link href="/" passHref>
+          <h1>
+            <a className={styles['navigation__link-logo']}>
+              <img src={'/logo/logo-3.svg'} alt="logo" />
+            </a>
+          </h1>
         </Link>
         <ul className={styles['navigation__list']}>
           <li className={styles['navigation__list-item']}>

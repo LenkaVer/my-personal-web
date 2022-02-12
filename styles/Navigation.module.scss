@@ -1,12 +1,20 @@
-@use './settings/colors.scss' as colors;
+@use './settings/variables.scss' as variables;
 
 .navigation {
-  max-height: 100px;
+  height: variables.$spacing * 13;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  padding-top:variables.$spacing * 3;
+  padding-bottom:variables.$spacing * 3;
+  z-index:20;
+
+  &:global(.container) {
+    max-width:1920px;
+  }
+
   &:after {
     content: '';
     position: absolute;
@@ -14,7 +22,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: colors.$secondary;
+    background-color: variables.$secondary;
     opacity: 0.5;
   }
 }
@@ -36,7 +44,7 @@
 
 .navigation__list-item {
   display: inline-block;
-  color: colors.$primary;
+  color: variables.$primary;
   font-size: 18px;
   a {
     display: inline-block;
