@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import IntroSection from './../components/homepage/IntroSection';
-import styles from '../styles/Home.module.scss';
+
 const Home = () => {
   return (
     <>

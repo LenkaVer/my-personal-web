@@ -1,3 +1,5 @@
+@use './../../styles/settings/variables.scss' as variables;
+
 .test {
-  color:blue;
+  color:variables.$primary;
 }
