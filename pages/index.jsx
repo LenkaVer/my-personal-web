@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import IntroSection from './../components/homepage/IntroSection';
+import Button from './../components/globals/Button';
+import Link from 'next/link';
 
 const Home = () => {
   return (
@@ -10,7 +12,10 @@ const Home = () => {
       </Head>
       <main>
         <IntroSection />
-      </main>{' '}
+        <Link href="/" passHref>
+          <Button title="Rezervovat termín" />
+        </Link>
+      </main>
     </>
   );
 };
