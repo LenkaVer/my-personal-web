@@ -1,6 +1,7 @@
 import '../styles/settings/globals.scss';
 import Layout from './../components/layout/Layout';
 import Head from 'next/head';
+import SimpleReactLightbox from 'simple-react-lightbox';
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -33,9 +34,11 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="msapplication-TileColor" content="#603cba" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <SimpleReactLightbox>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </SimpleReactLightbox>
     </>
   );
 };

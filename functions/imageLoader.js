@@ -7,6 +7,9 @@ export async function loadImageData(hash) {
   return imageData;
 }
 
-export const imageLoader = ({ width, src }) => {
+export const imageLoader = ({ width, src, square = false }) => {
+  if (square) {
+    return `${adminUrl}api-image/image/${src}?width=${width}&originalRatio=0`;
+  }
   return `${adminUrl}api-image/image/${src}?width=${width}`;
 };
