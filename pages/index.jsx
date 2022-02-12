@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import IntroSection from './../components/homepage/IntroSection';
 import ReservationBanner from './../components/homepage/ReservationBanner';
+import GallerySection from './../components/homepage/GallerySection';
 import { loadImageData } from './../functions/imageLoader';
 
 const Home = ({ images }) => {
@@ -13,6 +14,7 @@ const Home = ({ images }) => {
       <main>
         <IntroSection images={images} />
         <ReservationBanner />
+        <GallerySection images={images} />
       </main>
     </>
   );
@@ -21,6 +23,12 @@ const Home = ({ images }) => {
 export async function getStaticProps({ params }) {
   const imagesToLoad = {
     introSectionFoto: '2zx97jeYjQdOXgW',
+    watsu1: '8B34vrwOWwlyLzD',
+    watsu2: 'vbJZMNQgrejmaWG',
+    watsu3: 'WyGn9PQMAQArdMx',
+    watsu4: 'ov51DrwaBeyJLWp',
+    watsu5: 'MJAq6NKopwRpWj7',
+    watsu6: 'rXOza7QPdQdZEJ3',
   };
   const images = {};
 

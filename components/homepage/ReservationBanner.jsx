@@ -4,16 +4,14 @@ import Link from 'next/link';
 
 const ReservationBanner = () => {
   return (
-    <>
-      <section className={styles['reservation-banner']}>
-        <div className="container">
-          <img src={'/icons/calendar.svg'} alt="kalendář" />
-          <Link href="/" passHref>
-            <Button title="Rezervovat termín" />
-          </Link>
-        </div>
-      </section>
-    </>
+    <section className={styles['reservation-banner']}>
+      <div className="container">
+        <img src={'/icons/calendar.svg'} alt="kalendář" />
+        <Link href="/" passHref>
+          <Button title="Rezervovat termín" />
+        </Link>
+      </div>
+    </section>
   );
 };
 
