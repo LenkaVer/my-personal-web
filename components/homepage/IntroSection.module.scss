@@ -43,13 +43,7 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
   margin-left:variables.$spacing * 3;
- 
-  img {
-    display:block;
-    width:100%;
-    height:100%;
-    border-radius:50%;
-  }
+  border-radius:50%;
 
   @media (max-width: 992px) {
     grid-column: 2 / 3;

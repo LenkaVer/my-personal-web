@@ -1,6 +1,8 @@
 import styles from './IntroSection.module.scss';
+import Image from 'next/image';
+import { imageLoader } from '../../functions/imageLoader';
 
-const IntroSection = () => {
+const IntroSection = ({ images }) => {
   return (
     <>
       <section className={styles['intro-section']}>
@@ -44,9 +46,14 @@ const IntroSection = () => {
             </div>
 
             <div className={styles['intro-section__img']}>
-              <img
-                src={'/images/lenka-verzichova-2.jpeg'}
-                alt="Lenka Verzichová foto"
+              <Image
+                loader={imageLoader}
+                src={images.introSectionFoto.hash}
+                alt={images.introSectionFoto.alt}
+                width={400}
+                height={400}
+                placeholder={'blur'}
+                blurDataURL={images.introSectionFoto.base64}
               />
             </div>
           </div>
