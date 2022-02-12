@@ -1,6 +1,6 @@
 @use './variables.scss' as variables;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap');
 
 html,
 body {
@@ -25,28 +25,31 @@ h6 {
   margin-bottom: 0;
   font-weight: 700;
   color:variables.$secondary;
+  font-family:'Arima Madurai', cursive;
+  text-align: center;
 }
 
-// h2 {
-//   font-size:32px;
-//   transform: translateY(1px);
-//   line-height:variables.$spacing * 5;
-//   margin-bottom: variables.$spacing * 3;
-
-//   @media (max-width: 992px) {
-//     font-size:26px;
-//     transform: translateY(0);
-//     line-height:variables.$spacing * 4;
-//   }
-
-//   @media (max-width: 576px) {
-//     font-size:24px;
-//     transform: translateY(0);
-//     line-height:variables.$spacing * 4;
-//   }
-// }
-
+h1,
 h2 {
+  font-size:32px;
+  transform: translateY(1px);
+  line-height:variables.$spacing * 5;
+  margin-bottom: variables.$spacing * 3;
+
+  @media (max-width: 992px) {
+    font-size:26px;
+    transform: translateY(0);
+    line-height:variables.$spacing * 4;
+  }
+
+  @media (max-width: 576px) {
+    font-size:24px;
+    transform: translateY(0);
+    line-height:variables.$spacing * 4;
+  }
+}
+
+h3 {
   font-size:26px;
   transform: translateY(-1px);
   line-height:variables.$spacing * 4;
@@ -65,17 +68,17 @@ h2 {
   }
 }
 
-h3 {
-  font-size:20px;
-  transform: translateY(5px);
-  line-height:24px;
-  margin-bottom: variables.$spacing * 2;
+// h3 {
+//   font-size:20px;
+//   transform: translateY(5px);
+//   line-height:24px;
+//   margin-bottom: variables.$spacing * 2;
 
-  @media (max-width: 992px) {
-    font-size:18px;
-    transform: translateY(-2px);
-  }
-}
+//   @media (max-width: 992px) {
+//     font-size:18px;
+//     transform: translateY(-2px);
+//   }
+// }
 
 
 a {

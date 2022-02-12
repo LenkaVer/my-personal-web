@@ -8,7 +8,7 @@ const IntroSection = ({ images }) => {
       <div className="container">
         <div className={styles['intro-section__wrapper']}>
           <div className={styles['intro-section__description']}>
-            <h2 className={styles['intro-section__heading']}>Watsu</h2>
+            <h1 className={styles['intro-section__heading']}>Watsu terapie</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
               ducimus voluptates aliquid tempore laboriosam unde nam, inventore

@@ -23,12 +23,15 @@ const Home = ({ images }) => {
 export async function getStaticProps({ params }) {
   const imagesToLoad = {
     introSectionFoto: '2zx97jeYjQdOXgW',
-    watsu1: '8B34vrwOWwlyLzD',
+    watsu1: 'ov51DrwaBeyJLWp',
     watsu2: 'vbJZMNQgrejmaWG',
     watsu3: 'WyGn9PQMAQArdMx',
-    watsu4: 'ov51DrwaBeyJLWp',
-    watsu5: 'MJAq6NKopwRpWj7',
+    watsu4: 'MJAq6NKopwRpWj7',
+    watsu5: '8B34vrwOWwlyLzD',
     watsu6: 'rXOza7QPdQdZEJ3',
+    watsu7: 'mxBN5Peqme1Z2nG',
+    watsu8: 'O6dpDGQ4qKB0MYZ',
+    watsu9: 'xJmM3GQE6Kp2Z4a',
   };
   const images = {};
 
