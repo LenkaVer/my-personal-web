@@ -1,0 +1,47 @@
+@use './settings/colors.scss' as colors;
+
+.navigation {
+  max-height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: colors.$secondary;
+    opacity: 0.5;
+  }
+}
+.navigation__link-logo {
+  max-height: 80px;
+  max-width: 150px;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.navigation__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navigation__list-item {
+  display: inline-block;
+  color: colors.$primary;
+  font-size: 18px;
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 16px 24px;
+  }
+}
