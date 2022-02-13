@@ -73,7 +73,7 @@ const Navigation = () => {
           </svg>
         </button>
         <li className={styles['navigation__list-item']}>
-          <Link href="/">
+          <Link href="/o-watsu">
             <a>O Watsu</a>
           </Link>
         </li>
