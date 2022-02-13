@@ -1,19 +1,15 @@
 @use './../../styles/settings/variables.scss' as variables;
 
 .navigation {
-  height: variables.$spacing * 13;
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding-top:variables.$spacing * 3;
-  padding-bottom:variables.$spacing * 3;
+  padding-top:variables.$spacing * 2;
+  padding-bottom:variables.$spacing * 2;
   z-index:20;
-
-  &:global(.container) {
-    max-width:1920px;
-  }
 
   &:after {
     content: '';
@@ -24,6 +20,16 @@
     height: 1px;
     background-color: variables.$terciary;
     opacity: 0.5;
+  }
+
+  &:global(.container) {
+    max-width:1920px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top:variables.$spacing;
+    padding-bottom:variables.$spacing;
+
   }
 }
 .navigation__link-logo {
@@ -40,16 +46,69 @@
   padding: 0;
   margin: 0;
   display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-end;
+    position:absolute;
+    right:0;
+    top:0;
+    background-color: variables.$white;
+    border-radius:8px;
+    padding-top: variables.$spacing ;
+    padding-bottom: variables.$spacing * 3;
+    box-shadow: 4px 4px 24px variables.$terciary;
+    z-index:10;
+    display:none;
+
+    &.--show {
+      display:flex;
+    }
+  }
 }
 
 .navigation__list-item {
   display: inline-block;
+  width: 100%;
   color: variables.$primary;
   font-size: 18px;
+  text-align: right;
+
   a {
     display: inline-block;
     width: 100%;
     height: 100%;
     padding: 16px 24px;
+
+    @media (max-width: 768px) {
+      padding:variables.$spacing * 2;
+      padding-right:26px;
+    }
   }
 }
+
+.navigation__cross-icon {
+  margin-bottom:variables.$spacing * 2 ;
+  padding-right:26px;
+}
+
+.navigation__cross-icon,
+.navigation__menu-icon {
+  border:none;
+  background-color:transparent;
+  width:variables.$spacing * 15;
+  cursor:pointer;
+  
+  img {
+    display:block;
+    max-width:variables.$spacing * 8;
+    width:100%;
+    
+    margin-left:auto;
+  }
+  @media (min-width: 768px) {
+    display:none;
+  }
+}
+

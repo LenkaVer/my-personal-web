@@ -1,8 +1,9 @@
+import styles from './Header.module.scss';
 import Navigation from './Navigation';
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles['header-main']}>
       <Navigation />
     </header>
   );

@@ -1,0 +1,13 @@
+@use './../../styles/settings/variables.scss' as variables;
+
+.header-main {
+  position: fixed;
+  height: variables.$spacing * 13;
+  width:100%;
+  background-color: variables.$white;
+  z-index:15;
+
+  @media (max-width: 768px) {
+    height:variables.$spacing * 10;
+  }
+}
