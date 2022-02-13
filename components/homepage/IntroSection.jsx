@@ -17,21 +17,20 @@ const IntroSection = ({ images }) => {
               Watsu terapie
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-              ducimus voluptates aliquid tempore laboriosam unde nam, inventore
-              voluptatibus nisi consequuntur dignissimos quis quod, labore qui
-              sequi. Suscipit excepturi unde corporis! Nostrum nam distinctio,
-              odio cum a maiores aliquid nesciunt fuga voluptatum, sunt
-              voluptate, sequi quia debitis recusandae impedit possimus
-              repellendus quasi accusamus placeat facilis doloremque maxime
-              libero hic. Laboriosam, qui! Veritatis perspiciatis sit doloremque
-              deleniti perferendis. Voluptas consequatur sunt repellendus
-              aliquam voluptate consectetur laboriosam rerum, voluptatum officia
-              totam beatae provident sapiente repellat, molestias quae. Illo
-              soluta iste eligendi sit dignissimos! In optio, voluptatum
-              accusantium saepe, odio cumque dolore ducimus iste id, architecto
-              minima error iusto magnam ipsam. Ipsa, sunt facere, error iure
-              aspernatur eligendi provident natus odio labore iste numquam!
+              WATSU<sup>&reg;</sup> (water Shiatsu), je jemná forma tělesné
+              terapie, která pochází z techniky Zen-Shiatsu. Spojuje v sobě
+              prvky z masáže, Shiatsu, mobilizace kloubů, protažení svalů, tanec
+              a práci s meridiány ve 34°C teplé vodě.
+            </p>
+            <p>
+              Nosné vlastnosti vody dovolí trojrozměrné pohyby, jaké na zemi
+              nejsou možné. Voda přináší stav bez tíže, společně s vyšší
+              teplotou a plynulými pohyby v ní se uvolňují svaly, prohlubuje se
+              dech a přichází hluboký relaxační stav. Střídají se okamžiky klidu
+              s rytmickými plynulými pohyby a protažením svalů. Hlava zůstává
+              při této metodě vždy na hladině vody. S touto podporou a bez
+              vnímané hmotnosti těla, páteře, kloubů a svalů je snadné uvolnit
+              se k jedinečném terapeutickému prožitku.
             </p>
           </div>
           <div className={styles['intro-section__opinion']}>
