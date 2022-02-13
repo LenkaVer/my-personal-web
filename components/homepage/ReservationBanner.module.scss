@@ -21,11 +21,14 @@
     justify-content:center;
     column-gap: variables.$spacing * 6;
 
-    img {
-      width:120px;
+    svg {
+      max-width:120px;
+      max-height:95px;
+      width:100%;
+      height:100%;
 
       @media (max-width: 576px) {
-        width:88px;
+        max-width:88px;
       }
     }
 
@@ -34,4 +37,7 @@
       row-gap: variables.$spacing * 4;
     }
   }
+}
+.calendar-window {
+  fill: variables.$secondary;
 }
