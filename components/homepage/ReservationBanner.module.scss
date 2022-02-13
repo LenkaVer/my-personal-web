@@ -40,4 +40,5 @@
 }
 .calendar-window {
   fill: variables.$secondary;
+  transition: fill 0.4s ease-in-out;
 }
