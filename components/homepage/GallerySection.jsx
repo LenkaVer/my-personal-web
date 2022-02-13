@@ -30,7 +30,11 @@ const GallerySection = ({ images }) => {
     <section className={styles['gallery-section']}>
       <div className="container">
         <div className={styles['gallery-section__wrapper']}>
-          <h2 className={styles['gallery-section__title']}>
+          <h2
+            className={
+              (styles['gallery-section__title'], ['title-decoration'].join(' '))
+            }
+          >
             Jak vypadá terapie
           </h2>
           <SRLWrapper options={options}>

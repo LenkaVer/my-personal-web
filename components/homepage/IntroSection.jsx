@@ -8,7 +8,14 @@ const IntroSection = ({ images }) => {
       <div className="container">
         <div className={styles['intro-section__wrapper']}>
           <div className={styles['intro-section__description']}>
-            <h1 className={styles['intro-section__heading']}>Watsu terapie</h1>
+            <h1
+              className={
+                (styles['intro-section__heading'],
+                ['title-decoration'].join(' '))
+              }
+            >
+              Watsu terapie
+            </h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
               ducimus voluptates aliquid tempore laboriosam unde nam, inventore
@@ -28,7 +35,12 @@ const IntroSection = ({ images }) => {
             </p>
           </div>
           <div className={styles['intro-section__opinion']}>
-            <h3 className={styles['intro-section__subheading']}>
+            <h3
+              className={
+                (styles['intro-section__subheading'],
+                ['title-decoration'].join(' '))
+              }
+            >
               Moje cesta k watsu
             </h3>
             <p>
