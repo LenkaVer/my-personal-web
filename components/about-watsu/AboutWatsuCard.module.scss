@@ -1,0 +1,61 @@
+@use './../../styles/settings/variables.scss' as variables;
+
+.about-watsu-card {
+  max-width:448px;
+  width:100%;
+  min-height:100%;
+  padding:variables.$spacing * 4;
+  border-radius:16px;
+  box-shadow: 2px 2px 16px variables.$terciary;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+
+  @media (max-width: 1200px) {
+    max-width: calc((100% - 84px) / 2); //padding and gap size
+  }
+
+  @media (max-width: 992px) {
+    max-width: calc((100% - 32px) / 2); 
+  }
+
+  @media (max-width: 992px) {
+    max-width:500px;
+  }
+}
+
+.about-watsu-card__title {
+  text-align:center;
+}
+.about-watsu-card__image {
+  position:absolute;
+  left:16px;
+  top:16px;
+  width:50px;
+}
+
+.about-watsu-card__link-icon {
+  display:block;
+  position:relative;
+  width: variables.$spacing * 4;
+  flex-shrink: 0;
+  left: 0;
+  top:0;
+  margin-left: variables.$spacing;
+  transition: transform 0.2s;
+  transform: translateX(0);
+}
+
+.about-watsu-card__link {
+  display:flex;
+  align-items:center;
+  justify-content: flex-end;
+  margin-top:auto;
+
+  &:hover {
+    .about-watsu-card__link-icon {
+      transform:translateX(6px);
+    }
+  }
+}
+

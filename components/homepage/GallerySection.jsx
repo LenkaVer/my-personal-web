@@ -31,9 +31,11 @@ const GallerySection = ({ images }) => {
       <div className="container">
         <div className={styles['gallery-section__wrapper']}>
           <h2
-            className={
-              (styles['gallery-section__title'], ['title-decoration'].join(' '))
-            }
+            className={[
+              styles['gallery-section__title'],
+              'title-decoration',
+              'main-heading',
+            ].join(' ')}
           >
             Jak vypadá terapie
           </h2>

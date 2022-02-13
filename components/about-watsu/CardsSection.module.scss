@@ -1,0 +1,17 @@
+@use './../../styles/settings/variables.scss' as variables;
+
+.cards-section__wrapper {
+  display:flex;
+  height:100%;
+  gap:variables.$spacing * 4;
+  justify-content:center;
+
+  @media (max-width: 1200px) {
+    flex-wrap:wrap;
+  }
+}
+
+.cards-section__title {
+  margin-bottom:variables.$spacing * 6;
+  font-size:40px;
+}
