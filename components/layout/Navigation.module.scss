@@ -97,21 +97,25 @@
 .navigation__menu-icon {
   border:none;
   background-color:transparent;
-  width:variables.$spacing * 15;
+  width:variables.$spacing * 14;
   cursor:pointer;
-
   max-height: 100%;
   
   
   svg {
     display:block;
-    max-width:variables.$spacing * 8;
+    max-width:variables.$spacing * 7;
     width:100%;
-    max-height: variables.$spacing * 8;
+    max-height: variables.$spacing * 7;
     margin-left:auto;
 
     path {
       transition:fill 0.2s;
+    }
+
+    @media (max-width: 576px) {
+      max-width:variables.$spacing * 6;
+      max-height: variables.$spacing * 6;
     }
   }
 
