@@ -13,6 +13,11 @@ body {
 
 * {
   box-sizing: border-box;
+
+  &:focus {
+    outline: 1px solid variables.$primary;
+    border-radius: 8px;
+  }
 }
 
 main {
@@ -162,6 +167,14 @@ p {
     vertical-align: middle;
     left:variables.$spacing * -1;
     width: variables.$spacing * 6;
+
+    @media (max-width: 768px) {
+      width: variables.$spacing * 4;
+    }
+
+    @media (max-width: 576px) {
+      width: variables.$spacing * 3;
+    }
   }
 
   &:after {
@@ -173,6 +186,14 @@ p {
     vertical-align: middle;
     right:variables.$spacing * -1;
     width: variables.$spacing * 6;
+
+    @media (max-width: 768px) {
+      width: variables.$spacing * 4;
+    }
+
+    @media (max-width: 576px) {
+      width: variables.$spacing * 3;
+    }
   }
 
 }

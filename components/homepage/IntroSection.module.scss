@@ -12,6 +12,7 @@
   @media (max-width: 576px) {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
+    padding:variables.$spacing * 2;
   }
 }
 

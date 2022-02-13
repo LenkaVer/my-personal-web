@@ -3,6 +3,10 @@
   padding:variables.$spacing * 4;
   border-radius:16px;
   box-shadow: 2px 2px 16px variables.$terciary;
+  
+  @media (max-width: 576px) {
+    padding:variables.$spacing * 2;
+  }
 }
 
 .gallery-section__gallery {
@@ -39,12 +43,10 @@
     }
   }
 
-  span {
+
+  span:first-of-type {
     height:100% !important;
   }
 
-  img {
-    height:100% !important;
-  }
 }
 
