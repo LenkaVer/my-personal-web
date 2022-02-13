@@ -9,10 +9,11 @@ const IntroSection = ({ images }) => {
         <div className={styles['intro-section__wrapper']}>
           <div className={styles['intro-section__description']}>
             <h1
-              className={
-                (styles['intro-section__heading'],
-                ['title-decoration'].join(' '))
-              }
+              className={[
+                styles['intro-section__heading'],
+                'title-decoration',
+                ['main-heading'],
+              ].join(' ')}
             >
               Watsu terapie
             </h1>
@@ -35,10 +36,11 @@ const IntroSection = ({ images }) => {
           </div>
           <div className={styles['intro-section__opinion']}>
             <h3
-              className={
-                (styles['intro-section__subheading'],
-                ['title-decoration'].join(' '))
-              }
+              className={[
+                styles['intro-section__subheading'],
+                'title-decoration',
+                'subheading',
+              ].join(' ')}
             >
               Moje cesta k watsu
             </h3>
