@@ -6,17 +6,26 @@ const IntroSection = ({ images }) => {
   return (
     <section className={styles['intro-section']}>
       <div className="container">
+        <h1
+          className={[
+            styles['intro-section__main-heading'],
+            'title-decoration',
+            ['main-heading'],
+          ].join(' ')}
+        >
+          Watsu v Českých Budějovicích
+        </h1>
         <div className={styles['intro-section__wrapper']}>
           <div className={styles['intro-section__description']}>
-            <h1
+            <h2
               className={[
                 styles['intro-section__heading'],
                 'title-decoration',
-                ['main-heading'],
+                ['section-heading'],
               ].join(' ')}
             >
               Watsu terapie
-            </h1>
+            </h2>
             <p>
               WATSU<sup>&reg;</sup> (water Shiatsu), je jemná forma tělesné
               terapie, která pochází z techniky Zen-Shiatsu. Spojuje v sobě

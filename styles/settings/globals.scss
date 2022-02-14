@@ -46,57 +46,6 @@ h6 {
   text-align: center;
 }
 
-.main-heading {
-  font-size:32px;
-  transform: translateY(1px);
-  line-height:variables.$spacing * 5;
-  margin-bottom: variables.$spacing * 3;
-
-  @media (max-width: 992px) {
-    font-size:26px;
-    transform: translateY(0);
-    line-height:variables.$spacing * 4;
-  }
-
-  @media (max-width: 576px) {
-    font-size:24px;
-    transform: translateY(0);
-    line-height:variables.$spacing * 4;
-  }
-}
-
-.subheading {
-  font-size:26px;
-  transform: translateY(-1px);
-  line-height:variables.$spacing * 4;
-  margin-bottom: variables.$spacing * 2;
-
-  @media (max-width: 992px) {
-    font-size:24px;
-    transform: translateY(0);
-    line-height:variables.$spacing * 4;
-  }
-
-  @media (max-width: 576px) {
-    font-size:20px;
-    transform: translateY(-3px);
-    line-height:variables.$spacing * 3;
-  }
-}
-
-// h3 {
-//   font-size:20px;
-//   transform: translateY(5px);
-//   line-height:24px;
-//   margin-bottom: variables.$spacing * 2;
-
-//   @media (max-width: 992px) {
-//     font-size:18px;
-//     transform: translateY(-2px);
-//   }
-// }
-
-
 a {
   display:inline-block;
   color: inherit;
@@ -198,6 +147,61 @@ p {
       width: variables.$spacing * 3;
     }
   }
-
 }
 
+.main-heading {
+  font-size:40px;
+  transform: translateY(2px);
+  line-height:variables.$spacing * 6;
+  margin-bottom: variables.$spacing * 6;
+
+  @media (max-width: 992px) {
+    font-size:32px;
+    transform: translateY(1px);
+    line-height:variables.$spacing * 5;
+  }
+
+  @media (max-width: 576px) {
+    font-size:26px;
+    transform: translateY(0);
+    line-height:variables.$spacing * 4;
+  }
+}
+
+.section-heading {
+  font-size:32px;
+  transform: translateY(1px);
+  line-height:variables.$spacing * 5;
+  margin-bottom: variables.$spacing * 3;
+
+  @media (max-width: 992px) {
+    font-size:26px;
+    transform: translateY(0);
+    line-height:variables.$spacing * 4;
+  }
+
+  @media (max-width: 576px) {
+    font-size:24px;
+    transform: translateY(0);
+    line-height:variables.$spacing * 4;
+  }
+}
+
+.subheading {
+  font-size:26px;
+  transform: translateY(-1px);
+  line-height:variables.$spacing * 4;
+  margin-bottom: variables.$spacing * 2;
+
+  @media (max-width: 992px) {
+    font-size:24px;
+    transform: translateY(0);
+    line-height:variables.$spacing * 4;
+  }
+
+  @media (max-width: 576px) {
+    font-size:20px;
+    transform: translateY(-3px);
+    line-height:variables.$spacing * 3;
+  }
+}

@@ -34,7 +34,7 @@ const GallerySection = ({ images }) => {
             className={[
               styles['gallery-section__title'],
               'title-decoration',
-              'main-heading',
+              'section-heading',
             ].join(' ')}
           >
             Jak vypadá terapie
