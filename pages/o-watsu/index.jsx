@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import CardsSection from './../../components/about-watsu/CardsSection';
+import WaveAnimation from './../../components/about-watsu/WaveAnimation';
+
 const AboutWatsu = () => {
   return (
     <>
@@ -9,6 +11,7 @@ const AboutWatsu = () => {
       </Head>
       <main>
         <CardsSection />
+        <WaveAnimation />
       </main>
     </>
   );

@@ -9,6 +9,8 @@ body {
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 }
 
 * {
@@ -22,6 +24,8 @@ body {
 
 main {
   padding-top: variables.$spacing * 13;
+  min-height: calc((100vh - 56px));
+  position:relative;
 
   @media (max-width: 768px) {
    padding-top:variables.$spacing * 10;
