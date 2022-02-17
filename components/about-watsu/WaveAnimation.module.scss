@@ -1,0 +1,90 @@
+@use './../../styles/settings/variables.scss' as variables;
+
+
+.pool {
+
+  svg {
+    transform: rotate(180deg) scaleY(0.4);
+    transform-origin:50% 72%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:-5;
+    overflow: visible;
+
+    @media (max-width: 576px) {
+      transform: rotate(180deg) scaleY(0.7);
+      transform-origin:50% 59.3%;
+    }
+  }
+
+  .wave-big {
+    display: none;
+    width: 3024px;
+    @media (min-width: 1920px) {
+      display: initial;
+    }
+  }
+
+  .wave-middle {
+    display: none;
+    width: 2177px;
+
+    @media (min-width: 576px) and (max-width:1920px){
+      display: initial;
+    }}
+  
+  .wave-small {
+    width: 1094px;
+
+    @media (min-width: 576px) {
+      display: none;
+    }}
+}
+
+.first-wave {
+  animation: wave 35s linear infinite;
+}
+
+.second-wave {
+  animation: wave1 60s linear infinite;
+  animation-delay: -20s;
+
+}
+.third-wave {
+  animation: wave2 50s linear infinite;
+  animation-delay: -30s;
+}
+
+
+
+@keyframes wave {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes wave1 {
+  0% {
+    transform: scaleY(1.2) translateX(0%);
+  }
+
+  100% {
+    transform: scaleY(1.2) translateX(100%);
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    transform: scaleY(.8) translateX(0%);
+  }
+
+  100% {
+    transform: scaleY(.8) translateX(100%);
+  }}
+
+

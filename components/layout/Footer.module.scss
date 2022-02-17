@@ -1,16 +1,19 @@
 @use './../../styles/settings/variables.scss' as variables;
 
-.footer {
+.footer-wrapper {
+  background-color: variables.$primary;
+}
+
+.footer__content {
   display:flex;
   height:variables.$spacing * 7;
   margin:0 auto;
   justify-content:center;
   align-items:center;
   color:variables.$white;
-  background-color: variables.$primary;
+
   
   &:global(.container) {
-    max-width:1920px;
     padding-top:variables.$spacing * 2;
     padding-bottom:variables.$spacing * 2;
 
@@ -26,7 +29,7 @@
   }
 }
 
-.footer_information {
+.footer__information {
   margin:0;
   margin-right:variables.$spacing * 3;
 
@@ -40,7 +43,7 @@
   }
 }
 
-.footer_contact {
+.footer__contact {
   margin:0;
   a {
     text-decoration: underline;
