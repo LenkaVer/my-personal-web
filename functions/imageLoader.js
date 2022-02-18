@@ -1,6 +1,6 @@
 export async function loadImageData(hash) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_HOST}/api/image-data?hash=${hash}`,
+    `${process.env.NEXT_PUBLIC_ADMIN_URL}/api/${process.env.NEXT_PUBLIC_ADMIN_HASH}/image/data/${hash}`,
   );
   const imageData = await res.json();
 
