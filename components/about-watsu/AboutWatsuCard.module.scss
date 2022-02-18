@@ -26,9 +26,9 @@
 .titleLink {
   color:variables.$secondary;
   &:hover {
-    color:variables.$button-hover;
+    color:variables.$secondary-light;
     .title {
-    color:variables.$button-hover;
+      color:variables.$secondary-light;
     }
   }
 }
@@ -69,12 +69,15 @@
   padding:variables.$spacing;
   margin-top:auto;
   margin-left:auto;
+  color:variables.$primary;
 
   &:hover {
+    color:variables.$terciary;
     .linkIcon {
       transform:translateX(6px);
       path {
-      fill:variables.$terciary;}
+      fill:variables.$terciary;
+    }
     }
   }
 }

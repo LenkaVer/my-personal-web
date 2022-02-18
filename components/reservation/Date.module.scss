@@ -1,0 +1,28 @@
+@use './../../styles/settings/variables.scss' as variables;
+
+.listItem {
+  width:100%;
+  cursor: pointer;
+
+
+  &.active {
+
+    .itemTitle {
+      background-color: variables.$white;
+      border-color:variables.$terciary transparent variables.$terciary variables.$terciary;
+    }
+  }
+}
+
+.itemTitle {
+  color:variables.$secondary;
+  font-family:'Montserrat', sans-serif;
+  font-size: 20px;
+  position:relative;
+  pointer-events: none;
+  z-index:10;
+  border:3px solid transparent;
+  margin-right:-3px;
+  border-radius: 8px 0 0 8px;
+  padding:variables.$spacing * 2;
+}

@@ -168,7 +168,7 @@ const ReservationBanner = () => {
             />
           </g>
         </svg>
-        <Link href="/" passHref>
+        <Link href="/rezervace" passHref>
           <Button title="Rezervovat termín" />
         </Link>
       </div>

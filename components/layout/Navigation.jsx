@@ -78,7 +78,7 @@ const Navigation = () => {
           </Link>
         </li>
         <li className={styles.listItem}>
-          <Link href="/">
+          <Link href="/rezervace">
             <a>Rezervovat termín</a>
           </Link>
         </li>

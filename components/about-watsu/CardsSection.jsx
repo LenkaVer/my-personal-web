@@ -13,7 +13,7 @@ const CardsSection = () => {
         <div className={styles.wrapper}>
           <AboutWatsuCard
             title="Účinky"
-            link="/o-watsu/kontraindikace"
+            link="/o-watsu/ucinky"
             imageSource={'/icons/effects.svg'}
             imageAlt="účinky"
           >
@@ -31,7 +31,7 @@ const CardsSection = () => {
           </AboutWatsuCard>
           <AboutWatsuCard
             title="Průběh terapie"
-            link="/o-watsu/kontraindikace"
+            link="/o-watsu/prubeh-terapie"
             imageSource={'/icons/therapy.svg'}
             imageAlt="průběh terapie"
           >

@@ -44,7 +44,7 @@ const WaveAnimation = () => {
         <use className={styles.thirdWave} x="-100%" href="#sineWave2" />
       </svg>
       <svg
-        className={styles['wave-small']}
+        className={styles.waveSmall}
         viewbox="0 0 1094 320"
         xmlns="http://www.w3.org/2000/svg"
       >
