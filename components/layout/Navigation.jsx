@@ -4,21 +4,21 @@ import { useState } from 'react';
 
 const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const navigationListClasses = [styles['navigation__list']];
+  const navigationListClasses = [styles['list']];
   if (showMenu) {
     navigationListClasses.push(styles['--show']);
   }
 
   return (
-    <nav className={[styles.navigation, 'container'].join(' ')}>
+    <nav className={[styles.body, 'container'].join(' ')}>
       <Link href="/">
-        <a className={styles['navigation__link-logo']}>
+        <a className={styles.linkLogo}>
           <img src={'/logo/logo-3.svg'} alt="logo" />
         </a>
       </Link>
       <ul className={navigationListClasses.join(' ')}>
         <button
-          className={styles['navigation__cross-icon']}
+          className={styles.crossIcon}
           onClick={() => {
             setShowMenu(false);
           }}
@@ -72,24 +72,24 @@ const Navigation = () => {
             </g>
           </svg>
         </button>
-        <li className={styles['navigation__list-item']}>
+        <li className={styles.listItem}>
           <Link href="/o-watsu">
             <a>O Watsu</a>
           </Link>
         </li>
-        <li className={styles['navigation__list-item']}>
+        <li className={styles.listItem}>
           <Link href="/">
             <a>Rezervovat termín</a>
           </Link>
         </li>
-        <li className={styles['navigation__list-item']}>
+        <li className={styles.listItem}>
           <Link href="/">
             <a>Kontakt</a>
           </Link>
         </li>
       </ul>
       <button
-        className={styles['navigation__menu-icon']}
+        className={styles.menuIcon}
         onClick={() => {
           setShowMenu(true);
         }}

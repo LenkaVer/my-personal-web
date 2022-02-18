@@ -27,27 +27,25 @@ const GallerySection = ({ images }) => {
     return imageLoader({ width: width, src: src, square: true });
   };
   return (
-    <section className={styles['gallery-section']}>
+    <section className={styles.section}>
       <div className="container">
-        <div className={styles['gallery-section__wrapper']}>
+        <div className={styles.wrapper}>
           <h2
-            className={[
-              styles['gallery-section__title'],
-              'title-decoration',
-              'section-heading',
-            ].join(' ')}
+            className={[styles.title, 'titleDecoration', 'sectionHeading'].join(
+              ' ',
+            )}
           >
             Jak vypadá terapie
           </h2>
           <SRLWrapper options={options}>
-            <div className={styles['gallery-section__gallery']}>
+            <div className={styles.gallery}>
               {galleryImages.map((galleryImage, index) => {
                 return (
                   <a
                     key={galleryImage.data.hash}
                     href={galleryImage.data.originalUrl}
                     className={[
-                      styles['gallery-section__gallery-item'],
+                      styles.galleryItem,
                       styles[`image${index}`],
                     ].join(' ')}
                   >

@@ -18,7 +18,7 @@
     }
   }
 
-  .wave-big {
+  .waveBig {
     display: none;
     width: 3024px;
     @media (min-width: 1920px) {
@@ -26,7 +26,7 @@
     }
   }
 
-  .wave-middle {
+  .waveMiddle {
     display: none;
     width: 2177px;
 
@@ -34,7 +34,7 @@
       display: initial;
     }}
   
-  .wave-small {
+  .waveSmall {
     width: 1094px;
 
     @media (min-width: 576px) {
@@ -42,16 +42,16 @@
     }}
 }
 
-.first-wave {
+.firstWave {
   animation: wave 35s linear infinite;
 }
 
-.second-wave {
+.secondWave {
   animation: wave1 60s linear infinite;
   animation-delay: -20s;
 
 }
-.third-wave {
+.thirdWave {
   animation: wave2 50s linear infinite;
   animation-delay: -30s;
 }

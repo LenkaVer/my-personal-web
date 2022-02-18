@@ -4,24 +4,18 @@ import { imageLoader } from '../../functions/imageLoader';
 
 const IntroSection = ({ images }) => {
   return (
-    <section className={styles['intro-section']}>
+    <section className={styles.section}>
       <div className="container">
-        <h1
-          className={[
-            styles['intro-section__main-heading'],
-            'title-decoration',
-            ['main-heading'],
-          ].join(' ')}
-        >
+        <h1 className={['titleDecoration', 'mainHeading'].join(' ')}>
           Watsu v Českých Budějovicích
         </h1>
-        <div className={styles['intro-section__wrapper']}>
-          <div className={styles['intro-section__description']}>
+        <div className={styles.wrapper}>
+          <div className={styles.description}>
             <h2
               className={[
-                styles['intro-section__heading'],
-                'title-decoration',
-                ['section-heading'],
+                styles.heading,
+                'titleDecoration',
+                'sectionHeading',
               ].join(' ')}
             >
               Watsu terapie
@@ -43,11 +37,11 @@ const IntroSection = ({ images }) => {
               se k jedinečném terapeutickému prožitku.
             </p>
           </div>
-          <div className={styles['intro-section__opinion']}>
+          <div className={styles.Opinion}>
             <h3
               className={[
-                styles['intro-section__subheading'],
-                'title-decoration',
+                styles.subheading,
+                'titleDecoration',
                 'subheading',
               ].join(' ')}
             >
@@ -65,7 +59,7 @@ const IntroSection = ({ images }) => {
             </p>
           </div>
 
-          <div className={styles['intro-section__img']}>
+          <div className={styles.image}>
             <Image
               loader={imageLoader}
               src={images.introSectionFoto.hash}

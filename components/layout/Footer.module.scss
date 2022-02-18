@@ -1,10 +1,10 @@
 @use './../../styles/settings/variables.scss' as variables;
 
-.footer-wrapper {
+.wrapper {
   background-color: variables.$primary;
 }
 
-.footer__content {
+.content {
   display:flex;
   height:variables.$spacing * 7;
   margin:0 auto;
@@ -29,7 +29,7 @@
   }
 }
 
-.footer__information {
+.information {
   margin:0;
   margin-right:variables.$spacing * 3;
 
@@ -43,9 +43,10 @@
   }
 }
 
-.footer__contact {
+.contact {
   margin:0;
   a {
+    color:variables.$white;
     text-decoration: underline;
     text-underline-offset:1px;
   }

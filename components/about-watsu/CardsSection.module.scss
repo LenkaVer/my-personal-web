@@ -1,11 +1,15 @@
 @use './../../styles/settings/variables.scss' as variables;
 
-.cards-section {
+.section {
   :global(.container) {
     padding-bottom: variables.$spacing * 24;
+
+    @media (min-width: 992px) {
+      padding-top: variables.$spacing * 7;
+    }
   }}
 
-.cards-section__wrapper {
+.wrapper {
   display:flex;
   height:100%;
   gap:variables.$spacing * 4;
