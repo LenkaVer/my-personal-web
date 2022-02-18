@@ -1,6 +1,6 @@
 @use './variables.scss' as variables;
 
- @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;500;700&family=Montserrat:wght@300;400;700&display=swap');
 
 html,
 body {
@@ -23,13 +23,13 @@ body {
 }
 
 main {
-  padding-top: variables.$spacing * 13;
+  padding-top: variables.$spacing * 10;
   min-height: calc((100vh - 56px));
   position:relative;
 
-  @media (max-width: 768px) {
-   padding-top:variables.$spacing * 10;
-  }
+  // @media (max-width: 768px) {
+  //  padding-top:variables.$spacing * 10;
+  // }
 }
 
 footer {
@@ -52,11 +52,11 @@ h6 {
 
 a {
   display:inline-block;
-  color: inherit;
+  color:variables.$primary;
   text-decoration: none;
   transition: color 0.2s;
+  
   &:hover,
-  &:active,
   &:focus {
     text-decoration: underline;
     color: variables.$terciary;
@@ -72,7 +72,7 @@ p {
 }
 
 
-.page-wrapper {
+.pageWrapper {
   display:grid;
   min-height: 100vh;
   grid-template-columns: 100%;
@@ -113,7 +113,7 @@ p {
   }
 }
 
-.title-decoration {
+.titleDecoration {
   &:before {
     content: "";
     background-color: variables.$terciary;
@@ -153,7 +153,7 @@ p {
   }
 }
 
-.main-heading {
+.mainHeading {
   font-size:40px;
   transform: translateY(2px);
   line-height:variables.$spacing * 6;
@@ -172,7 +172,7 @@ p {
   }
 }
 
-.section-heading {
+.sectionHeading {
   font-size:32px;
   transform: translateY(1px);
   line-height:variables.$spacing * 5;

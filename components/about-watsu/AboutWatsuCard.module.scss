@@ -1,6 +1,6 @@
 @use './../../styles/settings/variables.scss' as variables;
 
-.about-watsu-card {
+.wrapper {
   max-width:448px;
   width:100%;
   min-height:100%;
@@ -23,38 +23,61 @@
     max-width:500px;
   }
 }
+.titleLink {
+  color:variables.$secondary;
+  &:hover {
+    color:variables.$secondary-light;
+    .title {
+      color:variables.$secondary-light;
+    }
+  }
+}
 
-.about-watsu-card__title {
+.title {
   text-align:center;
 }
-.about-watsu-card__image {
+
+.image {
   position:absolute;
   left:16px;
   top:16px;
   width:50px;
 }
 
-.about-watsu-card__link-icon {
+.linkIcon {
   display:block;
   position:relative;
   width: variables.$spacing * 4;
+  height:variables.$spacing * 4;
   flex-shrink: 0;
   left: 0;
   top:0;
   margin-left: variables.$spacing;
   transition: transform 0.2s;
   transform: translateX(0);
+
+  path {
+    transition: fill 0.2s; 
+  }
 }
 
-.about-watsu-card__link {
+.link {
   display:flex;
+  width:fit-content;
   align-items:center;
   justify-content: flex-end;
+  padding:variables.$spacing;
   margin-top:auto;
+  margin-left:auto;
+  color:variables.$primary;
 
   &:hover {
-    .about-watsu-card__link-icon {
+    color:variables.$terciary;
+    .linkIcon {
       transform:translateX(6px);
+      path {
+      fill:variables.$terciary;
+    }
     }
   }
 }

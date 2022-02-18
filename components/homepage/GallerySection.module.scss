@@ -1,6 +1,6 @@
 @use './../../styles/settings/variables.scss' as variables;
 
-.gallery-section__wrapper {
+.wrapper {
   padding:variables.$spacing * 4;
   border-radius:16px;
   box-shadow: 2px 2px 16px variables.$terciary;
@@ -10,7 +10,7 @@
   }
 }
 
-.gallery-section__gallery {
+.gallery {
   display:grid;
   grid-template-columns: repeat(5,1fr);
   gap:variables.$spacing;
@@ -21,7 +21,7 @@
 
 }
 
-.gallery-section__gallery-item {
+.galleryItem {
   border-radius:8px;
   overflow:hidden;
 
@@ -49,6 +49,4 @@
     height:100% !important;
     width:100% !important;
   }
-
 }
-

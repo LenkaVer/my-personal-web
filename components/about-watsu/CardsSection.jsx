@@ -3,21 +3,17 @@ import AboutWatsuCard from './AboutWatsuCard';
 
 const CardsSection = () => {
   return (
-    <section className={styles['cards-section']}>
+    <section className={styles.section}>
       <div className="container">
         <h1
-          className={[
-            styles['cards-section__title'],
-            'title-decoration',
-            'main-heading',
-          ].join(' ')}
+          className={[styles.title, 'titleDecoration', 'mainHeading'].join(' ')}
         >
           O Watsu
         </h1>
-        <div className={styles['cards-section__wrapper']}>
+        <div className={styles.wrapper}>
           <AboutWatsuCard
             title="Účinky"
-            link="/o-watsu/kontraindikace"
+            link="/o-watsu/ucinky"
             imageSource={'/icons/effects.svg'}
             imageAlt="účinky"
           >
@@ -35,7 +31,7 @@ const CardsSection = () => {
           </AboutWatsuCard>
           <AboutWatsuCard
             title="Průběh terapie"
-            link="/o-watsu/kontraindikace"
+            link="/o-watsu/prubeh-terapie"
             imageSource={'/icons/therapy.svg'}
             imageAlt="průběh terapie"
           >

@@ -1,7 +1,7 @@
-const adminUrl = 'https://watsuadmin.verzichova.cz/';
-
 export async function loadImageData(hash) {
-  const res = await fetch(`${adminUrl}api-image/image-data/${hash}`);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_HOST}/api/image-data?hash=${hash}`,
+  );
   const imageData = await res.json();
 
   return imageData;
@@ -9,7 +9,7 @@ export async function loadImageData(hash) {
 
 export const imageLoader = ({ width, src, square = false }) => {
   if (square) {
-    return `${adminUrl}api-image/image/${src}?width=${width}&originalRatio=0`;
+    return `${process.env.NEXT_PUBLIC_ADMIN_URL}/api/${process.env.NEXT_PUBLIC_ADMIN_HASH}/image/file/${src}?width=${width}&originalRatio=0`;
   }
-  return `${adminUrl}api-image/image/${src}?width=${width}`;
+  return `${process.env.NEXT_PUBLIC_ADMIN_URL}/api/${process.env.NEXT_PUBLIC_ADMIN_HASH}/image/file/${src}?width=${width}`;
 };

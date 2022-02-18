@@ -1,6 +1,6 @@
 @use './../../styles/settings/variables.scss' as variables;
 
-.reservation-banner {
+.section {
   position:relative;
 
   &:before {
@@ -38,7 +38,7 @@
     }
   }
 }
-.calendar-window {
+.calendarWindow {
   fill: variables.$secondary;
   transition: fill 0.4s ease-in-out;
 }
