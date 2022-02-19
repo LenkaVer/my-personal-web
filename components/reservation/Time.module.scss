@@ -3,24 +3,31 @@
 
 
 .listItemLink {
-  color:variables.$white;
+  color:variables.$secondary;
   padding: variables.$spacing * 2 variables.$spacing * 3;
   border-radius: 8px;
-  background-color: variables.$secondary;
   text-transform: uppercase;
   letter-spacing: 1px;
   min-width:170px;
   text-align: center;
-  box-shadow: 4px 6px 10px variables.$primary;
+  font-weight: bold;
+  background-color: variables.$white;
+  box-shadow: 4px 4px 5px variables.$primary, inset 0 0 0 2px variables.$terciary ;
   transition:background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 
   &:hover {
-    background-color: variables.$button-hover;
+    box-shadow: 4px 4px 5px variables.$primary;
+    background-color: variables.$secondary;
     color:white;
     text-decoration: none;
   }
   &:active {
     box-shadow: 2px 2px 3px variables.$primary;
     transform:translate(2px, 4px);
+  }
+
+  @media (max-width: 576px) {
+    padding: variables.$spacing * 2;
+    min-width:160px;
   }
 }
