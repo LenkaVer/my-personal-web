@@ -2,10 +2,13 @@
 
 .section {
   :global(.container) {
-    padding-bottom: variables.$spacing * 24;
+    padding-bottom: variables.$spacing * 32;
 
     @media (min-width: 992px) {
       padding-top: variables.$spacing * 7;
+    }
+    @media (max-width: 1919px) {
+      padding-bottom: variables.$spacing * 24;
     }
   }}
 

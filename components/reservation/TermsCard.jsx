@@ -59,7 +59,7 @@ const TermsCard = ({ images }) => {
           Cena
         </h2>
         <p>
-          Terapie v probíhají v Baby Centru Šikulka (Rudolfovská 634,
+          Terapie probíhají v Baby Centru Šikulka (Rudolfovská 634,
           <a
             href="http://www.sikulka.com/"
             target="_blank"
@@ -74,7 +74,7 @@ const TermsCard = ({ images }) => {
           abyste měli dostatek času na přípravu a ve sjednaný čas jste mohli být
           v bazénu. Na terapii je vhodné nejít těsně po jídle, ale ani hladový.
           S sebou plavky, ručník, hygienické potřeby (jako při běžné návštěvě
-          bazénu), případně žabky. Po terapii doporučuji klidnější režim, pít
+          bazénu), případně žabky. Po terapii je dobré mít klidnější režim, pít
           dostatek tekutin a udržovat se v teple.
         </p>
         <p>
