@@ -21,10 +21,11 @@ const IntroSection = ({ images }) => {
               Watsu terapie
             </h2>
             <p>
-              WATSU<sup>&reg;</sup> (water Shiatsu), je jemná forma tělesné
-              terapie, která pochází z techniky Zen-Shiatsu. Spojuje v sobě
-              prvky z masáže, Shiatsu, mobilizace kloubů, protažení svalů, tanec
-              a práci s meridiány ve 34°C teplé vodě.
+              WATSU&reg;(water Shiatsu), je jemná forma tělesné terapie, která
+              pochází z techniky Zen-Shiatsu. Spojuje v sobě prvky z masáže,
+              Shiatsu, mobilizace kloubů, protažení svalů, tanec a práci s
+              meridiány ve 34°C teplé vodě. Založená byla v roce 1980 Haroldem
+              Dullem.
             </p>
             <p>
               Nosné vlastnosti vody dovolí trojrozměrné pohyby, jaké na zemi
