@@ -19,14 +19,18 @@ const CardsSection = () => {
           >
             {' '}
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ad
-              aliquid quisquam laborum, earum obcaecati placeat quis! Tempore at
-              quibusdam reiciendis tenetur blanditiis voluptatem minima,
-              perferendis, aspernatur pariatur, nostrum porro! Ex inventore
-              temporibus, dolorem odit amet excepturi alias! Voluptatum animi
-              sint adipisci, est, nemo quos amet earum tempore iusto harum natus
-              quidem aliquid sit voluptatem porro deleniti dolores aut
-              consequuntur?
+              Vodní terapie s tělem jsou doplňkovou léčebnou metodou, kde se
+              jako médium využívá voda. Zahrnuje různé metody. Hlavní a
+              nejrozšířenější je WATSU&reg; (Water Shiatsu). Vztlak a teplo
+              uvolňují svaly, klouby a oprošťují tělo od vlivů gravitace. Uši
+              klienta jsou během terapie pod vodou, čímž jsou z vnějšku silně
+              redukované akustické vjemy. Klient zpravidla sám uzavře při
+              terapii oči a tak neprobíhá žádný rozhovor mezi terapeutem a
+              klientem.
+            </p>
+            <p>
+              Minimální vlivy zvenčí navodí tak meditativní stav, což usnadní
+              přístup sama k sobě.
             </p>
           </AboutWatsuCard>
           <AboutWatsuCard
@@ -35,12 +39,12 @@ const CardsSection = () => {
             imageSource={'/icons/therapy.svg'}
             imageAlt="průběh terapie"
           >
-            {' '}
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
-              dicta consectetur nihil odit quaerat natus culpa deserunt eaque ab
-              sit assumenda error nulla libero. Non ex ratione eligendi velit
-              harum?
+              Terapie trvá přibližně 50-60 minut. Je vhodné nejít těsně po
+              jídle, ale ani hladový. S sebou plavky, ručník, hygienické potřeby
+              (jako při běžné návštěvě bazénu), případně žabky. Po terapii je
+              dobré mít klidnější režim, pít dostatek tekutin a udržovat se v
+              teple.
             </p>
           </AboutWatsuCard>
           <AboutWatsuCard
@@ -49,16 +53,17 @@ const CardsSection = () => {
             imageSource={'/icons/contraindications.svg'}
             imageAlt="kontraindikace"
           >
-            {' '}
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Praesentium, accusantium exercitationem voluptatum laborum id
-              similique quos, dolorem nisi repellat, velit facere. Veritatis,
-              nisi. Ab non placeat, quibusdam excepturi perspiciatis optio?
-              Rerum voluptatibus labore, autem distinctio consequuntur nostrum
-              at neque reiciendis fugit nulla, ipsa praesentium quasi veniam
-              modi aperiam commodi nisi reprehenderit recusandae, temporibus
-              mollitia officiis assumenda vel repellendus voluptatum. Error.
+              Pokud váháte, jestli jsou pro Vás vodní terapie vhodné, jako
+              základní vodítko může pomoci uvědomit si, jestli váš zdravotní
+              stav dovoluje pobyt v teplé vodě 34-36°C. Pokud ano, pravděpodobně
+              jsou pro vás Watsu&reg; a ostatní vodní terapie vhodné. Dále v
+              článku si můžete přečíst vybrané kontraindikace. V případě
+              nejasností se poraďte se svým lékařem, o jakýchkoli zdravotních
+              problémech (i užití dlouhodobé medikace) však vždy informujte také
+              před samotnou terapií (případně před rezervací termínu), pro
+              posouzení vhodnosti terapie a případně její přizpůsobení Vašim
+              potřebám.
             </p>
           </AboutWatsuCard>
         </div>
