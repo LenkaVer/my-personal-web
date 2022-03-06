@@ -17,7 +17,6 @@
   padding:variables.$spacing * 4;
   border-radius:16px;
   box-shadow: 2px 2px 16px variables.$terciary;
-  //box-shadow: 0 8px 32rem #1d1d1b1a;
 
   @media (max-width: 576px) {
     grid-template-columns: 1fr;

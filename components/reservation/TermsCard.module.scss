@@ -15,8 +15,6 @@
   flex-direction: column;
   margin:0 auto;
 
-  
-
   @media (max-width: 576px) {
     padding:variables.$spacing * 2;
   }
@@ -84,6 +82,7 @@
 .price {
   width: 100%;
   p {
+    margin-bottom:variables.$spacing * 3;
     span {
       font-weight: 600;
     }
@@ -94,6 +93,10 @@
       padding-left: variables.$spacing * 0.5;
     }
   }
+}
+
+.title {
+  margin-bottom: variables.$spacing * 3;
 }
 
 .paragraphBg {

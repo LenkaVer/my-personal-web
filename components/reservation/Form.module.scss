@@ -1,0 +1,172 @@
+@use './../../styles/settings/variables.scss' as variables;
+
+.section {
+  :global(.container) {
+
+    @media (min-width: 992px) {
+      padding-top: variables.$spacing * 7;
+    }
+  }}
+
+.title {
+  span {
+    margin-right: variables.$spacing * 2;
+  }
+}
+
+.wrapper {
+  max-width:800px;
+  width:100%;
+  height:100%;
+  min-height: 400px;
+  padding:variables.$spacing * 4;
+  border-radius:16px;
+  box-shadow: 2px 2px 16px variables.$terciary;
+  margin:0 auto;
+
+  @media (max-width: 576px) {
+    padding:variables.$spacing * 2;
+  }
+}
+
+.form {
+  display:flex;
+  flex-direction:column;
+  gap:variables.$spacing * 2;
+  max-width:560px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: variables.$spacing * 4;
+
+  @media (max-width: 576px) {
+    gap:variables.$spacing * 2;
+  }
+}
+
+.inputForm {
+  color:variables.$primary;
+  font-size:16px;
+  line-height:24px;
+  display:flex;
+
+  label {
+    width: 20%;
+    margin-right: variables.$spacing * 2;
+    font-weight: 600;
+
+    span {
+      color:#b3230a;
+    }
+  }
+
+  input {
+    font-size:16px;
+    width: 80%;
+    color:variables.$primary;
+    height:variables.$spacing * 4;
+    background-color:variables.$white;
+    padding:variables.$spacing * 0.5 variables.$spacing;
+    border:none;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 2px variables.$terciary ;
+
+    &:focus {
+      box-shadow: 0 0 0 2px variables.$secondary ;
+    }
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    gap: variables.$spacing;
+   
+    label, input {
+      width: 100%;
+      
+    }
+  }
+}
+
+.paragraph {
+  margin-bottom: 0;
+
+  a {
+    display: inline;
+    text-decoration: underline;
+  }
+  
+  span {
+    color:#b3230a;
+  }
+}
+
+.btn {
+  align-self: flex-end;
+  color:variables.$secondary;
+  padding: variables.$spacing * 2 variables.$spacing * 3;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width:170px;
+  text-align: center;
+  font-weight: bold;
+  border:none;
+  background-color: variables.$white;
+  box-shadow: 4px 4px 5px variables.$primary, inset 0 0 0 2px variables.$terciary ;
+  transition:background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 4px 4px 5px variables.$primary;
+    background-color: variables.$secondary;
+    color:white;
+    text-decoration: none;
+  }
+  &:active {
+    box-shadow: 2px 2px 3px variables.$primary;
+    transform:translate(2px, 4px);
+  }
+}
+
+.price {
+  width: 100%;
+  p {
+    margin-bottom:variables.$spacing * 3;
+    span {
+      font-weight: 600;
+    }
+
+    a {
+      text-decoration: underline;
+      display: inline-block;
+      padding-left: variables.$spacing * 0.5;
+    }
+  }
+}
+
+.title {
+  margin-bottom: variables.$spacing * 3;
+}
+
+.paragraphBg {
+  position:relative;
+  
+  &:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top:0;
+    transform: translate(-32px, -8px);
+    width:calc(100% + 64px);
+    height: calc(100% + 16px);
+    background-color: variables.$terciary;
+    z-index: -1;
+    opacity:0.4;
+
+    @media (max-width: 576px) {
+      width:calc(100% + 32px);
+      transform: translate(-16px, -8px);
+    }
+  }
+}
+
+
