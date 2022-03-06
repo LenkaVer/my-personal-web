@@ -1,0 +1,139 @@
+@use './settings/variables.scss' as variables;
+
+.pageWrapper {
+  display:grid;
+  min-height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+}
+
+.container {
+  padding-left:variables.$spacing * 2;
+  padding-right: variables.$spacing * 2;
+  padding-top: variables.$spacing * 5;
+  padding-bottom: variables.$spacing * 5;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+
+  @media (min-width: 576px) {
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: variables.$spacing * 6;
+    padding-bottom: variables.$spacing * 6;
+    max-width: 768px;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: variables.$spacing * 7;
+    padding-bottom: variables.$spacing * 7;
+    max-width: 992px;
+  }
+
+  @media (min-width: 992px) {
+    padding-top: variables.$spacing * 8;
+    padding-bottom: variables.$spacing * 8;
+    max-width: 1200px;
+  }
+  
+  @media (min-width: 1200px) {
+    max-width: 1460px;
+  }
+}
+
+.titleDecoration {
+  &:before {
+    content: "";
+    background-color: variables.$terciary;
+    position: relative;
+    display: inline-block;
+    height: 1px;
+    vertical-align: middle;
+    left:variables.$spacing * -1;
+    width: variables.$spacing * 6;
+
+    @media (max-width: 768px) {
+      width: variables.$spacing * 4;
+    }
+
+    @media (max-width: 576px) {
+      width: variables.$spacing * 3;
+    }
+  }
+
+  &:after {
+    content: "";
+    background-color: variables.$terciary;
+    position: relative;
+    display: inline-block;
+    height: 1px;
+    vertical-align: middle;
+    right:variables.$spacing * -1;
+    width: variables.$spacing * 6;
+
+    @media (max-width: 768px) {
+      width: variables.$spacing * 4;
+    }
+
+    @media (max-width: 576px) {
+      width: variables.$spacing * 3;
+    }
+  }
+}
+
+.mainHeading {
+  font-size:40px;
+  transform: translateY(2px);
+  line-height:variables.$spacing * 6;
+  margin-bottom: variables.$spacing * 6;
+
+  @media (max-width: 992px) {
+    font-size:32px;
+    transform: translateY(1px);
+    line-height:variables.$spacing * 5;
+  }
+
+  @media (max-width: 576px) {
+    font-size:26px;
+    transform: translateY(0);
+    line-height:variables.$spacing * 4;
+  }
+}
+
+.sectionHeading {
+  font-size:32px;
+  transform: translateY(1px);
+  line-height:variables.$spacing * 5;
+  margin-bottom: variables.$spacing * 3;
+
+  @media (max-width: 992px) {
+    font-size:26px;
+    transform: translateY(0);
+    line-height:variables.$spacing * 4;
+  }
+
+  @media (max-width: 576px) {
+    font-size:24px;
+    transform: translateY(0);
+    line-height:variables.$spacing * 4;
+  }
+}
+
+.subheading {
+  font-size:26px;
+  transform: translateY(-1px);
+  line-height:variables.$spacing * 4;
+  margin-bottom: variables.$spacing * 2;
+
+  @media (max-width: 992px) {
+    font-size:24px;
+    transform: translateY(0);
+    line-height:variables.$spacing * 4;
+  }
+
+  @media (max-width: 576px) {
+    font-size:20px;
+    transform: translateY(-3px);
+    line-height:variables.$spacing * 3;
+  }
+}

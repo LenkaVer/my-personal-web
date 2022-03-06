@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Time = ({ time }) => {
   return (
     <li className={styles.listItem} key={time.id}>
-      <Link href="/">
+      <Link href={`/rezervace/${time.id}`}>
         <a className={styles.listItemLink}>
           {time.start} - {time.end}
         </a>
