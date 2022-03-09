@@ -1,4 +1,5 @@
 import styles from './Form.module.scss';
+import Link from 'next/link';
 
 import { useState, useEffect } from 'react';
 import Router from 'next/router';
@@ -65,7 +66,11 @@ const Form = ({ termId }) => {
                 </p>
                 <p className={styles.paragraph}>
                   Odesláním tohoto formuláře souhlasím se
-                  <a href=""> zpracováním osobních údajů</a>.
+                  <Link href="/">
+                    {' '}
+                    <a href="">zpracováním osobních údajů</a>
+                  </Link>
+                  .
                 </p>
                 <button className={styles.btn} type="submit">
                   Rezervovat termín
