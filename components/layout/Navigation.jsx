@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './Navigation.module.scss';
+import { slide as Menu } from 'react-burger-menu';
 import { useState } from 'react';
 
 const Navigation = () => {
@@ -9,15 +10,64 @@ const Navigation = () => {
     navigationListClasses.push(styles['--show']);
   }
 
+  const menuStyles = {
+    bmBurgerButton: {
+      position: 'fixed',
+      width: '36px',
+      height: '30px',
+      right: '36px',
+      top: '24px',
+    },
+    bmBurgerBars: {
+      background: '#373a47',
+    },
+    bmBurgerBarsHover: {
+      background: '#a90000',
+    },
+    bmCrossButton: {
+      height: '24px',
+      width: '24px',
+    },
+    bmCross: {
+      background: '#bdc3c7',
+    },
+    bmMenuWrap: {
+      position: 'fixed',
+      height: '100%',
+      top: '0',
+      right: '0',
+    },
+    bmMenu: {
+      background: '#373a47',
+      padding: '2.5em 1.5em 0',
+      fontSize: '1.15em',
+    },
+    bmMorphShape: {
+      fill: '#373a47',
+    },
+    bmItemList: {
+      color: '#b8b7ad',
+      padding: '0.8em',
+    },
+    bmItem: {
+      display: 'inline-block',
+    },
+    bmOverlay: {
+      background: 'rgba(0, 0, 0, 0.3)',
+      top: '0',
+      right: '0',
+    },
+  };
+
   return (
-    <nav className={[styles.body, 'container'].join(' ')}>
+    <nav className={[styles.navigation, 'container'].join(' ')}>
       <Link href="/">
         <a className={styles.linkLogo}>
           <img src={'/logo/logo-3.svg'} alt="logo" />
         </a>
       </Link>
       <ul className={navigationListClasses.join(' ')}>
-        <button
+        {/* <button
           className={styles.crossIcon}
           onClick={() => {
             setShowMenu(false);
@@ -71,24 +121,26 @@ const Navigation = () => {
               </g>
             </g>
           </svg>
-        </button>
-        <li className={styles.listItem}>
-          <Link href="/o-watsu">
-            <a>O Watsu</a>
-          </Link>
-        </li>
-        <li className={styles.listItem}>
-          <Link href="/rezervace">
-            <a>Rezervovat termín</a>
-          </Link>
-        </li>
-        <li className={styles.listItem}>
-          <Link href="/kontakt">
-            <a>Kontakt</a>
-          </Link>
-        </li>
+        </button> */}
+        <Menu right styles={menuStyles}>
+          <li className={styles.listItem}>
+            <Link href="/o-watsu">
+              <a>O Watsu</a>
+            </Link>
+          </li>
+          <li className={styles.listItem}>
+            <Link href="/rezervace">
+              <a>Rezervovat termín</a>
+            </Link>
+          </li>
+          <li className={styles.listItem}>
+            <Link href="/kontakt">
+              <a>Kontakt</a>
+            </Link>
+          </li>
+        </Menu>
       </ul>
-      <button
+      {/* <button
         className={styles.menuIcon}
         onClick={() => {
           setShowMenu(true);
@@ -113,7 +165,7 @@ const Navigation = () => {
             />
           </g>
         </svg>
-      </button>
+      </button> */}
     </nav>
   );
 };
