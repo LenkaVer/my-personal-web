@@ -137,3 +137,68 @@
     line-height:variables.$spacing * 3;
   }
 }
+
+
+// Menu style
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  right: 24px;
+  top: 16px;
+  border:none;
+  background-color:transparent;
+  max-width:variables.$spacing * 6;
+  max-height:variables.$spacing * 6;
+  cursor:pointer;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  border:none;
+  background-color:transparent;
+  width:variables.$spacing * 4 !important;
+  height:variables.$spacing * 4 !important;
+  cursor:pointer;
+ 
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top:0;
+  right:0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: variables.$white;
+  box-shadow:0 0.5rem 2rem #1d1d1b1a;
+  padding-top: 48px;
+  font-size: 1.15em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
