@@ -5,7 +5,7 @@ const WaveAnimation = () => {
     <div className={styles.pool}>
       <svg
         className={styles.waveBig}
-        viewbox="0 0 3024 320"
+        viewBox="0 0 3024 320"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -25,7 +25,7 @@ const WaveAnimation = () => {
       </svg>
       <svg
         className={styles.waveMiddle}
-        viewbox="0 0 2177 320"
+        viewBox="0 0 2177 320"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -45,7 +45,7 @@ const WaveAnimation = () => {
       </svg>
       <svg
         className={styles.waveSmall}
-        viewbox="0 0 1094 320"
+        viewBox="0 0 1094 320"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
