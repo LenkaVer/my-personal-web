@@ -1,4 +1,5 @@
 import styles from './Footer.module.scss';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -12,6 +13,11 @@ const Footer = () => {
           <a href="mailto:lenkaverzichova@gmail.com">
             lenkaverzichova@gmail.com
           </a>
+        </p>
+        <p className={styles.gdpr}>
+          <Link href="/gdpr">
+            <a>Ochrana osobních údajů</a>
+          </Link>
         </p>
       </div>
     </footer>

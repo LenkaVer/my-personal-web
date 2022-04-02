@@ -42,7 +42,7 @@ const NewsletterCard = ({ termsAvailable }) => {
             <input type="checkbox" required />
             <span className={styles.checkboxLink}>
               Odesláním tohoto formuláře souhlasím se{' '}
-              <Link href="/">
+              <Link href="/gdpr">
                 <a>zpracováním osobních údajů</a>
               </Link>
               .

@@ -66,7 +66,7 @@ const Form = ({ termId }) => {
                 </p>
                 <p className={styles.paragraph}>
                   Odesláním tohoto formuláře souhlasím se{' '}
-                  <Link href="/">
+                  <Link href="/gdpr">
                     <a>zpracováním osobních údajů</a>
                   </Link>
                   .
