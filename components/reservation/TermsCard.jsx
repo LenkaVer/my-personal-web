@@ -60,7 +60,7 @@ const TermsCard = ({ images }) => {
         </ul>
       </div>
 
-      <p className={styles.paragraph}>
+      <p className={[styles.paragraph, styles.paragraphBg].join(' ')}>
         Pokud jste si nevybrali žádný z aktuálně dostupných termínů , můžete{' '}
         <Link href="/rezervace/email-o-terminech">
           <a>vyplnit formulář</a>

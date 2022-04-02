@@ -6,7 +6,6 @@
   height:100%;
   min-height: 400px;
   padding:variables.$spacing * 4;
- 
   border-radius:16px;
   box-shadow: 2px 2px 16px variables.$terciary;
   margin:0 auto;
@@ -25,6 +24,13 @@
 }
 
 .form {
+  margin-top:variables.$spacing * 6;
+  position:relative;
+
+  @media (max-width: 576px) {
+    margin-top:variables.$spacing * 4;
+  }
+
   button {
     width:30%;
     color:variables.$white;
@@ -54,10 +60,29 @@
       width:100%;
     }
   }
+    
+  &:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top:0;
+    transform: translate(-32px, -24px);
+    width:calc(100% + 64px);
+    height: calc(100% + 48px);
+    background-color: variables.$terciary;
+    z-index: -1;
+    opacity:0.4;
+  
+    @media (max-width: 576px) {
+      width:calc(100% + 32px);
+      height: calc(100% + 32px);
+      transform: translate(-16px, -16px);
+    }
+  }
 }
 
+
 .inputWrapper {
-  margin-top:variables.$spacing * 3;
   margin-bottom:variables.$spacing * 3;
   width:80%;
 
@@ -73,8 +98,9 @@
 
 .inputEmail {
   padding:variables.$spacing;
+  margin-right: variables.$spacing;
   height: variables.$spacing * 6;
-  width:70%;
+  width:65%;
   border-radius: 8px;
   border:none;
   outline: none;
