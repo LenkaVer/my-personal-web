@@ -36,7 +36,7 @@
   max-width:560px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: variables.$spacing * 4;
+  margin-bottom: variables.$spacing * 6;
 
   @media (max-width: 576px) {
     gap:variables.$spacing * 2;
@@ -103,8 +103,9 @@
 }
 
 .btn {
-  align-self: flex-end;
-  color:variables.$secondary;
+  align-self: center;
+  width:60%;
+  color:variables.$white;
   padding: variables.$spacing * 2 variables.$spacing * 3;
   border-radius: 8px;
   text-transform: uppercase;
@@ -113,20 +114,25 @@
   text-align: center;
   font-weight: bold;
   border: none;
+  outline: none;
   cursor: pointer;
-  background-color: variables.$white;
-  box-shadow: 4px 4px 5px variables.$primary, inset 0 0 0 2px variables.$terciary ;
+  background-color: variables.$secondary;
+  box-shadow: 4px 4px 5px variables.$primary;
   transition:background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 
   &:hover {
-    box-shadow: 4px 4px 5px variables.$primary;
-    background-color: variables.$secondary;
+    background-color: variables.$button-hover;
     color:white;
     text-decoration: none;
   }
+
   &:active {
     box-shadow: 2px 2px 3px variables.$primary;
     transform:translate(2px, 4px);
+  }
+
+  @media (max-width: 576px) {
+    width:100%;
   }
 }
 
