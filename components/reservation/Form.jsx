@@ -65,10 +65,9 @@ const Form = ({ termId }) => {
                   Položky označené <span>*</span> jsou povinné.
                 </p>
                 <p className={styles.paragraph}>
-                  Odesláním tohoto formuláře souhlasím se
+                  Odesláním tohoto formuláře souhlasím se{' '}
                   <Link href="/">
-                    {' '}
-                    <a href="">zpracováním osobních údajů</a>
+                    <a>zpracováním osobních údajů</a>
                   </Link>
                   .
                 </p>

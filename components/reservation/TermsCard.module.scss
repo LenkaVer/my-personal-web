@@ -79,6 +79,15 @@
   }
 }
 
+.paragraph {
+  margin-bottom: variables.$spacing * 3;
+
+  a {
+    display: inline;
+    text-decoration: underline;
+  }
+}
+
 .price {
   width: 100%;
   p {
