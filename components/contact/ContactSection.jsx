@@ -19,9 +19,13 @@ const ContactSection = () => {
               </a>
             </p>
             <p>
-              <span>IČ:</span> 11726270.
+              <span>Tel: </span>
+              <a href="tel:728363010">728 363 010.</a>
             </p>
             <p>
+              <span>IČ:</span> 11726270.
+            </p>
+            <p className={styles.externalLink}>
               Spolupracuji s{' '}
               <a
                 href="https://www.watsu-czech.cz/"

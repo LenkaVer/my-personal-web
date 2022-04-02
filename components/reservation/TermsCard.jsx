@@ -2,23 +2,31 @@ import styles from './TermsCard.module.scss';
 import Date from './Date';
 import Time from './Time';
 import Image from 'next/image';
+import Link from 'next/link';
 import { imageLoader } from '../../functions/imageLoader';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const TermsCard = ({ images }) => {
   const [selectedDay, setSelectedDay] = useState(null);
   const [times, setTimes] = useState(null);
   const [datesData, setDatesData] = useState(null);
+  const router = useRouter();
+
   useEffect(() => {
     fetch('/api/therapy-times')
       .then((response) => response.json())
       .then((json) => {
         const firstDay = json[0];
-        setSelectedDay(firstDay);
-        setTimes(firstDay.times);
-        setDatesData(json);
+        if (firstDay) {
+          setSelectedDay(firstDay);
+          setTimes(firstDay.times);
+          setDatesData(json);
+        } else {
+          router.push('/rezervace/email-o-terminech');
+        }
       });
-  }, []);
+  }, [router]);
   return (
     <div className={styles.wrapper}>
       <div className={styles.terms}>
@@ -51,6 +59,14 @@ const TermsCard = ({ images }) => {
             : null}
         </ul>
       </div>
+
+      <p className={styles.paragraph}>
+        Pokud jste si nevybrali žádný z aktuálně dostupných termínů , můžete{' '}
+        <Link href="/rezervace/email-o-terminech">
+          <a>vyplnit formulář</a>
+        </Link>{' '}
+        pro zasílání upozornění o vypsání nových termínů.
+      </p>
 
       <div className={styles.price}>
         <h2

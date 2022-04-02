@@ -1,6 +1,5 @@
 import styles from './ReservationBanner.module.scss';
 import Button from './../globals/Button';
-import Link from 'next/link';
 import { useEffect } from 'react';
 
 const ReservationBanner = () => {
@@ -168,9 +167,8 @@ const ReservationBanner = () => {
             />
           </g>
         </svg>
-        <Link href="/rezervace" passHref>
-          <Button title="Rezervovat termín" />
-        </Link>
+
+        <Button href="/rezervace" title="Rezervovat termín" />
       </div>
     </section>
   );

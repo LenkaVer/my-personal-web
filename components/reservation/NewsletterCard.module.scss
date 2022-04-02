@@ -1,0 +1,104 @@
+@use './../../styles/settings/variables.scss' as variables;
+
+.wrapper {
+  max-width:800px;
+  width:100%;
+  height:100%;
+  min-height: 400px;
+  padding:variables.$spacing * 4;
+ 
+  border-radius:16px;
+  box-shadow: 2px 2px 16px variables.$terciary;
+  margin:0 auto;
+
+  @media (max-width: 576px) {
+    padding:variables.$spacing * 2;
+  }
+}
+
+.paragraph {
+
+  a {
+    display: inline;
+    text-decoration: underline;
+  }
+}
+
+.form {
+  button {
+    width:30%;
+    color:variables.$white;
+    padding: variables.$spacing * 2 variables.$spacing * 3;
+    border-radius: 8px;
+    background-color: variables.$secondary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 4px 4px 5px variables.$primary;
+    outline:none;
+    border:none;
+    cursor: pointer;
+    transition:background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      background-color: variables.$button-hover;
+      color:white;
+      text-decoration: none;
+    }
+
+    &:active {
+      box-shadow: 2px 2px 3px variables.$primary;
+      transform:translate(2px, 4px);
+    }
+
+    @media (max-width: 576px) {
+      width:100%;
+    }
+  }
+}
+
+.inputWrapper {
+  margin-top:variables.$spacing * 3;
+  margin-bottom:variables.$spacing * 3;
+  width:80%;
+
+  @media (max-width: 768px) {
+    width:100%;
+  }
+
+  @media (max-width: 576px) {
+    display:flex;
+    flex-direction: column;
+  }
+}
+
+.inputEmail {
+  padding:variables.$spacing;
+  height: variables.$spacing * 6;
+  width:70%;
+  border-radius: 8px;
+  border:none;
+  outline: none;
+  box-shadow: inset 0 0 0 1px variables.$primary;
+
+  &::placeholder {
+    color: variables.$primary;
+    font-size: 16px;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px variables.$secondary ;
+  }
+
+  @media (max-width: 576px) {
+    width:100%;
+    margin-bottom:variables.$spacing * 2;
+  }
+} 
+
+.checkboxLink {
+  margin-left: variables.$spacing;
+  a {
+    display: inline;
+    text-decoration: underline;
+  }
+}
