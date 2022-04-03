@@ -43,6 +43,10 @@
   }
 }
 
+.error {
+  color:variables.$danger;
+}
+
 .inputForm {
   color:variables.$primary;
   font-size:16px;
@@ -126,9 +130,14 @@
     text-decoration: none;
   }
 
-  &:active {
+  &:enabled:active {
     box-shadow: 2px 2px 3px variables.$primary;
     transform:translate(2px, 4px);
+  }
+
+  &:disabled {
+    background-color: variables.$button-disabled;
+    cursor:not-allowed;
   }
 
   @media (max-width: 576px) {

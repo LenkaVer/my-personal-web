@@ -21,6 +21,7 @@ const NewsletterCard = ({ termsAvailable }) => {
     } else {
       setErrorMessage(null);
     }
+
     if (!gdpr) {
       setErrorMessage('Potvrďte souhlas se zpracováním osobních údajů.');
       setBtnDisabled(false);
@@ -28,6 +29,7 @@ const NewsletterCard = ({ termsAvailable }) => {
     } else {
       setErrorMessage(null);
     }
+
     const response = await fetch('/api/newsletter-user', {
       method: 'POST',
       body: JSON.stringify({
@@ -42,10 +44,11 @@ const NewsletterCard = ({ termsAvailable }) => {
       return;
     }
     setSuccessMessage(
-      'Vaše emailová adresa byla uložena. Jakmile se objeví nové termíny, budu vás informovat.',
+      'Vaše emailová adresa byla uložena. Jakmile se objeví nové termíny, budu Vás informovat.',
     );
     setBtnDisabled(false);
   };
+
   return (
     <div className={styles.wrapper}>
       {termsAvailable ? (

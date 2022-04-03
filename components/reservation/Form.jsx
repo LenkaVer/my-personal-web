@@ -1,11 +1,18 @@
 import styles from './Form.module.scss';
 import Link from 'next/link';
-
+import validator from 'validator';
 import { useState, useEffect } from 'react';
 import Router from 'next/router';
 
 const Form = ({ termId }) => {
   const [selectedTerm, setSelectedTerm] = useState(null);
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [userName, setUserName] = useState('');
+  const [userSurname, setUserSurname] = useState('');
+  const [btnDisabled, setBtnDisabled] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
+
   useEffect(() => {
     fetch(`/api/therapy-time?termId=${termId}`)
       .then((response) => {
@@ -19,7 +26,71 @@ const Form = ({ termId }) => {
         setSelectedTerm(json);
       });
   }, [termId]);
-  const createReservation = async (event) => {};
+
+  const createReservation = async (e) => {
+    e.preventDefault();
+
+    setBtnDisabled(true);
+
+    if (!validator.isEmail(email)) {
+      setErrorMessage('Zadejte platnou emailovou adresu.');
+      setBtnDisabled(false);
+      return;
+    } else {
+      setErrorMessage(null);
+    }
+
+    if (!validator.isMobilePhone(phone)) {
+      setErrorMessage('Zadejte platné telefonní číslo.');
+      setBtnDisabled(false);
+      return;
+    } else {
+      setErrorMessage(null);
+    }
+
+    if (userName.length < 1) {
+      setErrorMessage('Zadejte jméno.');
+      setBtnDisabled(false);
+      return;
+    } else {
+      setErrorMessage(null);
+    }
+
+    if (userSurname.length < 1) {
+      setErrorMessage('Zadejte příjmení.');
+      setBtnDisabled(false);
+      return;
+    } else {
+      setErrorMessage(null);
+    }
+
+    const response = await fetch('/api/create-reservation', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: email,
+        name: userName,
+        surname: userSurname,
+        phone: phone,
+        therapyTimeId: termId,
+      }),
+    });
+
+    const json = await response.json();
+    if (response.status !== 200) {
+      setErrorMessage(json.message);
+      setBtnDisabled(false);
+      return;
+    }
+    Router.push({
+      pathname: '/rezervace/potvrzeni-rezervace',
+      query: {
+        reservation: json.reservationId,
+      },
+    });
+
+    setBtnDisabled(false);
+  };
+
   return (
     <section className={styles.section}>
       <div className="container">
@@ -37,29 +108,63 @@ const Form = ({ termId }) => {
               </h2>
 
               <form className={styles.form} onSubmit={createReservation}>
+                {errorMessage && (
+                  <div className={styles.error}>
+                    <p>{errorMessage}</p>
+                  </div>
+                )}
+
                 <div className={styles.inputForm}>
                   <label htmlFor="name">
                     Jméno: <span>*</span>
                   </label>
-                  <input id="name" name="name" type="text" required />
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    value={userName}
+                    required
+                    onChange={(e) => setUserName(e.target.value)}
+                  />
                 </div>
                 <div className={styles.inputForm}>
                   <label htmlFor="surname">
                     Příjmení: <span>*</span>
                   </label>
-                  <input id="surname" name="surname" type="text" required />
+                  <input
+                    id="surname"
+                    name="surname"
+                    type="text"
+                    value={userSurname}
+                    required
+                    onChange={(e) => setUserSurname(e.target.value)}
+                  />
                 </div>
                 <div className={styles.inputForm}>
                   <label htmlFor="email">
                     Email: <span>*</span>
                   </label>
-                  <input id="email" name="email" type="email" required />
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </div>
                 <div className={styles.inputForm}>
                   <label htmlFor="phone">
                     Telefon: <span>*</span>
                   </label>
-                  <input id="phone" name="phone" type="tel" required />
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
                 </div>
                 <p className={styles.paragraph}>
                   Položky označené <span>*</span> jsou povinné.
@@ -67,11 +172,15 @@ const Form = ({ termId }) => {
                 <p className={styles.paragraph}>
                   Odesláním tohoto formuláře souhlasím se{' '}
                   <Link href="/gdpr">
-                    <a>zpracováním osobních údajů</a>
+                    <a target="_blank">zpracováním osobních údajů</a>
                   </Link>
                   .
                 </p>
-                <button className={styles.btn} type="submit">
+                <button
+                  className={styles.btn}
+                  type="submit"
+                  disabled={btnDisabled}
+                >
                   Rezervovat termín
                 </button>
               </form>
