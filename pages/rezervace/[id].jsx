@@ -13,9 +13,7 @@ const ReservationForm = () => {
         <title>Rezervační formulář</title>
         <meta name="description" content="Watsu terapie Lenka Verzichová" />
       </Head>
-      <Layout>
-        <Form termId={id} />
-      </Layout>
+      <Layout>{id && <Form termId={id} />}</Layout>
     </>
   );
 };
