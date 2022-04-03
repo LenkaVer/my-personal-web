@@ -8,23 +8,11 @@
 .content {
   width:40%;
 
-  a {
-    text-decoration: none;
-
-    &:hover{
-      text-decoration: underline;
-    }
-  }
-
   p {
     margin-bottom: variables.$spacing;
 
     &:last-child {
       margin-bottom: 0;
-    }
-
-    span {
-      font-weight:600;
     }
   }
 
@@ -32,6 +20,48 @@
     width:100%;
   }
 }
+
+.contactTable {
+  width: 100%;
+  box-shadow: 0 0 0 2px variables.$terciary;
+  margin-bottom:variables.$spacing * 3;
+  border-collapse: collapse;
+  border-radius:8px;
+  
+  tr {
+    th,
+    td {
+      padding:variables.$spacing;
+    }
+    th {
+      text-align: left;
+      background-color: variables.$terciary;
+      color:variables.$white;
+      border-bottom:1px solid variables.$white;
+    }
+    td {
+      border-bottom:1px solid variables.$terciary;
+    }
+    &:last-child {
+      td {
+        border-bottom:none;
+      }
+      th {
+        border-bottom: none;
+      }
+    }
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 576px) {
+    font-size:14px;
+  }
+}
+
+
 .externalLink {
   a {
     text-decoration: underline;

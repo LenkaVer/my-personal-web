@@ -10,9 +10,7 @@ const Footer = () => {
         </p>
         <p className={styles.contact}>
           Kontakt:{' '}
-          <a href="mailto:lenkaverzichova@gmail.com">
-            lenkaverzichova@gmail.com
-          </a>
+          <a href="mailto:lenkaverzichova@gmail.com">lenka@verzichova.cz</a>
         </p>
         <p className={styles.gdpr}>
           <Link href="/gdpr">

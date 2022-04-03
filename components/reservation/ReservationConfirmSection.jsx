@@ -34,7 +34,7 @@ const ReservationConfirm = () => {
         <table className={styles.reservationTable}>
           <tbody>
             <tr>
-              <th>Datum:</th>
+              <th>Datum</th>
               <td>
                 {reservation.dayOfWeek.charAt(0).toUpperCase() +
                   reservation.dayOfWeek.slice(1)}{' '}
@@ -42,11 +42,11 @@ const ReservationConfirm = () => {
               </td>
             </tr>
             <tr>
-              <th>Začátek terapie:</th>
+              <th>Začátek terapie</th>
               <td>{reservation.start}</td>
             </tr>
             <tr>
-              <th>Stav rezervace:</th>
+              <th>Stav rezervace</th>
               <td>{reservation.status}</td>
             </tr>
           </tbody>

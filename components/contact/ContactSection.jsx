@@ -6,19 +6,30 @@ const ContactSection = () => {
     <SectionCard mainTitle={'Kontakt'} extraClass={'contactSection'}>
       <div className={styles.content}>
         <h2 className={styles.heading}>Lenka Verzichová</h2>
-        <p>
-          <span>Email: </span>
-          <a href="mailto:lenkaverzichova@gmail.com">
-            lenkaverzichova@gmail.com.
-          </a>
-        </p>
-        <p>
-          <span>Tel: </span>
-          <a href="tel:728363010">728 363 010.</a>
-        </p>
-        <p>
-          <span>IČ:</span> 11726270.
-        </p>
+
+        <table className={styles.contactTable}>
+          <tbody>
+            <tr>
+              <th>E-mail</th>
+              <td>
+                <a href="mailto:lenkaverzichova@gmail.com">
+                  lenka@verzichova.cz
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th>Tel.</th>
+              <td>
+                <a href="tel:728363010">728 363 010</a>
+              </td>
+            </tr>
+            <tr>
+              <th>IČ</th>
+              <td> 11726270</td>
+            </tr>
+          </tbody>
+        </table>
+
         <p className={styles.externalLink}>
           Spolupracuji s{' '}
           <a
