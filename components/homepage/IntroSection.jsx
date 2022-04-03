@@ -38,7 +38,7 @@ const IntroSection = ({ images }) => {
               se k jedinečném terapeutickému prožitku.
             </p>
           </div>
-          <div className={styles.Opinion}>
+          <div className={styles.opinion}>
             <h3
               className={[
                 styles.subheading,
@@ -49,14 +49,25 @@ const IntroSection = ({ images }) => {
               Moje cesta k watsu
             </h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              rem, exercitationem, animi possimus cum impedit quis est
-              voluptates repudiandae aliquam, blanditiis facere voluptate
-              deleniti maxime debitis totam recusandae libero itaque. Fugit
-              eligendi odio at, recusandae alias repellendus corporis sit?
-              Delectus excepturi consequuntur illum natus alias optio
-              praesentium quam vel, eos nesciunt ab quia voluptatibus sequi
-              totam reiciendis nihil quibusdam dolore?
+              S Watsu jsem se prvně potkala v roce 2017 v meditačním centru u
+              Karlových Varů. Byl to pro mě takový zážitek, že jsem se hned po
+              terapii ptala, kde se dá tato metoda naučit. Tak jsem se dostala k{' '}
+              <a
+                href="https://www.watsu-czech.cz/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Watsu Czech
+              </a>
+              , kde jsem po několikaletém studiu vzdělání dokončila a stala se
+              watsu terapeutem.
+            </p>
+            <p>
+              To co dělá pro mě tuto metodu výjimečnou je kombinace prostředí
+              teplé vody, stavu bez gravitace a důvěry mezi klientem a
+              terapeutem. Je to pro mě zároveň velmi přirozená cesta k meditaci,
+              k bytí v přítomnosti, k naslouchání tělu, cesta k tanci, který mi
+              plynulé pohyby ve vodě připomínají.
             </p>
           </div>
 

@@ -51,9 +51,14 @@
       text-decoration: none;
     }
 
-    &:active {
+    &:enabled:active {
       box-shadow: 2px 2px 3px variables.$primary;
       transform:translate(2px, 4px);
+    }
+
+    &:disabled {
+      background-color: variables.$button-disabled;
+      cursor:not-allowed;
     }
 
     @media (max-width: 576px) {
@@ -100,6 +105,8 @@
   margin-right: variables.$spacing;
   height: variables.$spacing * 6;
   width:65%;
+  font-size: 16px;
+  color:variables.$primary;
   border-radius: 8px;
   border:none;
   appearance: none;
@@ -119,7 +126,11 @@
     width:100%;
     margin-bottom:variables.$spacing * 2;
   }
-} 
+}
+
+.error {
+  color:variables.$danger;
+}
 
 .checkboxLink {
   margin-left: variables.$spacing;
