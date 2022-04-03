@@ -9,7 +9,9 @@ const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
   useEffect(() => {
     router.events.on('routeChangeStart', () => {
-      document.body.scrollTop = 0;
+      window.scrollTop = 0;
+      window.document.body.scrollTop = 0;
+      window.document.documentElement.scrollTop = 0;
     });
   }, [router]);
 

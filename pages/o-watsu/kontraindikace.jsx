@@ -26,7 +26,7 @@ const Contraindication = () => {
             <li>Nepředvídatelná střevní nebo močová inkontinence.</li>
             <li>Otevřené rány.</li>
             <li>
-              Epilepsie - obzvláště pokud je nekontrolovatelná(pravděpodobnost
+              Epilepsie - obzvláště pokud je nekontrolovatelná (pravděpodobnost
               záchvatu).
             </li>
             <li>
