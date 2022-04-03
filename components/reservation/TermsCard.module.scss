@@ -29,12 +29,10 @@
   position:absolute;
   top:variables.$spacing * 3;
   left:variables.$spacing * 4;
-  display:block;
   max-width:variables.$spacing * 8;
   width:100%;
   max-height: variables.$spacing * 8;
   margin-left:auto;
-
 
   @media (max-width: 576px) {
     max-width:variables.$spacing * 6;
