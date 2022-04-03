@@ -42,7 +42,11 @@ const GallerySection = ({ images }) => {
             return (
               <a
                 key={galleryImage.data.hash}
-                href={galleryImage.data.originalUrl}
+                href={imageLoader({
+                  width: 1800,
+                  src: galleryImage.data.hash,
+                  square: false,
+                })}
                 className={[styles.galleryItem, styles[`image${index}`]].join(
                   ' ',
                 )}
@@ -55,7 +59,7 @@ const GallerySection = ({ images }) => {
                   height={galleryImage.height}
                   placeholder={'blur'}
                   blurDataURL={galleryImage.data.base64}
-                  priority={true}
+                  srl_gallery_image="true"
                 />
               </a>
             );
