@@ -44,8 +44,10 @@ const Navigation = () => {
             width={250}
             onStateChange={handleStateChange}
             isOpen={menuOpen}
-            customBurgerIcon={<img src={'icons/menu.svg'} alt="otevřít menu" />}
-            customCrossIcon={<img src={'icons/cross.svg'} alt="zavřít menu" />}
+            customBurgerIcon={
+              <img src={'/icons/menu.svg'} alt="otevřít menu" />
+            }
+            customCrossIcon={<img src={'/icons/cross.svg'} alt="zavřít menu" />}
           >
             <li className={styles.listItem}>
               <Link href="/o-watsu">

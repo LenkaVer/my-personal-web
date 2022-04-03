@@ -23,6 +23,10 @@ body {
   //   outline: 1px solid variables.$primary;
   //   border-radius: 8px;
   // }
+  &::selection {
+    background:variables.$terciary;
+    color:variables.$white;
+    }
 }
 
 main {
@@ -35,6 +39,7 @@ main {
   // @media (max-width: 768px) {
   //  padding-top:variables.$spacing * 10;
   // }
+
 }
 
 footer {

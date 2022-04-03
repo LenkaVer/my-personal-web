@@ -1,8 +1,51 @@
 import styles from './NewsletterCard.module.scss';
 import Link from 'next/link';
+import { useState } from 'react';
+import validator from 'validator';
 
 const NewsletterCard = ({ termsAvailable }) => {
-  const submitNewsletter = async (event) => {};
+  const [email, setEmail] = useState('');
+  const [gdpr, setGdpr] = useState(false);
+  const [btnDisabled, setBtnDisabled] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(null);
+  const submitNewsletter = async (e) => {
+    e.preventDefault();
+
+    setBtnDisabled(true);
+
+    if (!validator.isEmail(email)) {
+      setErrorMessage('Zadejte platnou emailovou adresu.');
+      setBtnDisabled(false);
+      return;
+    } else {
+      setErrorMessage(null);
+    }
+    if (!gdpr) {
+      setErrorMessage('Potvrďte souhlas se zpracováním osobních údajů.');
+      setBtnDisabled(false);
+      return;
+    } else {
+      setErrorMessage(null);
+    }
+    const response = await fetch('/api/newsletter-user', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: email,
+      }),
+    });
+
+    const json = await response.json();
+    if (response.status !== 200) {
+      setErrorMessage(json.message);
+      setBtnDisabled(false);
+      return;
+    }
+    setSuccessMessage(
+      'Vaše emailová adresa byla uložena. Jakmile se objeví nové termíny, budu vás informovat.',
+    );
+    setBtnDisabled(false);
+  };
   return (
     <div className={styles.wrapper}>
       {termsAvailable ? (
@@ -26,30 +69,53 @@ const NewsletterCard = ({ termsAvailable }) => {
         </>
       )}
 
-      <form className={styles.form} onSubmit={submitNewsletter}>
-        <div className={styles.inputWrapper}>
-          <input
-            className={styles.inputEmail}
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-          />
-          <button type="submit">Odeslat</button>
+      {successMessage ? (
+        <div className={styles.form}>
+          <p>{successMessage}</p>
         </div>
-        <div className={styles.checkbox}>
-          <label>
-            <input type="checkbox" required />
-            <span className={styles.checkboxLink}>
-              Odesláním tohoto formuláře souhlasím se{' '}
-              <Link href="/gdpr">
-                <a>zpracováním osobních údajů</a>
-              </Link>
-              .
-            </span>
-          </label>
-        </div>
-      </form>
+      ) : (
+        <form className={styles.form} onSubmit={submitNewsletter}>
+          {errorMessage && (
+            <div className={styles.error}>
+              <p>{errorMessage}</p>
+            </div>
+          )}
+
+          <div className={styles.inputWrapper}>
+            <input
+              className={styles.inputEmail}
+              type="email"
+              name="email"
+              id="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+            />
+            <button type="submit" disabled={btnDisabled}>
+              Odeslat
+            </button>
+          </div>
+
+          <div className={styles.checkbox}>
+            <label>
+              <input
+                type="checkbox"
+                checked={gdpr}
+                required
+                onChange={(e) => setGdpr(e.target.checked)}
+              />
+              <span className={styles.checkboxLink}>
+                Odesláním tohoto formuláře souhlasím se{' '}
+                <Link href="/gdpr">
+                  <a target="_blank">zpracováním osobních údajů</a>
+                </Link>
+                .
+              </span>
+            </label>
+          </div>
+        </form>
+      )}
     </div>
   );
 };
