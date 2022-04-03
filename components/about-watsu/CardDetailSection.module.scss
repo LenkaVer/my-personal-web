@@ -1,63 +1,8 @@
 @use './../../styles/settings/variables.scss' as variables;
 
-.section {
-  h2 {
-    margin-top:variables.$spacing * 2;
-    margin-bottom:variables.$spacing * 2;
-
-    &:first-of-type{
-      margin-top: 0;
-    }
-
-  }
-}
-
-.wrapper {
-  max-width:720px;
-  width:100%;
-  min-height:100%;
-  padding:variables.$spacing * 4;
-  border-radius:16px;
-  box-shadow: 2px 2px 16px variables.$terciary;
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  margin: 0 auto;
-}
-
 .image {
-position:absolute;
+  position:absolute;
   left:16px;
   top:16px;
   width:50px;
-
 }
-
-// .decoration {
-//   display:block;
-//   max-height: 100vh;
-//   height: calc(100% - 80px);
-//   position:absolute;
-//   top:80px;
-//   right:0;
-//   display:flex;
-//   align-items:center;
-
-//   &:before {
-//     content: "";
-//     position:absolute;
-//     top:0;
-//     right:0;
-//     width: 110%;
-//     height: 100%;
-//     background: linear-gradient(87deg, rgba(255,255,255,1) 0%, rgba(196,178,188,1) 100%);
-    
-//     z-index:-5;
-//   }
-//   img {
-//     max-height: 480px;
-//     opacity:0.7;
-    
-//   }
-
-// }

@@ -1,5 +1,5 @@
-import styles from './NewsletterSection.module.scss';
 import NewsletterCard from './NewsletterCard';
+import SectionCard from '../globals/SectionCard';
 import { useState, useEffect } from 'react';
 
 const NewsletterSection = () => {
@@ -13,16 +13,9 @@ const NewsletterSection = () => {
       });
   }, []);
   return (
-    <section className={styles.section}>
-      <div className="container">
-        <h1
-          className={[styles.title, 'titleDecoration', 'mainHeading'].join(' ')}
-        >
-          Nové termíny e-mailem
-        </h1>
-        <NewsletterCard termsAvailable={termsAvailable} />
-      </div>
-    </section>
+    <SectionCard mainTitle={'Nové termíny e-mailem'}>
+      <NewsletterCard termsAvailable={termsAvailable} />
+    </SectionCard>
   );
 };
 

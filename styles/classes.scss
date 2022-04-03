@@ -138,6 +138,17 @@
   }
 }
 
+.wrapperCard {
+  padding:variables.$spacing * 4;
+  border-radius:16px;
+  box-shadow: 2px 2px 16px variables.$terciary;
+
+  @media (max-width: 576px) {
+    padding:variables.$spacing * 2;
+  }
+}
+
+
 
 // Menu style
 
