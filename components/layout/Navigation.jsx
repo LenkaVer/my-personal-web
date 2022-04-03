@@ -2,10 +2,11 @@ import Link from 'next/link';
 import styles from './Navigation.module.scss';
 import { slide as Menu } from 'react-burger-menu';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-const Navigation = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+const Navigation = ({ menuOpen, setMenuOpen }) => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const router = useRouter();
   const closeMenu = () => {
     setMenuOpen(false);
   };
@@ -51,17 +52,44 @@ const Navigation = () => {
           >
             <li className={styles.listItem}>
               <Link href="/o-watsu">
-                <a onClick={closeMenu}>O Watsu</a>
+                <a
+                  className={
+                    router.pathname.includes('/o-watsu')
+                      ? styles.linkActive
+                      : null
+                  }
+                  onClick={closeMenu}
+                >
+                  O Watsu
+                </a>
               </Link>
             </li>
             <li className={styles.listItem}>
               <Link href="/rezervace">
-                <a onClick={closeMenu}>Rezervovat termín</a>
+                <a
+                  className={
+                    router.pathname.includes('/rezervace')
+                      ? styles.linkActive
+                      : null
+                  }
+                  onClick={closeMenu}
+                >
+                  Rezervovat termín
+                </a>
               </Link>
             </li>
             <li className={styles.listItem}>
               <Link href="/kontakt">
-                <a onClick={closeMenu}>Kontakt</a>
+                <a
+                  className={
+                    router.pathname.includes('/kontakt')
+                      ? styles.linkActive
+                      : null
+                  }
+                  onClick={closeMenu}
+                >
+                  Kontakt
+                </a>
               </Link>
             </li>
           </Menu>
@@ -69,17 +97,41 @@ const Navigation = () => {
           <>
             <li className={styles.listItem}>
               <Link href="/o-watsu">
-                <a>O Watsu</a>
+                <a
+                  className={
+                    router.pathname.includes('/o-watsu')
+                      ? styles.linkActive
+                      : null
+                  }
+                >
+                  O Watsu
+                </a>
               </Link>
             </li>
             <li className={styles.listItem}>
               <Link href="/rezervace">
-                <a>Rezervovat termín</a>
+                <a
+                  className={
+                    router.pathname.includes('/rezervace')
+                      ? styles.linkActive
+                      : null
+                  }
+                >
+                  Rezervovat termín
+                </a>
               </Link>
             </li>
             <li className={styles.listItem}>
               <Link href="/kontakt">
-                <a>Kontakt</a>
+                <a
+                  className={
+                    router.pathname.includes('/kontakt')
+                      ? styles.linkActive
+                      : null
+                  }
+                >
+                  Kontakt
+                </a>
               </Link>
             </li>
           </>
