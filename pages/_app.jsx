@@ -12,6 +12,7 @@ const MyApp = ({ Component, pageProps }) => {
       window.scrollTop = 0;
       window.document.body.scrollTop = 0;
       window.document.documentElement.scrollTop = 0;
+      window.scrollTo(0, 0);
     });
   }, [router]);
 
@@ -46,7 +47,15 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <SimpleReactLightbox>
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence
+          exitBeforeEnter
+          onExitComplete={() => {
+            window.scrollTop = 0;
+            window.document.body.scrollTop = 0;
+            window.document.documentElement.scrollTop = 0;
+            window.scrollTo(0, 0);
+          }}
+        >
           <Component {...pageProps} />
         </AnimatePresence>
       </SimpleReactLightbox>
