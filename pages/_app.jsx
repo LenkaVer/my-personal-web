@@ -2,8 +2,17 @@ import '../styles/settings/globals.scss';
 import Layout from './../components/layout/Layout';
 import Head from 'next/head';
 import SimpleReactLightbox from 'simple-react-lightbox';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 const MyApp = ({ Component, pageProps }) => {
+  const router = useRouter();
+  useEffect(() => {
+    router.events.on('routeChangeStart', () => {
+      document.body.scrollTop = 0;
+    });
+  }, [router]);
+
   return (
     <>
       <Head>
