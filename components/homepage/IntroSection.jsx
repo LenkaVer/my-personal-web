@@ -64,10 +64,10 @@ const IntroSection = ({ images }) => {
             </p>
             <p>
               To co dělá pro mě tuto metodu výjimečnou je kombinace prostředí
-              teplé vody, stavu bez gravitace a důvěry mezi klientem a
-              terapeutem. Je to pro mě zároveň velmi přirozená cesta k meditaci,
-              k bytí v přítomnosti, k naslouchání tělu, cesta k tanci, který mi
-              plynulé pohyby ve vodě připomínají.
+              teplé vody, stavu bez tíže a důvěry mezi klientem a terapeutem. Je
+              to pro mě zároveň velmi přirozená cesta k meditaci, k bytí v
+              přítomnosti, k naslouchání tělu, cesta k tanci, který mi plynulé
+              pohyby ve vodě připomínají.
             </p>
           </div>
 
