@@ -1,9 +1,9 @@
 import '../styles/settings/globals.scss';
-import Layout from './../components/layout/Layout';
 import Head from 'next/head';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -44,9 +44,9 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <SimpleReactLightbox>
-        <Layout>
+        <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} />
-        </Layout>
+        </AnimatePresence>
       </SimpleReactLightbox>
     </>
   );
