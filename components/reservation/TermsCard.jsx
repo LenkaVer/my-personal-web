@@ -29,7 +29,7 @@ const TermsCard = ({ images }) => {
       });
   }, [router]);
   return (
-    <div className={styles.wrapper}>
+    <>
       <div className={styles.terms}>
         <div className={styles.image}>
           <CalendarAnimated />
@@ -106,7 +106,7 @@ const TermsCard = ({ images }) => {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

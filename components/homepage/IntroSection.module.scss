@@ -1,30 +1,5 @@
 @use './../../styles/settings/variables.scss' as variables;
 
-.section {
-  :global(.container) {
- 
-
-    @media (min-width: 992px) {
-      padding-top: variables.$spacing * 7;
-    }
-  }
-}
-
-.wrapper {
-  display:grid;
-  grid-template-columns: 1fr minmax(auto, 40%);
-  grid-template-rows: auto auto;
-  padding:variables.$spacing * 4;
-  border-radius:16px;
-  box-shadow: 2px 2px 16px variables.$terciary;
-
-  @media (max-width: 576px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    padding:variables.$spacing * 2;
-  }
-}
-
 .description {
 
   @media (max-width: 992px) {

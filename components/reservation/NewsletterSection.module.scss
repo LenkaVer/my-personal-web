@@ -1,9 +1,0 @@
-@use './../../styles/settings/variables.scss' as variables;
-
-.section {
-  :global(.container) {
-
-    @media (min-width: 992px) {
-      padding-top: variables.$spacing * 7;
-    }
-  }}

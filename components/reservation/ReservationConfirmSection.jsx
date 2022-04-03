@@ -1,4 +1,5 @@
 import styles from './ReservationConfirmSection.module.scss';
+import SectionCard from '../globals/SectionCard';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -21,46 +22,37 @@ const ReservationConfirm = () => {
   }, [reservationId]);
 
   return (
-    <section className={styles.section}>
-      <div className="container">
-        <h1
-          className={[styles.title, 'titleDecoration', 'mainHeading'].join(' ')}
-        >
-          Termín rezervován
-        </h1>
-        <div className={styles.wrapper}>
-          <h2 className={[styles.title, 'subheading'].join(' ')}>
-            Děkuji Vám za rezervaci termínu
-          </h2>
-          <p className={styles.paragraph}>
-            Vaše rezervace čeká na schválení, o jejím schválení budete v
-            nejbližších dnech informováni emailem.
-          </p>
-          {reservation && (
-            <table className={styles.reservationTable}>
-              <tbody>
-                <tr>
-                  <th>Datum:</th>
-                  <td>
-                    {reservation.dayOfWeek.charAt(0).toUpperCase() +
-                      reservation.dayOfWeek.slice(1)}{' '}
-                    {reservation.date}
-                  </td>
-                </tr>
-                <tr>
-                  <th>Začátek terapie:</th>
-                  <td>{reservation.start}</td>
-                </tr>
-                <tr>
-                  <th>Stav rezervace:</th>
-                  <td>{reservation.status}</td>
-                </tr>
-              </tbody>
-            </table>
-          )}
-        </div>
-      </div>
-    </section>
+    <SectionCard mainTitle={'Termín rezervován'}>
+      <h2 className={[styles.title, 'subheading'].join(' ')}>
+        Děkuji Vám za rezervaci termínu
+      </h2>
+      <p className={styles.paragraph}>
+        Vaše rezervace čeká na schválení, o jejím schválení budete v nejbližších
+        dnech informováni emailem.
+      </p>
+      {reservation && (
+        <table className={styles.reservationTable}>
+          <tbody>
+            <tr>
+              <th>Datum:</th>
+              <td>
+                {reservation.dayOfWeek.charAt(0).toUpperCase() +
+                  reservation.dayOfWeek.slice(1)}{' '}
+                {reservation.date}
+              </td>
+            </tr>
+            <tr>
+              <th>Začátek terapie:</th>
+              <td>{reservation.start}</td>
+            </tr>
+            <tr>
+              <th>Stav rezervace:</th>
+              <td>{reservation.status}</td>
+            </tr>
+          </tbody>
+        </table>
+      )}
+    </SectionCard>
   );
 };
 

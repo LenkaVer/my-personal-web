@@ -1,15 +1,5 @@
 @use './../../styles/settings/variables.scss' as variables;
 
-.wrapper {
-  padding:variables.$spacing * 4;
-  border-radius:16px;
-  box-shadow: 2px 2px 16px variables.$terciary;
-  
-  @media (max-width: 576px) {
-    padding:variables.$spacing * 2;
-  }
-}
-
 .gallery {
   display:grid;
   grid-template-columns: repeat(5,1fr);
@@ -18,7 +8,6 @@
   @media (max-width: 768px) {
     grid-template-columns: repeat(3,1fr);
   }
-
 }
 
 .galleryItem {

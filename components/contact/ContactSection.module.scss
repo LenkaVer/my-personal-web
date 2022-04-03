@@ -1,43 +1,5 @@
 @use './../../styles/settings/variables.scss' as variables;
 
-.section {
-  :global(.container) {
-
-    @media (min-width: 992px) {
-      padding-top: variables.$spacing * 7;
-    }
-  }}
-
-.title {
-  span {
-    margin-right: variables.$spacing * 2;
-  }
-}
-
-.wrapper {
-  max-width:800px;
-  width:100%;
-  height:100%;
-  min-height: 400px;
-  padding:variables.$spacing * 4;
-  border-radius:16px;
-  box-shadow: 2px 2px 16px variables.$terciary;
-  margin:0 auto;
-  display: flex;
-  justify-content:space-between;
-  gap:variables.$spacing * 2;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap:variables.$spacing * 4;
-  }
-
-  @media (max-width: 576px) {
-    padding:variables.$spacing * 2;
-  }
-
-}
-
 .heading {
   text-align: left;
   margin-bottom: variables.$spacing * 3;

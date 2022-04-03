@@ -50,7 +50,7 @@ const NewsletterCard = ({ termsAvailable }) => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <>
       {termsAvailable ? (
         <p className={styles.paragraph}>
           Pokud jste si nevybrali žádný z aktuálně{' '}
@@ -119,7 +119,7 @@ const NewsletterCard = ({ termsAvailable }) => {
           </div>
         </form>
       )}
-    </div>
+    </>
   );
 };
 
