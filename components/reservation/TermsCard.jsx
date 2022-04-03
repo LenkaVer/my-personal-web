@@ -1,6 +1,7 @@
 import styles from './TermsCard.module.scss';
 import Date from './Date';
 import Time from './Time';
+import CalendarAnimated from '../calendar-animated/CalendarAnimated';
 import Image from 'next/image';
 import Link from 'next/link';
 import { imageLoader } from '../../functions/imageLoader';
@@ -30,12 +31,9 @@ const TermsCard = ({ images }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.terms}>
-        <img
-          className={styles.image}
-          src={'/icons/calendar.svg'}
-          alt="kalendář"
-        />
-
+        <div className={styles.image}>
+          <CalendarAnimated />
+        </div>
         <ul className={styles.listDate}>
           {datesData
             ? datesData.map((date) => {

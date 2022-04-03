@@ -9,7 +9,7 @@ body {
   margin: 0;
   height: 100vh;
   color:variables.$primary;
- // width: 100%;
+  width: 100%;
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -19,10 +19,6 @@ body {
 * {
   box-sizing: border-box;
 
-  // &:focus {
-  //   outline: 1px solid variables.$primary;
-  //   border-radius: 8px;
-  // }
   &::selection {
     background:variables.$terciary;
     color:variables.$white;
