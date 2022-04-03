@@ -41,6 +41,7 @@ const Navigation = ({ menuOpen, setMenuOpen }) => {
         {/*  className={navigationListClasses.join(' ')}*/}
         {mobileMenu ? (
           <Menu
+            disableAutoFocus
             right
             width={250}
             onStateChange={handleStateChange}
