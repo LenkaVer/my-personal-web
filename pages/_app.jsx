@@ -47,15 +47,7 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <SimpleReactLightbox>
-        <AnimatePresence
-          exitBeforeEnter
-          onExitComplete={() => {
-            window.scrollTop = 0;
-            window.document.body.scrollTop = 0;
-            window.document.documentElement.scrollTop = 0;
-            window.scrollTo(0, 0);
-          }}
-        >
+        <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} />
         </AnimatePresence>
       </SimpleReactLightbox>
