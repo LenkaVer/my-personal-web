@@ -1,6 +1,7 @@
 import styles from './TermsCard.module.scss';
 import Date from './Date';
 import Time from './Time';
+import Loader from './../globals/Loader';
 import CalendarAnimated from '../calendar-animated/CalendarAnimated';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -50,11 +51,13 @@ const TermsCard = ({ images }) => {
             : null}
         </ul>
         <ul className={styles.listTime}>
-          {times
-            ? times.map((time) => {
-                return <Time key={time.id} time={time} />;
-              })
-            : null}
+          {times ? (
+            times.map((time) => {
+              return <Time key={time.id} time={time} />;
+            })
+          ) : (
+            <Loader />
+          )}
         </ul>
       </div>
 

@@ -1,5 +1,6 @@
 import styles from './Form.module.scss';
 import Link from 'next/link';
+import Loader from './../globals/Loader';
 import validator from 'validator';
 import SectionCard from '../globals/SectionCard';
 import { useState, useEffect } from 'react';
@@ -208,7 +209,9 @@ const Form = ({ termId }) => {
             </p>
           </div>
         </>
-      ) : null}
+      ) : (
+        <Loader />
+      )}
     </SectionCard>
   );
 };

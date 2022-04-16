@@ -1,9 +1,10 @@
 import styles from './NewsletterCard.module.scss';
+import Loader from './../globals/Loader';
 import Link from 'next/link';
 import { useState } from 'react';
 import validator from 'validator';
 
-const NewsletterCard = ({ termsAvailable }) => {
+const NewsletterCard = ({ termsAvailable, loading }) => {
   const [email, setEmail] = useState('');
   const [gdpr, setGdpr] = useState(false);
   const [btnDisabled, setBtnDisabled] = useState(false);
@@ -51,7 +52,9 @@ const NewsletterCard = ({ termsAvailable }) => {
 
   return (
     <>
-      {termsAvailable ? (
+      {loading ? (
+        <Loader />
+      ) : termsAvailable ? (
         <p className={styles.paragraph}>
           Pokud jste si nevybrali žádný z aktuálně{' '}
           <Link href="/rezervace">
