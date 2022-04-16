@@ -14,6 +14,26 @@ const Form = ({ termId }) => {
   const [userSurname, setUserSurname] = useState('');
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
+  const [userData, setUserData] = useState({});
+  const handleChangeUserData = (userData) => {
+    localStorage.setItem('userData', JSON.stringify(userData));
+    const data = localStorage.getItem('userData');
+    setUserData(data ? JSON.parse(data) : {});
+  };
+
+  useEffect(() => {
+    const data = localStorage.getItem('userData');
+    setUserData(data ? JSON.parse(data) : {});
+  }, []);
+
+  useEffect(() => {
+    if (userData) {
+      setUserName(userData.name);
+      setUserSurname(userData.surname);
+      setEmail(userData.email);
+      setPhone(userData.phone);
+    }
+  }, [userData]);
 
   useEffect(() => {
     fetch(`/api/therapy-time?termId=${termId}`)
@@ -119,7 +139,10 @@ const Form = ({ termId }) => {
                 type="text"
                 value={userName}
                 required
-                onChange={(e) => setUserName(e.target.value)}
+                onChange={(e) => {
+                  userData.name = e.target.value;
+                  handleChangeUserData(userData);
+                }}
               />
             </div>
             <div className={styles.inputForm}>
@@ -132,7 +155,10 @@ const Form = ({ termId }) => {
                 type="text"
                 value={userSurname}
                 required
-                onChange={(e) => setUserSurname(e.target.value)}
+                onChange={(e) => {
+                  userData.surname = e.target.value;
+                  handleChangeUserData(userData);
+                }}
               />
             </div>
             <div className={styles.inputForm}>
@@ -145,7 +171,10 @@ const Form = ({ termId }) => {
                 type="email"
                 required
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  userData.email = e.target.value;
+                  handleChangeUserData(userData);
+                }}
               />
             </div>
             <div className={styles.inputForm}>
@@ -158,7 +187,10 @@ const Form = ({ termId }) => {
                 type="tel"
                 required
                 value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={(e) => {
+                  userData.phone = e.target.value;
+                  handleChangeUserData(userData);
+                }}
               />
             </div>
             <p className={styles.paragraph}>
