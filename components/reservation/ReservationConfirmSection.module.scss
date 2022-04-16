@@ -25,12 +25,20 @@
     td {
       border-bottom:1px solid variables.$terciary;
     }
+
+    &:first-child {
+      th {
+        border-radius: 8px 0 0 0;
+      }
+    }
+
     &:last-child {
       td {
         border-bottom:none;
       }
       th {
         border-bottom: none;
+        border-radius: 0 0 0 8px;
       }
     }
   }
