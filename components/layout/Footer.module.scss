@@ -50,8 +50,16 @@
   a {
     color:variables.$white;
     text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-color: variables.$white;
     text-underline-offset:1px;
+    transition:text-decoration-color 0.2s;
+
+    &:hover {
+      text-decoration-color: transparent;
+    }
   }
+
   @media (max-width: 992px) {
     margin-bottom:variables.$spacing * 0.5;
     font-size:14px;
@@ -66,9 +74,16 @@
   
   a {
     color:variables.$white;
-    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-color: variables.$white;
     text-underline-offset:1px;
+    transition:text-decoration-color 0.2s;
+
+    &:hover {
+      text-decoration-color: transparent;
+    }
   }
+
   @media (max-width: 992px) {
     margin-bottom:variables.$spacing * 0.5;
     font-size:14px;

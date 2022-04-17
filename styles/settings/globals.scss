@@ -21,20 +21,13 @@ body {
   &::selection {
     background:variables.$terciary;
     color:variables.$white;
-    }
+  }
 }
 
 main {
   padding-top: variables.$spacing * 10;
   min-height: calc((100vh - 56px));
   position:relative;
-  //width: 100%;
-
-
-  // @media (max-width: 768px) {
-  //  padding-top:variables.$spacing * 10;
-  // }
-
 }
 
 footer {
@@ -58,13 +51,14 @@ h6 {
 a {
   display:inline-block;
   color:variables.$primary;
-  text-decoration: none;
-  transition: color 0.2s;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  transition: color 0.2s, text-decoration-color 0.2s;
   
   &:hover,
   &:focus {
-    text-decoration: underline;
-    color: variables.$terciary;
+    text-decoration-color: variables.$secondary;
+    color: variables.$secondary;
   }
 }
 

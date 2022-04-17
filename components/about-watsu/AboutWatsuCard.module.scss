@@ -25,8 +25,10 @@
 }
 .titleLink {
   color:variables.$secondary;
+
   &:hover {
     color:variables.$secondary-light;
+
     .title {
       color:variables.$secondary-light;
     }
@@ -72,12 +74,14 @@
   color:variables.$primary;
 
   &:hover {
-    color:variables.$terciary;
+    color:variables.$secondary;
+
     .linkIcon {
       transform:translateX(6px);
+
       path {
-      fill:variables.$terciary;
-    }
+      fill:variables.$secondary;
+      }
     }
   }
 }
