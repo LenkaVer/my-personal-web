@@ -4,7 +4,9 @@
 
   a {
     display: inline;
-    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: variables.$primary;
   }
 }
 
@@ -121,6 +123,8 @@
   margin-left: variables.$spacing;
   a {
     display: inline;
-    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: variables.$primary;
   }
 }

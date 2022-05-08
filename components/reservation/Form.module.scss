@@ -75,7 +75,9 @@
 
   a {
     display: inline;
-    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: variables.$primary;
   }
   
   span {
@@ -131,7 +133,9 @@
     }
 
     a {
-      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-line: underline;
+      text-decoration-color: variables.$primary;
       display: inline-block;
       padding-left: variables.$spacing * 0.5;
     }
