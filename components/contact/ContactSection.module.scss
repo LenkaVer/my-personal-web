@@ -72,7 +72,9 @@
 
 .externalLink {
   a {
-    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: variables.$primary;
   }
 }
 
