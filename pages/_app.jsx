@@ -19,12 +19,12 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <>
-      <Script
+      {/* <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
+      /> */}
 
-      <Script id="gtag-script" strategy="lazyOnload">
+      {/* <Script id="gtag-script" strategy="lazyOnload">
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -33,7 +33,7 @@ const MyApp = ({ Component, pageProps }) => {
         page_path: window.location.pathname,
         });
     `}
-      </Script>
+      </Script> */}
       <Head>
         <meta name="description" content="Watsu terapie Lenka Verzichová" />
         <link
