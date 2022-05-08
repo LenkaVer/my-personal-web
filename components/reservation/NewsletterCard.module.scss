@@ -7,6 +7,10 @@
     text-decoration-style: solid;
     text-decoration-line: underline;
     text-decoration-color: variables.$primary;
+    
+    &:hover {
+      text-decoration-color: transparent;
+    }
   }
 }
 
@@ -126,5 +130,9 @@
     text-decoration-style: solid;
     text-decoration-line: underline;
     text-decoration-color: variables.$primary;
+
+    &:hover {
+      text-decoration-color: transparent;
+    }
   }
 }

@@ -64,6 +64,10 @@
     text-decoration-style: solid;
     text-decoration-line: underline;
     text-decoration-color: variables.$primary;
+
+    &:hover {
+      text-decoration-color: transparent;
+    }
   }
 }
 
@@ -81,6 +85,10 @@
       text-decoration-color: variables.$primary;
       display: inline-block;
       padding-left: variables.$spacing * 0.5;
+
+      &:hover {
+        text-decoration-color: transparent;
+      }
     }
   }
 }
