@@ -1,8 +1,9 @@
-import Head from 'next/head';
-import NewsletterSection from '../../components/reservation/NewsletterSection';
-import Layout from './../../components/layout/Layout';
+import Head from "next/head";
+import NewsletterSection from "../../components/reservation/NewsletterSection";
+import { loadImageData } from "./../../functions/imageLoader";
+import Layout from "./../../components/layout/Layout";
 
-const NewsletterForm = () => {
+const NewsletterForm = ({ images }) => {
   return (
     <>
       <Head>
@@ -10,10 +11,27 @@ const NewsletterForm = () => {
         <meta name="description" content="Watsu terapie Lenka Verzichová" />
       </Head>
       <Layout>
-        <NewsletterSection />
+        <NewsletterSection images={images} />
       </Layout>
     </>
   );
 };
+
+export async function getStaticProps({ params }) {
+  const imagesToLoad = {
+    voucher: "JZdL08wJgejEVgx",
+  };
+  const images = {};
+
+  for (const [name, hash] of Object.entries(imagesToLoad)) {
+    images[name] = await loadImageData(hash);
+  }
+
+  return {
+    props: {
+      images,
+    },
+  };
+}
 
 export default NewsletterForm;

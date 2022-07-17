@@ -1,28 +1,29 @@
-import styles from './Form.module.scss';
-import Link from 'next/link';
-import Loader from './../globals/Loader';
-import validator from 'validator';
-import SectionCard from '../globals/SectionCard';
-import { useState, useEffect } from 'react';
-import Router from 'next/router';
+import styles from "./Form.module.scss";
+import PriceSection from "./PriceSection";
+import Link from "next/link";
+import Loader from "./../globals/Loader";
+import validator from "validator";
+import SectionCard from "../globals/SectionCard";
+import { useState, useEffect } from "react";
+import Router from "next/router";
 
-const Form = ({ termId }) => {
+const Form = ({ termId, images }) => {
   const [selectedTerm, setSelectedTerm] = useState(null);
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [userName, setUserName] = useState('');
-  const [userSurname, setUserSurname] = useState('');
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [userName, setUserName] = useState("");
+  const [userSurname, setUserSurname] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const [userData, setUserData] = useState({});
   const handleChangeUserData = (userData) => {
-    localStorage.setItem('userData', JSON.stringify(userData));
-    const data = localStorage.getItem('userData');
+    localStorage.setItem("userData", JSON.stringify(userData));
+    const data = localStorage.getItem("userData");
     setUserData(data ? JSON.parse(data) : {});
   };
 
   useEffect(() => {
-    const data = localStorage.getItem('userData');
+    const data = localStorage.getItem("userData");
     setUserData(data ? JSON.parse(data) : {});
   }, []);
 
@@ -39,7 +40,7 @@ const Form = ({ termId }) => {
     fetch(`/api/therapy-time?termId=${termId}`)
       .then((response) => {
         if (response.status !== 200) {
-          Router.push('/rezervace');
+          Router.push("/rezervace");
         } else {
           return response.json();
         }
@@ -55,7 +56,7 @@ const Form = ({ termId }) => {
     setBtnDisabled(true);
 
     if (!validator.isEmail(email)) {
-      setErrorMessage('Zadejte platnou emailovou adresu.');
+      setErrorMessage("Zadejte platnou emailovou adresu.");
       setBtnDisabled(false);
       return;
     } else {
@@ -63,7 +64,7 @@ const Form = ({ termId }) => {
     }
 
     if (!validator.isMobilePhone(phone)) {
-      setErrorMessage('Zadejte platné telefonní číslo.');
+      setErrorMessage("Zadejte platné telefonní číslo.");
       setBtnDisabled(false);
       return;
     } else {
@@ -71,7 +72,7 @@ const Form = ({ termId }) => {
     }
 
     if (userName.length < 1) {
-      setErrorMessage('Zadejte jméno.');
+      setErrorMessage("Zadejte jméno.");
       setBtnDisabled(false);
       return;
     } else {
@@ -79,15 +80,15 @@ const Form = ({ termId }) => {
     }
 
     if (userSurname.length < 1) {
-      setErrorMessage('Zadejte příjmení.');
+      setErrorMessage("Zadejte příjmení.");
       setBtnDisabled(false);
       return;
     } else {
       setErrorMessage(null);
     }
 
-    const response = await fetch('/api/create-reservation', {
-      method: 'POST',
+    const response = await fetch("/api/create-reservation", {
+      method: "POST",
       body: JSON.stringify({
         email: email,
         name: userName,
@@ -104,7 +105,7 @@ const Form = ({ termId }) => {
       return;
     }
     Router.push({
-      pathname: '/rezervace/potvrzeni-rezervace',
+      pathname: "/rezervace/potvrzeni-rezervace",
       query: {
         reservation: json.reservationId,
       },
@@ -114,10 +115,10 @@ const Form = ({ termId }) => {
   };
 
   return (
-    <SectionCard mainTitle={'Rezervace termínu'}>
+    <SectionCard mainTitle={"Rezervace termínu"}>
       {selectedTerm ? (
         <>
-          <h2 className={[styles.title, 'sectionHeading'].join(' ')}>
+          <h2 className={[styles.title, "sectionHeading"].join(" ")}>
             <span>{selectedTerm.date}</span> {selectedTerm.start}-
             {selectedTerm.end}
           </h2>
@@ -197,7 +198,7 @@ const Form = ({ termId }) => {
               Položky označené <span>*</span> jsou povinné.
             </p>
             <p className={styles.paragraph}>
-              Odesláním tohoto formuláře souhlasím se{' '}
+              Odesláním tohoto formuláře souhlasím se{" "}
               <Link href="/gdpr">
                 <a target="_blank">zpracováním osobních údajů</a>
               </Link>
@@ -208,38 +209,7 @@ const Form = ({ termId }) => {
             </button>
           </form>
 
-          <div className={styles.price}>
-            <h2
-              className={[styles.title, 'titleDecoration', 'subheading'].join(
-                ' ',
-              )}
-            >
-              Cena
-            </h2>
-            <p>
-              Terapie probíhají v Baby Centru Šikulka (Rudolfovská 634,
-              <a
-                href="http://www.sikulka.com/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                www.sikulka.com
-              </a>
-              ) v Českých Budějovicích, cena je 1.100,- Kč.
-            </p>
-            <p className={styles.paragraphBg}>
-              Terapie trvá přibližně 50-60 minut, doporučuji přijít 15 minut
-              předem, abyste měli dostatek času na přípravu a ve sjednaný čas
-              jste mohli být v bazénu. Na terapii je vhodné nejít těsně po
-              jídle, ale ani hladový. S sebou plavky, ručník, hygienické potřeby
-              (jako při běžné návštěvě bazénu), případně žabky. Po terapii je
-              dobré mít klidnější režim, pít dostatek tekutin a udržovat se v
-              teple.
-            </p>
-            <p>
-              Na terapii je možné zakoupit <span>dárkový poukaz</span>.
-            </p>
-          </div>
+          <PriceSection images={images} />
         </>
       ) : (
         <Loader />

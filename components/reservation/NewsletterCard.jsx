@@ -1,11 +1,12 @@
-import styles from './NewsletterCard.module.scss';
-import Loader from './../globals/Loader';
-import Link from 'next/link';
-import { useState } from 'react';
-import validator from 'validator';
+import styles from "./NewsletterCard.module.scss";
+import PriceSection from "./PriceSection";
+import Loader from "./../globals/Loader";
+import Link from "next/link";
+import { useState } from "react";
+import validator from "validator";
 
-const NewsletterCard = ({ termsAvailable, loading }) => {
-  const [email, setEmail] = useState('');
+const NewsletterCard = ({ termsAvailable, loading, images }) => {
+  const [email, setEmail] = useState("");
   const [gdpr, setGdpr] = useState(false);
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -16,7 +17,7 @@ const NewsletterCard = ({ termsAvailable, loading }) => {
     setBtnDisabled(true);
 
     if (!validator.isEmail(email)) {
-      setErrorMessage('Zadejte platnou emailovou adresu.');
+      setErrorMessage("Zadejte platnou emailovou adresu.");
       setBtnDisabled(false);
       return;
     } else {
@@ -24,15 +25,15 @@ const NewsletterCard = ({ termsAvailable, loading }) => {
     }
 
     if (!gdpr) {
-      setErrorMessage('Potvrďte souhlas se zpracováním osobních údajů.');
+      setErrorMessage("Potvrďte souhlas se zpracováním osobních údajů.");
       setBtnDisabled(false);
       return;
     } else {
       setErrorMessage(null);
     }
 
-    const response = await fetch('/api/newsletter-user', {
-      method: 'POST',
+    const response = await fetch("/api/newsletter-user", {
+      method: "POST",
       body: JSON.stringify({
         email: email,
       }),
@@ -45,7 +46,7 @@ const NewsletterCard = ({ termsAvailable, loading }) => {
       return;
     }
     setSuccessMessage(
-      'Vaše emailová adresa byla uložena. Jakmile se objeví nové termíny, budu Vás informovat.',
+      "Vaše emailová adresa byla uložena. Jakmile se objeví nové termíny, budu Vás informovat."
     );
     setBtnDisabled(false);
   };
@@ -56,7 +57,7 @@ const NewsletterCard = ({ termsAvailable, loading }) => {
         <Loader />
       ) : termsAvailable ? (
         <p className={styles.paragraph}>
-          Pokud jste si nevybrali žádný z aktuálně{' '}
+          Pokud jste si nevybrali žádný z aktuálně{" "}
           <Link href="/rezervace">
             <a>dostupných termínů</a>
           </Link>
@@ -112,7 +113,7 @@ const NewsletterCard = ({ termsAvailable, loading }) => {
                 onChange={(e) => setGdpr(e.target.checked)}
               />
               <span className={styles.checkboxLink}>
-                Odesláním tohoto formuláře souhlasím se{' '}
+                Odesláním tohoto formuláře souhlasím se{" "}
                 <Link href="/gdpr">
                   <a target="_blank">zpracováním osobních údajů</a>
                 </Link>
@@ -122,6 +123,7 @@ const NewsletterCard = ({ termsAvailable, loading }) => {
           </div>
         </form>
       )}
+      <PriceSection images={images} />
     </>
   );
 };
