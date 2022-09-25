@@ -11,9 +11,11 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 const TermsCard = ({ images }) => {
+  const defaultMinHeight = 248;
   const [selectedDay, setSelectedDay] = useState(null);
   const [times, setTimes] = useState(null);
   const [datesData, setDatesData] = useState(null);
+  const [timesHeight, setTimesHeight] = useState(defaultMinHeight);
   const router = useRouter();
 
   useEffect(() => {
@@ -25,6 +27,10 @@ const TermsCard = ({ images }) => {
           setSelectedDay(firstDay);
           setTimes(firstDay.times);
           setDatesData(json);
+          if (json.length > 3) {
+            const daysIncreaseHinHeight = json.length - 3;
+            setTimesHeight(defaultMinHeight + daysIncreaseHinHeight * 62);
+          }
         } else {
           router.push("/rezervace/email-o-terminech");
         }
@@ -51,7 +57,12 @@ const TermsCard = ({ images }) => {
               })
             : null}
         </ul>
-        <ul className={styles.listTime}>
+        <ul
+          className={styles.listTime}
+          style={{
+            minHeight: timesHeight + "px",
+          }}
+        >
           {times ? (
             times.map((time) => {
               return <Time key={time.id} time={time} />;
