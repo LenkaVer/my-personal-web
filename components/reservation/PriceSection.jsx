@@ -17,7 +17,7 @@ const PriceSection = ({ images }) => {
         >
           www.sikulka.com
         </a>
-        ) v Českých Budějovicích, cena je 1.100,- Kč.
+        ) v Českých Budějovicích, cena je 1.500,- Kč.
       </p>
       <p className={styles.paragraphBg}>
         Terapie trvá přibližně 50-60 minut, doporučuji přijít 15 minut předem,
