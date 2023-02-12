@@ -1,23 +1,23 @@
-import Head from 'next/head';
-import CardDetailSection from '../../components/about-watsu/CardDetailSection';
-import Layout from './../../components/layout/Layout';
+import Head from "next/head";
+import CardDetailSection from "../../components/about-watsu/CardDetailSection";
+import Layout from "./../../components/layout/Layout";
 
 const Effects = () => {
   return (
     <>
       <Head>
         <title>Účinky</title>
-        <meta name="description" content="Watsu terapie Lenka Verzichová" />
+        <meta name="description" content="Účinky watsu terapie" />
       </Head>
 
       <Layout>
         <CardDetailSection
           title="Účinky"
-          imageSource={'/icons/effects.svg'}
+          imageSource={"/icons/effects.svg"}
           imageAlt="účinky"
         >
-          {' '}
-          <h2 className={'subheading'}> Vliv na cévní systém</h2>
+          {" "}
+          <h2 className={"subheading"}> Vliv na cévní systém</h2>
           <ul>
             <li>Zlepšuje se žilní a lymfatický zpětný tok.</li>
             <li>Posilí se prokrvení kůže, svalů a vazivových tkání.</li>
@@ -25,7 +25,7 @@ const Effects = () => {
             <li>Sníží se srdeční frekvence a krevní tlak.</li>
             <li>Prohlubuje a stabilizuje se dýchání.</li>
           </ul>
-          <h2 className={'subheading'}>Vliv na svalstvo a nervovou soustavu</h2>
+          <h2 className={"subheading"}>Vliv na svalstvo a nervovou soustavu</h2>
           <ul>
             <li>
               Zlepšuje pohyblivost a snižuje napětí svalstva. Uvolněné svaly
@@ -51,7 +51,7 @@ const Effects = () => {
               Mobilizuje protažení neurální struktury (míchy) v měkké periferii.
             </li>
           </ul>
-          <h2 className={'subheading'}>Vliv duševní</h2>
+          <h2 className={"subheading"}>Vliv duševní</h2>
           <ul>
             <li>Dochází k velmi hluboké relaxaci.</li>
             <li>Podporuje uvolněný a klidný vnitřní postoj.</li>

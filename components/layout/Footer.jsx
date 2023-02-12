@@ -1,15 +1,15 @@
-import styles from './Footer.module.scss';
-import Link from 'next/link';
+import styles from "./Footer.module.scss";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className={styles.wrapper}>
-      <div className={[styles.content, 'container'].join(' ')}>
+      <div className={[styles.content, "container"].join(" ")}>
         <p className={styles.information}>
-          Vytvořila &copy; Lenka Verzichová 2O22
+          Vytvořila &copy; Lenka Verzichová 2O23
         </p>
         <p className={styles.contact}>
-          Kontakt:{' '}
+          Kontakt:{" "}
           <a href="mailto:lenkaverzichova@gmail.com">lenka@verzichova.cz</a>
         </p>
         <p className={styles.gdpr}>

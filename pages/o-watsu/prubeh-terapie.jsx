@@ -1,21 +1,21 @@
-import Head from 'next/head';
-import CardDetailSection from '../../components/about-watsu/CardDetailSection';
-import Layout from './../../components/layout/Layout';
+import Head from "next/head";
+import CardDetailSection from "../../components/about-watsu/CardDetailSection";
+import Layout from "./../../components/layout/Layout";
 
 const Therapy = () => {
   return (
     <>
       <Head>
         <title>Průběh terapie</title>
-        <meta name="description" content="Watsu terapie Lenka Verzichová" />
+        <meta name="description" content="Popis watsu terapie" />
       </Head>
       <Layout>
         <CardDetailSection
           title="Průběh terapie"
-          imageSource={'/icons/therapy.svg'}
+          imageSource={"/icons/therapy.svg"}
           imageAlt="průběh terapie"
         >
-          <h2 className={'subheading'}>Před terapií</h2>
+          <h2 className={"subheading"}>Před terapií</h2>
           <ul>
             <li>Zvolte si pro Vás vhodnou hodinu terapie, udělejte si čas.</li>
             <li>
@@ -27,7 +27,7 @@ const Therapy = () => {
               jakékoliv Vaše dotazy.
             </li>
           </ul>
-          <h2 className={'subheading'}>Ve vodě</h2>
+          <h2 className={"subheading"}>Ve vodě</h2>
           <ul>
             <li>
               Ve vodě budete mít vyváženy nohy pomocí plováků, aby se zabránilo
@@ -60,7 +60,7 @@ const Therapy = () => {
               budete mít špatný pocit, můžete požádat o přerušení terapie.
             </li>
           </ul>
-          <h2 className={'subheading'}>Dokončení</h2>
+          <h2 className={"subheading"}>Dokončení</h2>
           <ul>
             <li>
               Na konci terapie budete opět postaveni do vzpřímené stabilní

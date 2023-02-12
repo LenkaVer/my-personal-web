@@ -1,14 +1,17 @@
-import Head from 'next/head';
-import ReservationTermsSection from './../../components/reservation/ReservationTermsSection';
-import { loadImageData } from './../../functions/imageLoader';
-import Layout from './../../components/layout/Layout';
+import Head from "next/head";
+import ReservationTermsSection from "./../../components/reservation/ReservationTermsSection";
+import { loadImageData } from "./../../functions/imageLoader";
+import Layout from "./../../components/layout/Layout";
 
 const Reservation = ({ images }) => {
   return (
     <>
       <Head>
         <title>Rezervovat termín</title>
-        <meta name="description" content="Watsu terapie Lenka Verzichová" />
+        <meta
+          name="description"
+          content="Rezervování watsu terapie v Českých Budějovicích"
+        />
       </Head>
       <Layout>
         <ReservationTermsSection images={images} />
@@ -19,7 +22,7 @@ const Reservation = ({ images }) => {
 
 export async function getStaticProps({ params }) {
   const imagesToLoad = {
-    voucher: 'JZdL08wJgejEVgx',
+    voucher: "JZdL08wJgejEVgx",
   };
   const images = {};
 

@@ -12,7 +12,7 @@ const ReservationForm = ({ images }) => {
     <>
       <Head>
         <title>Rezervační formulář</title>
-        <meta name="description" content="Watsu terapie Lenka Verzichová" />
+        <meta name="description" content="Rezervační formulář watsu terapií" />
       </Head>
       <Layout>{id && <Form termId={id} images={images} />}</Layout>
     </>

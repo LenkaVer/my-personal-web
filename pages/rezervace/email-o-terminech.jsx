@@ -8,7 +8,10 @@ const NewsletterForm = ({ images }) => {
     <>
       <Head>
         <title>Email o termínech</title>
-        <meta name="description" content="Watsu terapie Lenka Verzichová" />
+        <meta
+          name="description"
+          content="Odebírat email s termíny watsu terapií"
+        />
       </Head>
       <Layout>
         <NewsletterSection images={images} />

@@ -1,13 +1,16 @@
-import Head from 'next/head';
-import ContactSection from './../../components/contact/ContactSection';
-import Layout from './../../components/layout/Layout';
+import Head from "next/head";
+import ContactSection from "./../../components/contact/ContactSection";
+import Layout from "./../../components/layout/Layout";
 
 const Contact = () => {
   return (
     <>
       <Head>
         <title>Kontakt</title>
-        <meta name="description" content="Watsu terapie Lenka Verzichová" />
+        <meta
+          name="description"
+          content="Kontakt na watsu terapie v Českých Budějovicích, Lenka Verzichová"
+        />
       </Head>
       <Layout>
         <ContactSection />
