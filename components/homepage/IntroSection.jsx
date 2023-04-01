@@ -12,7 +12,7 @@ const IntroSection = ({ images }) => {
       <div className={styles.description}>
         <h2
           className={[styles.heading, 'titleDecoration', 'sectionHeading'].join(
-            ' ',
+            ' '
           )}
         >
           Watsu terapie
@@ -37,7 +37,7 @@ const IntroSection = ({ images }) => {
       <div className={styles.opinion}>
         <h3
           className={[styles.subheading, 'titleDecoration', 'subheading'].join(
-            ' ',
+            ' '
           )}
         >
           Moje cesta k watsu
@@ -47,9 +47,9 @@ const IntroSection = ({ images }) => {
           Karlových Varů. Byl to pro mě takový zážitek, že jsem se hned po
           terapii ptala, kde se dá tato metoda naučit. Tak jsem se dostala k{' '}
           <a
-            href="https://www.watsu-czech.cz/"
-            target="_blank"
-            rel="noreferrer noopener"
+            href='https://www.watsu-czech.cz/'
+            target='_blank'
+            rel='noreferrer noopener'
           >
             Watsu Czech
           </a>
@@ -68,6 +68,7 @@ const IntroSection = ({ images }) => {
       <div className={styles.image}>
         <Image
           loader={imageLoader}
+          priority={true}
           src={images.introSectionFoto.hash}
           alt={images.introSectionFoto.alt}
           width={400}

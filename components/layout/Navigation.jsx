@@ -47,7 +47,9 @@ const Navigation = ({ menuOpen, setMenuOpen }) => {
             customBurgerIcon={
               <img src={'/icons/menu.svg'} alt='otevřít menu' />
             }
-            customCrossIcon={<img src={'/icons/cross.svg'} alt='zavřít menu' />}
+            customCrossIcon={
+              <img src={'/icons/cross.svg'} loading='lazy' alt='zavřít menu' />
+            }
           >
             <li className={styles.listItem}>
               <Link
