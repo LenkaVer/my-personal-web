@@ -13,6 +13,7 @@
 .galleryItem {
   border-radius: 8px;
   overflow: hidden;
+  cursor: pointer;
 
   &.image3 {
     grid-column: 4 / 6;
