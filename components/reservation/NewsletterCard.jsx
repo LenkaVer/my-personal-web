@@ -1,12 +1,12 @@
-import styles from "./NewsletterCard.module.scss";
-import PriceSection from "./PriceSection";
-import Loader from "./../globals/Loader";
-import Link from "next/link";
-import { useState } from "react";
-import validator from "validator";
+import styles from './NewsletterCard.module.scss';
+import PriceSection from './PriceSection';
+import Loader from './../globals/Loader';
+import Link from 'next/link';
+import { useState } from 'react';
+import validator from 'validator';
 
 const NewsletterCard = ({ termsAvailable, loading, images }) => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   const [gdpr, setGdpr] = useState(false);
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -17,7 +17,7 @@ const NewsletterCard = ({ termsAvailable, loading, images }) => {
     setBtnDisabled(true);
 
     if (!validator.isEmail(email)) {
-      setErrorMessage("Zadejte platnou emailovou adresu.");
+      setErrorMessage('Zadejte platnou emailovou adresu.');
       setBtnDisabled(false);
       return;
     } else {
@@ -25,15 +25,15 @@ const NewsletterCard = ({ termsAvailable, loading, images }) => {
     }
 
     if (!gdpr) {
-      setErrorMessage("Potvrďte souhlas se zpracováním osobních údajů.");
+      setErrorMessage('Potvrďte souhlas se zpracováním osobních údajů.');
       setBtnDisabled(false);
       return;
     } else {
       setErrorMessage(null);
     }
 
-    const response = await fetch("/api/newsletter-user", {
-      method: "POST",
+    const response = await fetch('/api/newsletter-user', {
+      method: 'POST',
       body: JSON.stringify({
         email: email,
       }),
@@ -46,7 +46,7 @@ const NewsletterCard = ({ termsAvailable, loading, images }) => {
       return;
     }
     setSuccessMessage(
-      "Vaše emailová adresa byla uložena. Jakmile se objeví nové termíny, budu Vás informovat."
+      'Vaše emailová adresa byla uložena. Jakmile se objeví nové termíny, budu Vás informovat.'
     );
     setBtnDisabled(false);
   };
@@ -57,12 +57,9 @@ const NewsletterCard = ({ termsAvailable, loading, images }) => {
         <Loader />
       ) : termsAvailable ? (
         <p className={styles.paragraph}>
-          Pokud jste si nevybrali žádný z aktuálně{" "}
-          <Link href="/rezervace">
-            <a>dostupných termínů</a>
-          </Link>
-          , můžete vyplnit formulář níže pro zasílání upozornění o vypsání
-          nových termínů.
+          Pokud jste si nevybrali žádný z aktuálně{' '}
+          <Link href='/rezervace'>dostupných termínů</Link>, můžete vyplnit
+          formulář níže pro zasílání upozornění o vypsání nových termínů.
         </p>
       ) : (
         <>
@@ -91,15 +88,15 @@ const NewsletterCard = ({ termsAvailable, loading, images }) => {
           <div className={styles.inputWrapper}>
             <input
               className={styles.inputEmail}
-              type="email"
-              name="email"
-              id="email"
+              type='email'
+              name='email'
+              id='email'
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email"
+              placeholder='Email'
             />
-            <button type="submit" disabled={btnDisabled}>
+            <button type='submit' disabled={btnDisabled}>
               Odeslat
             </button>
           </div>
@@ -107,15 +104,15 @@ const NewsletterCard = ({ termsAvailable, loading, images }) => {
           <div className={styles.checkbox}>
             <label>
               <input
-                type="checkbox"
+                type='checkbox'
                 checked={gdpr}
                 required
                 onChange={(e) => setGdpr(e.target.checked)}
               />
               <span className={styles.checkboxLink}>
-                Odesláním tohoto formuláře souhlasím se{" "}
-                <Link href="/gdpr">
-                  <a target="_blank">zpracováním osobních údajů</a>
+                Odesláním tohoto formuláře souhlasím se{' '}
+                <Link href='/gdpr' target='_blank'>
+                  zpracováním osobních údajů
                 </Link>
                 .
               </span>

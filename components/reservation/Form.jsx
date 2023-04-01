@@ -1,29 +1,29 @@
-import styles from "./Form.module.scss";
-import PriceSection from "./PriceSection";
-import Link from "next/link";
-import Loader from "./../globals/Loader";
-import validator from "validator";
-import SectionCard from "../globals/SectionCard";
-import { useState, useEffect } from "react";
-import Router from "next/router";
+import styles from './Form.module.scss';
+import PriceSection from './PriceSection';
+import Link from 'next/link';
+import Loader from './../globals/Loader';
+import validator from 'validator';
+import SectionCard from '../globals/SectionCard';
+import { useState, useEffect } from 'react';
+import Router from 'next/router';
 
 const Form = ({ termId, images }) => {
   const [selectedTerm, setSelectedTerm] = useState(null);
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [userName, setUserName] = useState("");
-  const [userSurname, setUserSurname] = useState("");
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [userName, setUserName] = useState('');
+  const [userSurname, setUserSurname] = useState('');
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const [userData, setUserData] = useState({});
   const handleChangeUserData = (userData) => {
-    localStorage.setItem("userData", JSON.stringify(userData));
-    const data = localStorage.getItem("userData");
+    localStorage.setItem('userData', JSON.stringify(userData));
+    const data = localStorage.getItem('userData');
     setUserData(data ? JSON.parse(data) : {});
   };
 
   useEffect(() => {
-    const data = localStorage.getItem("userData");
+    const data = localStorage.getItem('userData');
     setUserData(data ? JSON.parse(data) : {});
   }, []);
 
@@ -40,7 +40,7 @@ const Form = ({ termId, images }) => {
     fetch(`/api/therapy-time?termId=${termId}`)
       .then((response) => {
         if (response.status !== 200) {
-          Router.push("/rezervace");
+          Router.push('/rezervace');
         } else {
           return response.json();
         }
@@ -56,7 +56,7 @@ const Form = ({ termId, images }) => {
     setBtnDisabled(true);
 
     if (!validator.isEmail(email)) {
-      setErrorMessage("Zadejte platnou emailovou adresu.");
+      setErrorMessage('Zadejte platnou emailovou adresu.');
       setBtnDisabled(false);
       return;
     } else {
@@ -64,7 +64,7 @@ const Form = ({ termId, images }) => {
     }
 
     if (!validator.isMobilePhone(phone)) {
-      setErrorMessage("Zadejte platné telefonní číslo.");
+      setErrorMessage('Zadejte platné telefonní číslo.');
       setBtnDisabled(false);
       return;
     } else {
@@ -72,7 +72,7 @@ const Form = ({ termId, images }) => {
     }
 
     if (userName.length < 1) {
-      setErrorMessage("Zadejte jméno.");
+      setErrorMessage('Zadejte jméno.');
       setBtnDisabled(false);
       return;
     } else {
@@ -80,15 +80,15 @@ const Form = ({ termId, images }) => {
     }
 
     if (userSurname.length < 1) {
-      setErrorMessage("Zadejte příjmení.");
+      setErrorMessage('Zadejte příjmení.');
       setBtnDisabled(false);
       return;
     } else {
       setErrorMessage(null);
     }
 
-    const response = await fetch("/api/create-reservation", {
-      method: "POST",
+    const response = await fetch('/api/create-reservation', {
+      method: 'POST',
       body: JSON.stringify({
         email: email,
         name: userName,
@@ -105,7 +105,7 @@ const Form = ({ termId, images }) => {
       return;
     }
     Router.push({
-      pathname: "/rezervace/potvrzeni-rezervace",
+      pathname: '/rezervace/potvrzeni-rezervace',
       query: {
         reservation: json.reservationId,
       },
@@ -115,10 +115,10 @@ const Form = ({ termId, images }) => {
   };
 
   return (
-    <SectionCard mainTitle={"Rezervace termínu"}>
+    <SectionCard mainTitle={'Rezervace termínu'}>
       {selectedTerm ? (
         <>
-          <h2 className={[styles.title, "sectionHeading"].join(" ")}>
+          <h2 className={[styles.title, 'sectionHeading'].join(' ')}>
             <span>{selectedTerm.date}</span> {selectedTerm.start}-
             {selectedTerm.end}
           </h2>
@@ -131,13 +131,13 @@ const Form = ({ termId, images }) => {
             )}
 
             <div className={styles.inputForm}>
-              <label htmlFor="name">
+              <label htmlFor='name'>
                 Jméno: <span>*</span>
               </label>
               <input
-                id="name"
-                name="name"
-                type="text"
+                id='name'
+                name='name'
+                type='text'
                 value={userName}
                 required
                 onChange={(e) => {
@@ -147,13 +147,13 @@ const Form = ({ termId, images }) => {
               />
             </div>
             <div className={styles.inputForm}>
-              <label htmlFor="surname">
+              <label htmlFor='surname'>
                 Příjmení: <span>*</span>
               </label>
               <input
-                id="surname"
-                name="surname"
-                type="text"
+                id='surname'
+                name='surname'
+                type='text'
                 value={userSurname}
                 required
                 onChange={(e) => {
@@ -163,13 +163,13 @@ const Form = ({ termId, images }) => {
               />
             </div>
             <div className={styles.inputForm}>
-              <label htmlFor="email">
+              <label htmlFor='email'>
                 Email: <span>*</span>
               </label>
               <input
-                id="email"
-                name="email"
-                type="email"
+                id='email'
+                name='email'
+                type='email'
                 required
                 value={email}
                 onChange={(e) => {
@@ -179,13 +179,13 @@ const Form = ({ termId, images }) => {
               />
             </div>
             <div className={styles.inputForm}>
-              <label htmlFor="phone">
+              <label htmlFor='phone'>
                 Telefon: <span>*</span>
               </label>
               <input
-                id="phone"
-                name="phone"
-                type="tel"
+                id='phone'
+                name='phone'
+                type='tel'
                 required
                 value={phone}
                 onChange={(e) => {
@@ -198,13 +198,13 @@ const Form = ({ termId, images }) => {
               Položky označené <span>*</span> jsou povinné.
             </p>
             <p className={styles.paragraph}>
-              Odesláním tohoto formuláře souhlasím se{" "}
-              <Link href="/gdpr">
-                <a target="_blank">zpracováním osobních údajů</a>
+              Odesláním tohoto formuláře souhlasím se{' '}
+              <Link href='/gdpr' target='_blank'>
+                zpracováním osobních údajů
               </Link>
               .
             </p>
-            <button className={styles.btn} type="submit" disabled={btnDisabled}>
+            <button className={styles.btn} type='submit' disabled={btnDisabled}>
               Rezervovat termín
             </button>
           </form>

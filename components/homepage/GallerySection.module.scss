@@ -1,18 +1,18 @@
 @use './../../styles/settings/variables.scss' as variables;
 
 .gallery {
-  display:grid;
-  grid-template-columns: repeat(5,1fr);
-  gap:variables.$spacing;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: variables.$spacing;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .galleryItem {
-  border-radius:8px;
-  overflow:hidden;
+  border-radius: 8px;
+  overflow: hidden;
 
   &.image3 {
     grid-column: 4 / 6;
@@ -33,9 +33,8 @@
     }
   }
 
-
-  span:first-of-type {
-    height:100% !important;
-    width:100% !important;
+  img {
+    height: 100%;
+    width: 100%;
   }
 }

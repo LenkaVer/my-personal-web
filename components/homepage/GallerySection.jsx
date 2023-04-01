@@ -31,7 +31,7 @@ const GallerySection = ({ images }) => {
     <SectionCard extraClass={'gallerySection'}>
       <h2
         className={[styles.title, 'titleDecoration', 'sectionHeading'].join(
-          ' ',
+          ' '
         )}
       >
         Jak vypadá terapie
@@ -48,7 +48,7 @@ const GallerySection = ({ images }) => {
                   square: false,
                 })}
                 className={[styles.galleryItem, styles[`image${index}`]].join(
-                  ' ',
+                  ' '
                 )}
               >
                 <Image
@@ -59,7 +59,7 @@ const GallerySection = ({ images }) => {
                   height={galleryImage.height}
                   placeholder={'blur'}
                   blurDataURL={galleryImage.data.base64}
-                  srl_gallery_image="true"
+                  srl_gallery_image='true'
                 />
               </a>
             );

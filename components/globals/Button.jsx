@@ -3,8 +3,8 @@ import styles from './Button.module.scss';
 
 const Button = ({ href, title }) => {
   return (
-    <Link href={href}>
-      <a className={styles.button}>{title}</a>
+    <Link href={href} className={styles.button}>
+      {title}
     </Link>
   );
 };
