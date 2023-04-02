@@ -34,7 +34,7 @@ const GallerySection = ({ images }) => {
       width: 1800,
       src: galleryImage.data.hash,
       square: false,
-    })
+    }),
   );
   const squareLoader = ({ width, src }) => {
     return imageLoader({ width: width, src: src, square: true });
@@ -43,7 +43,7 @@ const GallerySection = ({ images }) => {
     <SectionCard extraClass={'gallerySection'}>
       <h2
         className={[styles.title, 'titleDecoration', 'sectionHeading'].join(
-          ' '
+          ' ',
         )}
       >
         Jak vypadá terapie
@@ -59,7 +59,7 @@ const GallerySection = ({ images }) => {
                 setToggler(!toggler);
               }}
               className={[styles.galleryItem, styles[`image${index}`]].join(
-                ' '
+                ' ',
               )}
             >
               <Image
@@ -70,7 +70,12 @@ const GallerySection = ({ images }) => {
                 height={galleryImage.height}
                 placeholder={'blur'}
                 blurDataURL={galleryImage.data.base64}
-                srl_gallery_image='true'
+                srl_gallery_image="true"
+                sizes={
+                  [3, 4].includes(index)
+                    ? `(max-width: 768px) 55vw, (max-width: 1500px) 37vw, 554px`
+                    : `(max-width: 768px) 28vw, (max-width: 1500px) 18vw, 273px`
+                }
               />
             </div>
           );
