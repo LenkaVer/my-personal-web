@@ -1,7 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+//import { motion } from 'framer-motion';
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,14 +20,14 @@ const Layout = ({ children }) => {
       }}
     >
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <motion.main
+      {/* <motion.main
         initial="hidden"
         animate="show"
         variants={animations}
         transition={{ delay: 0, duration: 0.3 }}
-      >
-        {children}
-      </motion.main>
+      > */}
+      <main>{children}</main>
+      {/* </motion.main> */}
       <Footer />
     </div>
   );
