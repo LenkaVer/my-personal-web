@@ -12,32 +12,37 @@ const IntroSection = ({ images }) => {
       <div className={styles.description}>
         <h2
           className={[styles.heading, 'titleDecoration', 'sectionHeading'].join(
-            ' ',
+            ' '
           )}
         >
           Watsu terapie
         </h2>
         <p>
-          WATSU&reg;(water Shiatsu), je jemná forma tělesné terapie, která
-          pochází z techniky Zen-Shiatsu. Spojuje v sobě prvky z masáže,
-          Shiatsu, mobilizace kloubů, protažení svalů, tanec a práci s meridiány
-          ve 34°C teplé vodě. Založená byla v roce 1980 Haroldem Dullem.
+          WATSU&reg; (water Shiatsu) je terapeutická technika, která vznikla v
+          80. letech minulého století. Její tvůrce Harold Dull kombinoval prvky
+          japonské shiatsu masáže a tradiční čínské medicíny s pohyby v teplé
+          vodě (s teplotou kolem 34°C). Watsu může pomoci uvolnit napětí v těle,
+          podpořit zdraví a navodit hlubokou relaxaci.
         </p>
         <p>
-          Nosné vlastnosti vody dovolí trojrozměrné pohyby, jaké na zemi nejsou
-          možné. Voda přináší stav bez tíže, společně s vyšší teplotou a
-          plynulými pohyby v ní se uvolňují svaly, prohlubuje se dech a přichází
-          hluboký relaxační stav. Střídají se okamžiky klidu s rytmickými
-          plynulými pohyby a protažením svalů. Hlava zůstává při této metodě
-          vždy na hladině vody. S touto podporou a bez vnímané hmotnosti těla,
-          páteře, kloubů a svalů je snadné uvolnit se k jedinečném
-          terapeutickému prožitku.
+          Během terapie Watsu leží pacient ve vodě, podporován terapeutem, který
+          provádí jemné krouživé pohyby těla a masáž. Tento proces pomáhá
+          uvolnit napětí v svalové tkáni a uvolnit blokované energetické dráhy v
+          těle, čímž se podporuje celkové zdraví. Mnoho lidí také považuje watsu
+          za relaxační a meditační zážitek, který jim pomáhá najít vnitřní klid
+          a mír.
+        </p>
+        <p>
+          Při této metodě zůstává hlava vždy nad vodou, možné je tuto techniku
+          kombinovat s metodou OBA&reg; (Ocean Bodywork Aqua), kdy se terapie
+          rozšiřuje i o techniky probíhající pod vodou (za použití nosního
+          skřipce).
         </p>
       </div>
       <div className={styles.opinion}>
         <h3
           className={[styles.subheading, 'titleDecoration', 'subheading'].join(
-            ' ',
+            ' '
           )}
         >
           Moje cesta k watsu
@@ -47,9 +52,9 @@ const IntroSection = ({ images }) => {
           Karlových Varů. Byl to pro mě takový zážitek, že jsem se hned po
           terapii ptala, kde se dá tato metoda naučit. Tak jsem se dostala k{' '}
           <a
-            href="https://www.watsu-czech.cz/"
-            target="_blank"
-            rel="noreferrer noopener"
+            href='https://www.watsu-czech.cz/'
+            target='_blank'
+            rel='noreferrer noopener'
           >
             Watsu Czech
           </a>
@@ -63,6 +68,10 @@ const IntroSection = ({ images }) => {
           naslouchání tělu, cesta k tanci, který mi plynulé pohyby ve vodě
           připomínají.
         </p>
+        <p>
+          Při terapii kombinuji prvky z metod WATSU&reg;, OBA&reg; a
+          Kraniosakrální terapie ve vodě&trade;.
+        </p>
       </div>
 
       <div className={styles.image}>
@@ -75,11 +84,11 @@ const IntroSection = ({ images }) => {
           height={400}
           placeholder={'blur'}
           blurDataURL={images.introSectionFoto.base64}
-          sizes="(max-width: 340px) 45vw,
+          sizes='(max-width: 340px) 45vw,
           (max-width: 576px) 50vw,
           (max-width: 710px) 20vw,
           (max-width: 991px) 193px,
-          278px"
+          278px'
         />
       </div>
     </SectionCard>

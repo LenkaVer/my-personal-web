@@ -1,23 +1,23 @@
-import Head from "next/head";
-import CardDetailSection from "../../components/about-watsu/CardDetailSection";
-import Layout from "./../../components/layout/Layout";
+import Head from 'next/head';
+import CardDetailSection from '../../components/about-watsu/CardDetailSection';
+import Layout from './../../components/layout/Layout';
 
 const Effects = () => {
   return (
     <>
       <Head>
         <title>Účinky</title>
-        <meta name="description" content="Účinky watsu terapie" />
+        <meta name='description' content='Účinky watsu terapie' />
       </Head>
 
       <Layout>
         <CardDetailSection
-          title="Účinky"
-          imageSource={"/icons/effects.svg"}
-          imageAlt="účinky"
+          title='Účinky'
+          imageSource={'/icons/effects.svg'}
+          imageAlt='účinky'
         >
-          {" "}
-          <h2 className={"subheading"}> Vliv na cévní systém</h2>
+          {' '}
+          <h2 className={'subheading'}> Vliv na cévní systém</h2>
           <ul>
             <li>Zlepšuje se žilní a lymfatický zpětný tok.</li>
             <li>Posilí se prokrvení kůže, svalů a vazivových tkání.</li>
@@ -25,7 +25,7 @@ const Effects = () => {
             <li>Sníží se srdeční frekvence a krevní tlak.</li>
             <li>Prohlubuje a stabilizuje se dýchání.</li>
           </ul>
-          <h2 className={"subheading"}>Vliv na svalstvo a nervovou soustavu</h2>
+          <h2 className={'subheading'}>Vliv na svalstvo a nervovou soustavu</h2>
           <ul>
             <li>
               Zlepšuje pohyblivost a snižuje napětí svalstva. Uvolněné svaly
@@ -51,7 +51,7 @@ const Effects = () => {
               Mobilizuje protažení neurální struktury (míchy) v měkké periferii.
             </li>
           </ul>
-          <h2 className={"subheading"}>Vliv duševní</h2>
+          <h2 className={'subheading'}>Vliv duševní</h2>
           <ul>
             <li>Dochází k velmi hluboké relaxaci.</li>
             <li>Podporuje uvolněný a klidný vnitřní postoj.</li>
@@ -69,15 +69,16 @@ const Effects = () => {
             </li>
           </ul>
           <p>
-            Mnoho klientů přijde s konkrétním problémem (např. bolestivé
-            syndromy, stavy po poranění nebo po operaci, zvláštních omezení
-            pohybu), zatímco jiní hledají Watsu&reg; pro zážitek a relaxaci,
-            volnost a meditativní klid, který Watsu&reg; vyvolává. Specifické
-            léčebné účinky, které jsou zaznamenány klienty, zahrnují zvýšenou
-            mobilitu a flexibilitu, svalovou relaxaci, plnější hlubší dýchání,
+            Někteří klienti se k Watsu® dostávají s konkrétním problémem, jako
+            jsou bolestivé syndromy, stavy po poranění nebo po operaci, nebo
+            zvláštní omezení pohybu. Ostatní hledají Watsu® pro jeho relaxační a
+            meditativní účinky, které jim poskytují volnost a klid. Klienti si
+            často všimnou specifických léčebných účinků, jako jsou zvýšená
+            mobilita a flexibilita, svalová relaxace, plnější a hlubší dýchání,
             snížení úzkosti a stresu na všech úrovních, snížení bolesti,
-            zlepšení spánku a trávení a celkový pocit pohody. Někteří klienti
-            mohou zažít emoce, nové osobní postřehy a návrat starých vzpomínek.
+            zlepšení spánku, trávení a celkový pocit pohody. U některých klientů
+            se mohou objevit emoce, nové osobní poznatky nebo návrat starých
+            vzpomínek.
           </p>
         </CardDetailSection>
       </Layout>

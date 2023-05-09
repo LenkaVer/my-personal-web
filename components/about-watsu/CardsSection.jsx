@@ -4,7 +4,7 @@ import AboutWatsuCard from './AboutWatsuCard';
 const CardsSection = () => {
   return (
     <section className={styles.section}>
-      <div className="container">
+      <div className='container'>
         <h1
           className={[styles.title, 'titleDecoration', 'mainHeading'].join(' ')}
         >
@@ -12,32 +12,34 @@ const CardsSection = () => {
         </h1>
         <div className={styles.wrapper}>
           <AboutWatsuCard
-            title="Účinky"
-            link="/o-watsu/ucinky"
+            title='Účinky'
+            link='/o-watsu/ucinky'
             imageSource={'/icons/effects.svg'}
-            imageAlt="účinky"
+            imageAlt='účinky'
           >
             {' '}
             <p>
-              Vodní terapie s tělem jsou doplňkovou léčebnou metodou, kde se
-              jako médium využívá voda. Zahrnuje různé metody. Hlavní a
-              nejrozšířenější je WATSU&reg; (Water Shiatsu). Vztlak a teplo
-              uvolňují svaly, klouby a oprošťují tělo od vlivů gravitace. Uši
-              klienta jsou během terapie pod vodou, čímž jsou z vnějšku silně
-              redukované akustické vjemy. Klient zpravidla sám uzavře při
-              terapii oči a tak neprobíhá žádný rozhovor mezi terapeutem a
-              klientem.
+              Doplňková léčebná metoda, kde se využívá vody jako média pro
+              terapeutické účely. Existuje více různých metod, ale
+              nejrozšířenější je WATSU&reg; (Water Shiatsu). Díky teplu a
+              vztlaku voda uvolňuje svaly, klouby a odlehčuje tělo od vlivů
+              gravitace. Během terapie jsou uši klienta ponořeny pod vodou, což
+              výrazně redukuje akustické vjemy z vnějšího prostředí. Klienti
+              obvykle zavřou oči a terapie probíhá v tichu, případně za zvuku
+              hudby, bez nutnosti mluvení s terapeutem.
             </p>
             <p>
-              Minimální vlivy zvenčí navodí tak meditativní stav, což usnadní
-              přístup sama k sobě.
+              Tento způsob léčby umožňuje minimalizovat vlivy okolního světa a
+              vytvořit meditativní prostředí, které klientovi umožňuje lépe se
+              soustředit na své vnitřní pocity a myšlenky. Watsu tak nabízí
+              jedinečnou příležitost pro relaxaci a sebepoznání.
             </p>
           </AboutWatsuCard>
           <AboutWatsuCard
-            title="Průběh terapie"
-            link="/o-watsu/prubeh-terapie"
+            title='Průběh terapie'
+            link='/o-watsu/prubeh-terapie'
             imageSource={'/icons/therapy.svg'}
-            imageAlt="průběh terapie"
+            imageAlt='průběh terapie'
           >
             <p>
               Terapie trvá přibližně 50-60 minut. Je vhodné nejít těsně po
@@ -48,22 +50,22 @@ const CardsSection = () => {
             </p>
           </AboutWatsuCard>
           <AboutWatsuCard
-            title="Kontraindikace"
-            link="/o-watsu/kontraindikace"
+            title='Kontraindikace'
+            link='/o-watsu/kontraindikace'
             imageSource={'/icons/contraindications.svg'}
-            imageAlt="kontraindikace"
+            imageAlt='kontraindikace'
           >
             <p>
-              Pokud váháte, jestli jsou pro Vás vodní terapie vhodné, jako
-              základní vodítko může pomoci uvědomit si, jestli váš zdravotní
-              stav dovoluje pobyt v teplé vodě 34-36°C. Pokud ano, pravděpodobně
-              jsou pro vás Watsu&reg; a ostatní vodní terapie vhodné. Dále v
-              článku si můžete přečíst vybrané kontraindikace. V případě
-              nejasností se poraďte se svým lékařem, o jakýchkoli zdravotních
-              problémech (i užití dlouhodobé medikace) však vždy informujte také
-              před samotnou terapií (případně před rezervací termínu), pro
-              posouzení vhodnosti terapie a případně její přizpůsobení Vašim
-              potřebám.
+              Pokud se rozhodujete, zda jsou vodní terapie pro vás vhodné,
+              můžete jako základní orientační bod zvážit, zda váš zdravotní stav
+              umožňuje pobyt v teplé vodě o teplotě 34-36°C. Pokud ano,
+              pravděpodobně budou pro vás Watsu&reg; a ostatní vodní terapie
+              vhodné. V článku se dozvíte také o některých kontraindikacích,
+              které byste měli vzít v úvahu. V případě jakýchkoli nejasností se
+              poraďte se svým lékařem. Před samotnou terapií nebo rezervací
+              termínu byste měli informovat terapeuta o jakýchkoli zdravotních
+              problémech, včetně užívání dlouhodobé medikace, aby mohl posoudit
+              vhodnost terapie a případně ji přizpůsobit vašim potřebám.
             </p>
           </AboutWatsuCard>
         </div>
