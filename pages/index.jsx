@@ -10,7 +10,7 @@ const Home = ({ images }) => {
     <>
       <Head>
         <title>Watsu České Budějovice</title>
-        <meta name="description" content="Watsu terapie Lenka Verzichová" />
+        <meta name='description' content='Watsu terapie Lenka Verzichová' />
       </Head>
       <Layout>
         <IntroSection images={images} />
@@ -24,15 +24,15 @@ const Home = ({ images }) => {
 export async function getStaticProps({ params }) {
   const imagesToLoad = {
     introSectionFoto: '2zx97jeYjQdOXgW',
-    watsu1: 'ov51DrwaBeyJLWp',
-    watsu2: 'vbJZMNQgrejmaWG',
-    watsu3: 'WyGn9PQMAQArdMx',
-    watsu4: 'MJAq6NKopwRpWj7',
-    watsu5: '8B34vrwOWwlyLzD',
-    watsu6: 'rXOza7QPdQdZEJ3',
-    watsu7: 'mxBN5Peqme1Z2nG',
-    watsu8: 'O6dpDGQ4qKB0MYZ',
-    watsu9: 'xJmM3GQE6Kp2Z4a',
+    watsu1: 'zJyYk6QVdwj5xZd',
+    watsu2: 'bDqXRyKzXexdv3G',
+    watsu3: 'Bq3lbMQdoeD1oa4',
+    watsu4: 'OykBojw2OeMYG0p',
+    watsu5: 'gPyb2AeZveZLd59',
+    watsu6: '1GWLz5ej7Qx7vnj',
+    watsu7: 'zNrDBaeWxQPyLdV',
+    watsu8: 'qAnmrPQ62Qzg1jo',
+    watsu9: 'pNE2Bze1dwo31rk',
   };
   const images = {};
 
