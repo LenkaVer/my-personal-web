@@ -27,10 +27,10 @@ const IntroSection = ({ images }) => {
         <p>
           Během terapie Watsu leží pacient ve vodě, podporován terapeutem, který
           provádí jemné krouživé pohyby těla a masáž. Tento proces pomáhá
-          uvolnit napětí v svalové tkáni a uvolnit blokované energetické dráhy v
-          těle, čímž se podporuje celkové zdraví. Mnoho lidí také považuje watsu
-          za relaxační a meditační zážitek, který jim pomáhá najít vnitřní klid
-          a mír.
+          uvolnit napětí ve svalové tkáni a uvolnit blokované energetické dráhy
+          v těle, čímž se podporuje celkové zdraví. Mnoho lidí také považuje
+          watsu za relaxační a meditační zážitek, který jim pomáhá najít vnitřní
+          klid a mír.
         </p>
         <p>
           Při této metodě zůstává hlava vždy nad vodou, možné je tuto techniku
@@ -62,10 +62,10 @@ const IntroSection = ({ images }) => {
           terapeutem.
         </p>
         <p>
-          To co dělá pro mě tuto metodu výjimečnou je kombinace prostředí teplé
-          vody, stavu bez tíže a důvěry mezi klientem a terapeutem. Je to pro mě
-          zároveň velmi přirozená cesta k meditaci, k bytí v přítomnosti, k
-          naslouchání tělu, cesta k tanci, který mi plynulé pohyby ve vodě
+          To, co dělá pro mě tuto metodu výjimečnou, je kombinace prostředí
+          teplé vody, stavu bez tíže a důvěry mezi klientem a terapeutem. Je to
+          pro mě zároveň velmi přirozená cesta k meditaci, k bytí v přítomnosti,
+          k naslouchání tělu, cesta k tanci, který mi plynulé pohyby ve vodě
           připomínají.
         </p>
         <p>
