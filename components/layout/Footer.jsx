@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className={styles.wrapper}>
       <div className={[styles.content, 'container'].join(' ')}>
         <p className={styles.information}>
-          Vytvořila &copy; Lenka Verzichová 2O23
+          Vytvořila &copy; Lenka Verzichová 2O24
         </p>
         <p className={styles.contact}>
           Kontakt:{' '}
