@@ -6,8 +6,11 @@ const Effects = () => {
   return (
     <>
       <Head>
-        <title>Účinky</title>
-        <meta name='description' content='Účinky watsu terapie' />
+        <title>Účinky watsu terapie</title>
+        <meta
+          name='description'
+          content='Prozkoumejte vliv terapie Watsu® na cévní, svalový a nervový systém, a duševní pohodu. Zjistěte, jak voda posiluje zdraví a podporuje celkovou relaxaci a rovnováhu těla.'
+        />
       </Head>
 
       <Layout>

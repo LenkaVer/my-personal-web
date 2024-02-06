@@ -10,7 +10,10 @@ const Home = ({ images }) => {
     <>
       <Head>
         <title>Watsu České Budějovice</title>
-        <meta name='description' content='Watsu terapie Lenka Verzichová' />
+        <meta
+          name='description'
+          content='Objevte léčivou sílu Watsu®. Terapeutická metoda z 80. let spojuje Shiatsu masáž, čínskou medicínu a teplou vodu pro uvolnění, zdraví a hlubokou relaxaci.'
+        />
       </Head>
       <Layout>
         <IntroSection images={images} />

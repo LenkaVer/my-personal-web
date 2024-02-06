@@ -1,21 +1,24 @@
-import Head from "next/head";
-import CardDetailSection from "../../components/about-watsu/CardDetailSection";
-import Layout from "./../../components/layout/Layout";
+import Head from 'next/head';
+import CardDetailSection from '../../components/about-watsu/CardDetailSection';
+import Layout from './../../components/layout/Layout';
 
 const Contraindication = () => {
   return (
     <>
       <Head>
         <title>Kontraindikace</title>
-        <meta name="description" content="Kontraindikace watsu terapie" />
+        <meta
+          name='description'
+          content='Seznamte se s kontraindikacemi pro vodní terapie. Zjistěte, které stavy nejsou vhodné pro Watsu® a další metody. Pro zdravotní bezpečnost se poraďte s lékařem.'
+        />
       </Head>
       <Layout>
         <CardDetailSection
-          title="Kontraindikace"
-          imageSource={"/icons/contraindications.svg"}
-          imageAlt="kontraindikace"
+          title='Kontraindikace'
+          imageSource={'/icons/contraindications.svg'}
+          imageAlt='kontraindikace'
         >
-          <h2 className={"subheading"}> Nevhodné stavy pro vodní terapie</h2>
+          <h2 className={'subheading'}> Nevhodné stavy pro vodní terapie</h2>
           <ul>
             <li>Infekční a hořečnaté stavy.</li>
             <li>Kardiovasculární onemocnění.</li>

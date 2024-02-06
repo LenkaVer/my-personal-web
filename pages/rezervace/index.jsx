@@ -1,7 +1,7 @@
-import Head from "next/head";
-import ReservationTermsSection from "./../../components/reservation/ReservationTermsSection";
-import { loadImageData } from "./../../functions/imageLoader";
-import Layout from "./../../components/layout/Layout";
+import Head from 'next/head';
+import ReservationTermsSection from './../../components/reservation/ReservationTermsSection';
+import { loadImageData } from './../../functions/imageLoader';
+import Layout from './../../components/layout/Layout';
 
 const Reservation = ({ images }) => {
   return (
@@ -9,8 +9,8 @@ const Reservation = ({ images }) => {
       <Head>
         <title>Rezervovat termín</title>
         <meta
-          name="description"
-          content="Rezervování watsu terapie v Českých Budějovicích"
+          name='description'
+          content='Prohlédněte si nabídku dostupných termínů terapie Watsu® v Baby Centru Šikulka v Českých Budějovicích.  Rezervujte si svůj čas pro relaxaci a regeneraci'
         />
       </Head>
       <Layout>
@@ -22,7 +22,7 @@ const Reservation = ({ images }) => {
 
 export async function getStaticProps({ params }) {
   const imagesToLoad = {
-    voucher: "JZdL08wJgejEVgx",
+    voucher: 'JZdL08wJgejEVgx',
   };
   const images = {};
 

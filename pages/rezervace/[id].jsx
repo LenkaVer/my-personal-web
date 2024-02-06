@@ -1,8 +1,8 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Form from "./../../components/reservation/Form";
-import { loadImageData } from "./../../functions/imageLoader";
-import Layout from "./../../components/layout/Layout";
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Form from './../../components/reservation/Form';
+import { loadImageData } from './../../functions/imageLoader';
+import Layout from './../../components/layout/Layout';
 
 const ReservationForm = ({ images }) => {
   const router = useRouter();
@@ -12,7 +12,10 @@ const ReservationForm = ({ images }) => {
     <>
       <Head>
         <title>Rezervační formulář</title>
-        <meta name="description" content="Rezervační formulář watsu terapií" />
+        <meta
+          name='description'
+          content='Zarezervujte si konkrétní čas pro terapii Watsu® přímo online. Vyplňte formulář níže a získejte svůj rezervovaný termín pro relaxaci a regeneraci ve vodě.'
+        />
       </Head>
       <Layout>{id && <Form termId={id} images={images} />}</Layout>
     </>
@@ -21,7 +24,7 @@ const ReservationForm = ({ images }) => {
 
 export async function getServerSideProps({ params }) {
   const imagesToLoad = {
-    voucher: "JZdL08wJgejEVgx",
+    voucher: 'JZdL08wJgejEVgx',
   };
   const images = {};
 
