@@ -15,6 +15,12 @@ const Date = ({ date, selectedDay, setSelectedDay, setTimes }) => {
     >
       <h2 className={styles.itemTitle}>
         <span>{date.dayOfWeekShort}</span> {date.dateFormatted.slice(0, -5)}
+        {date.city && (
+          <span>
+            <br />
+            {date.city.name}
+          </span>
+        )}
       </h2>
     </li>
   );
