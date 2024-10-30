@@ -122,26 +122,31 @@ const Form = ({ termId, images }) => {
             <span>{selectedTerm.date}</span> {selectedTerm.start}-
             {selectedTerm.end}
           </h2>
+
           {selectedTerm?.city ? (
-            <p>
-              {selectedTerm.city.addressLine1 && (
-                <>
-                  {selectedTerm.city.addressLine1} <br />
-                </>
-              )}
-              {selectedTerm.city.addressLine2 && (
-                <>
-                  {selectedTerm.city.addressLine2} <br />
-                </>
-              )}
-              {selectedTerm.city.addressLine3 && (
-                <>
-                  {selectedTerm.city.addressLine3} <br />
-                </>
-              )}
-              <strong>{selectedTerm.city.name}</strong> <br />
-              <strong>Cena: {selectedTerm.city.price},- Kč</strong>
-            </p>
+            <div className={styles.adress}>
+              <p>
+                <strong>{selectedTerm.city.name}</strong> <br />
+                <strong>Cena: {selectedTerm.city.price},- Kč</strong>
+              </p>
+              <p>
+                {selectedTerm.city.addressLine1 && (
+                  <>
+                    {selectedTerm.city.addressLine1} <br />
+                  </>
+                )}
+                {selectedTerm.city.addressLine2 && (
+                  <>
+                    {selectedTerm.city.addressLine2} <br />
+                  </>
+                )}
+                {selectedTerm.city.addressLine3 && (
+                  <>
+                    {selectedTerm.city.addressLine3} <br />
+                  </>
+                )}
+              </p>
+            </div>
           ) : null}
 
           <form className={styles.form} onSubmit={createReservation}>
@@ -152,13 +157,13 @@ const Form = ({ termId, images }) => {
             )}
 
             <div className={styles.inputForm}>
-              <label htmlFor="name">
+              <label htmlFor='name'>
                 Jméno: <span>*</span>
               </label>
               <input
-                id="name"
-                name="name"
-                type="text"
+                id='name'
+                name='name'
+                type='text'
                 value={userName}
                 required
                 onChange={(e) => {
@@ -168,13 +173,13 @@ const Form = ({ termId, images }) => {
               />
             </div>
             <div className={styles.inputForm}>
-              <label htmlFor="surname">
+              <label htmlFor='surname'>
                 Příjmení: <span>*</span>
               </label>
               <input
-                id="surname"
-                name="surname"
-                type="text"
+                id='surname'
+                name='surname'
+                type='text'
                 value={userSurname}
                 required
                 onChange={(e) => {
@@ -184,13 +189,13 @@ const Form = ({ termId, images }) => {
               />
             </div>
             <div className={styles.inputForm}>
-              <label htmlFor="email">
+              <label htmlFor='email'>
                 Email: <span>*</span>
               </label>
               <input
-                id="email"
-                name="email"
-                type="email"
+                id='email'
+                name='email'
+                type='email'
                 required
                 value={email}
                 onChange={(e) => {
@@ -200,13 +205,13 @@ const Form = ({ termId, images }) => {
               />
             </div>
             <div className={styles.inputForm}>
-              <label htmlFor="phone">
+              <label htmlFor='phone'>
                 Telefon: <span>*</span>
               </label>
               <input
-                id="phone"
-                name="phone"
-                type="tel"
+                id='phone'
+                name='phone'
+                type='tel'
                 required
                 value={phone}
                 onChange={(e) => {
@@ -220,12 +225,12 @@ const Form = ({ termId, images }) => {
             </p>
             <p className={styles.paragraph}>
               Odesláním tohoto formuláře souhlasím se{' '}
-              <Link href="/gdpr" target="_blank">
+              <Link href='/gdpr' target='_blank'>
                 zpracováním osobních údajů
               </Link>
               .
             </p>
-            <button className={styles.btn} type="submit" disabled={btnDisabled}>
+            <button className={styles.btn} type='submit' disabled={btnDisabled}>
               Rezervovat termín
             </button>
           </form>

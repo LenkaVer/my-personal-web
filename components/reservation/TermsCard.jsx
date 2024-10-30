@@ -71,32 +71,36 @@ const TermsCard = ({ images }) => {
             <Loader />
           )}
           {selectedDay?.city ? (
-            <p>
-              {selectedDay.city.addressLine1 && (
-                <>
-                  {selectedDay.city.addressLine1} <br />
-                </>
-              )}
-              {selectedDay.city.addressLine2 && (
-                <>
-                  {selectedDay.city.addressLine2} <br />
-                </>
-              )}
-              {selectedDay.city.addressLine3 && (
-                <>
-                  {selectedDay.city.addressLine3} <br />
-                </>
-              )}
-              <strong>{selectedDay.city.name}</strong> <br />
-              <strong>Cena: {selectedDay.city.price},- Kč</strong>
-            </p>
+            <div className={styles.adress}>
+              <p>
+                <strong>{selectedDay.city.name}</strong> <br />
+                <strong>Cena: {selectedDay.city.price},- Kč</strong>
+              </p>
+              <p>
+                {selectedDay.city.addressLine1 && (
+                  <>
+                    {selectedDay.city.addressLine1} <br />
+                  </>
+                )}
+                {selectedDay.city.addressLine2 && (
+                  <>
+                    {selectedDay.city.addressLine2} <br />
+                  </>
+                )}
+                {selectedDay.city.addressLine3 && (
+                  <>
+                    {selectedDay.city.addressLine3} <br />
+                  </>
+                )}{' '}
+              </p>{' '}
+            </div>
           ) : null}
         </ul>
       </div>
 
       <p className={[styles.paragraph, styles.paragraphBg].join(' ')}>
         Pokud jste si nevybrali žádný z aktuálně dostupných termínů , můžete{' '}
-        <Link href="/rezervace/email-o-terminech">vyplnit formulář</Link> pro
+        <Link href='/rezervace/email-o-terminech'>vyplnit formulář</Link> pro
         zasílání upozornění o vypsání nových termínů.
       </p>
 

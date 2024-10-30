@@ -1,11 +1,11 @@
-import styles from "./PriceSection.module.scss";
-import Image from "next/image";
-import { imageLoader } from "../../functions/imageLoader";
+import styles from './PriceSection.module.scss';
+import Image from 'next/image';
+import { imageLoader } from '../../functions/imageLoader';
 
 const PriceSection = ({ images }) => {
   return (
     <section className={styles.price}>
-      <h2 className={[styles.title, "titleDecoration", "subheading"].join(" ")}>
+      {/* <h2 className={[styles.title, "titleDecoration", "subheading"].join(" ")}>
         Cena
       </h2>
       <p>
@@ -18,7 +18,7 @@ const PriceSection = ({ images }) => {
           www.sikulka.com
         </a>
         ) v Českých Budějovicích, cena je 1.500,- Kč.
-      </p>
+      </p> */}
       <p className={styles.paragraphBg}>
         Terapie trvá přibližně 50-60 minut, doporučuji přijít 15 minut předem,
         abyste měli dostatek času na přípravu a ve sjednaný čas jste mohli být v
@@ -37,7 +37,7 @@ const PriceSection = ({ images }) => {
           alt={images.voucher.alt}
           width={400}
           height={283}
-          placeholder={"blur"}
+          placeholder={'blur'}
           blurDataURL={images.voucher.base64}
         />
       </div>
