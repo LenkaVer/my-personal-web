@@ -56,6 +56,15 @@
 
 .adress {
   margin-top: variables.$spacing;
+  width: 100%;
+
+  hr {
+    margin: variables.$spacing * 2 0;
+  }
+
+  h3 {
+    text-align: left;
+  }
 
   p {
     & strong {

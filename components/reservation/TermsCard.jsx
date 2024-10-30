@@ -63,6 +63,7 @@ const TermsCard = ({ images }) => {
             minHeight: timesHeight + 'px',
           }}
         >
+          {selectedDay?.city && <h2>{selectedDay.city.name}</h2>}
           {times ? (
             times.map((time) => {
               return <Time key={time.id} time={time} />;
@@ -72,10 +73,10 @@ const TermsCard = ({ images }) => {
           )}
           {selectedDay?.city ? (
             <div className={styles.adress}>
-              <p>
-                <strong>{selectedDay.city.name}</strong> <br />
-                <strong>Cena: {selectedDay.city.price},- Kč</strong>
-              </p>
+              <hr />
+              <h3>Cena</h3>
+              <p> {selectedDay.city.price},- Kč</p>
+              <h3>Adresa</h3>
               <p>
                 {selectedDay.city.addressLine1 && (
                   <>
@@ -100,7 +101,7 @@ const TermsCard = ({ images }) => {
 
       <p className={[styles.paragraph, styles.paragraphBg].join(' ')}>
         Pokud jste si nevybrali žádný z aktuálně dostupných termínů , můžete{' '}
-        <Link href='/rezervace/email-o-terminech'>vyplnit formulář</Link> pro
+        <Link href="/rezervace/email-o-terminech">vyplnit formulář</Link> pro
         zasílání upozornění o vypsání nových termínů.
       </p>
 
