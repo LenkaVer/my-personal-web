@@ -125,10 +125,11 @@ const Form = ({ termId, images }) => {
 
           {selectedTerm?.city ? (
             <div className={styles.adress}>
-              <p>
-                <strong>{selectedTerm.city.name}</strong> <br />
-                <strong>Cena: {selectedTerm.city.price},- Kč</strong>
-              </p>
+              <h3>{selectedTerm.city.name}</h3>
+              <hr />
+              <h3 className='textStart'>Cena</h3>
+              <p>{selectedTerm.city.price},- Kč</p>
+              <h3 className='textStart'>Adresa</h3>
               <p>
                 {selectedTerm.city.addressLine1 && (
                   <>

@@ -1,20 +1,20 @@
 @use './settings/variables.scss' as variables;
 
 .pageWrapper {
-  display:grid;
+  display: grid;
   min-height: 100vh;
   grid-template-columns: 100%;
   grid-template-rows: auto 1fr auto;
 }
 
 .container {
-  padding-left:variables.$spacing * 2;
+  padding-left: variables.$spacing * 2;
   padding-right: variables.$spacing * 2;
   padding-top: variables.$spacing * 5;
   padding-bottom: variables.$spacing * 5;
-  margin-left:auto;
-  margin-right:auto;
-  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 
   @media (min-width: 576px) {
     padding-left: 26px;
@@ -31,10 +31,9 @@
   }
 
   @media (min-width: 992px) {
-  
     max-width: 1200px;
   }
-  
+
   @media (min-width: 1200px) {
     max-width: 1460px;
   }
@@ -75,13 +74,13 @@
   // }
 
   &::before {
-    content: "";
+    content: '';
     background-color: variables.$terciary;
     position: relative;
     display: inline-block;
     height: 1px;
     vertical-align: middle;
-    left:variables.$spacing * -1;
+    left: variables.$spacing * -1;
     width: variables.$spacing * 6;
 
     @media (max-width: 768px) {
@@ -94,13 +93,13 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     background-color: variables.$terciary;
     position: relative;
     display: inline-block;
     height: 1px;
     vertical-align: middle;
-    right:variables.$spacing * -1;
+    right: variables.$spacing * -1;
     width: variables.$spacing * 6;
 
     @media (max-width: 768px) {
@@ -114,59 +113,59 @@
 }
 
 .mainHeading {
-  font-size:40px;
+  font-size: 40px;
   transform: translateY(2px);
-  line-height:variables.$spacing * 6;
+  line-height: variables.$spacing * 6;
   margin-bottom: variables.$spacing * 6;
 
   @media (max-width: 992px) {
-    font-size:32px;
+    font-size: 32px;
     transform: translateY(1px);
-    line-height:variables.$spacing * 5;
+    line-height: variables.$spacing * 5;
   }
 
   @media (max-width: 576px) {
-    font-size:26px;
+    font-size: 26px;
     transform: translateY(0);
-    line-height:variables.$spacing * 4;
+    line-height: variables.$spacing * 4;
   }
 }
 
 .sectionHeading {
-  font-size:32px;
+  font-size: 32px;
   transform: translateY(1px);
-  line-height:variables.$spacing * 5;
+  line-height: variables.$spacing * 5;
   margin-bottom: variables.$spacing * 3;
 
   @media (max-width: 992px) {
-    font-size:26px;
+    font-size: 26px;
     transform: translateY(0);
-    line-height:variables.$spacing * 4;
+    line-height: variables.$spacing * 4;
   }
 
   @media (max-width: 576px) {
-    font-size:24px;
+    font-size: 24px;
     transform: translateY(0);
-    line-height:variables.$spacing * 4;
+    line-height: variables.$spacing * 4;
   }
 }
 
 .subheading {
-  font-size:26px;
+  font-size: 26px;
   transform: translateY(-1px);
-  line-height:variables.$spacing * 4;
+  line-height: variables.$spacing * 4;
   margin-bottom: variables.$spacing * 2;
 
   @media (max-width: 992px) {
-    font-size:24px;
+    font-size: 24px;
     transform: translateY(0);
-    line-height:variables.$spacing * 4;
+    line-height: variables.$spacing * 4;
   }
 
   @media (max-width: 576px) {
-    font-size:20px;
+    font-size: 20px;
     transform: translateY(-3px);
-    line-height:variables.$spacing * 3;
+    line-height: variables.$spacing * 3;
   }
 }
 
@@ -177,26 +176,24 @@
   position: fixed;
   right: 24px;
   top: 16px;
-  border:none;
-  background-color:transparent;
-  max-width:variables.$spacing * 6;
-  max-height:variables.$spacing * 6;
-  cursor:pointer;
+  border: none;
+  background-color: transparent;
+  max-width: variables.$spacing * 6;
+  max-height: variables.$spacing * 6;
+  cursor: pointer;
 }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  border:none;
-  background-color:transparent;
-  width:variables.$spacing * 4 !important;
-  height:variables.$spacing * 4 !important;
-  cursor:pointer;
- 
+  border: none;
+  background-color: transparent;
+  width: variables.$spacing * 4 !important;
+  height: variables.$spacing * 4 !important;
+  cursor: pointer;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-  
 }
 
 /*
@@ -206,14 +203,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
 }
 
 /* General sidebar styles */
 .bm-menu {
   background: variables.$white;
-  box-shadow:0 0.5rem 2rem #1d1d1b1a;
+  box-shadow: 0 0.5rem 2rem #1d1d1b1a;
   padding-top: 48px;
   font-size: 1.15em;
 }
@@ -221,7 +218,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
-  
 }
 
 /* Individual item */
@@ -232,4 +228,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+/* UTILITIES */
+.textStart {
+  text-align: left;
 }
