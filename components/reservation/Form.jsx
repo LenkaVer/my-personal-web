@@ -123,6 +123,33 @@ const Form = ({ termId, images }) => {
             {selectedTerm.end}
           </h2>
 
+          {selectedTerm?.city ? (
+            <div className={styles.adress}>
+              <h3>{selectedTerm.city.name}</h3>
+              <hr />
+              <h3 className='textStart'>Cena</h3>
+              <p>{selectedTerm.city.price},- Kč</p>
+              <h3 className='textStart'>Adresa</h3>
+              <p>
+                {selectedTerm.city.addressLine1 && (
+                  <>
+                    {selectedTerm.city.addressLine1} <br />
+                  </>
+                )}
+                {selectedTerm.city.addressLine2 && (
+                  <>
+                    {selectedTerm.city.addressLine2} <br />
+                  </>
+                )}
+                {selectedTerm.city.addressLine3 && (
+                  <>
+                    {selectedTerm.city.addressLine3} <br />
+                  </>
+                )}
+              </p>
+            </div>
+          ) : null}
+
           <form className={styles.form} onSubmit={createReservation}>
             {errorMessage && (
               <div className={styles.error}>

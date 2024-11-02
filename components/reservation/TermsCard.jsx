@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 const TermsCard = ({ images }) => {
-  const defaultMinHeight = 248;
+  const defaultMinHeight = 300;
   const [selectedDay, setSelectedDay] = useState(null);
   const [times, setTimes] = useState(null);
   const [datesData, setDatesData] = useState(null);
@@ -29,7 +29,7 @@ const TermsCard = ({ images }) => {
           setDatesData(json);
           if (json.length > 3) {
             const daysIncreaseHinHeight = json.length - 3;
-            setTimesHeight(defaultMinHeight + daysIncreaseHinHeight * 62);
+            setTimesHeight(defaultMinHeight + daysIncreaseHinHeight * 85);
           }
         } else {
           router.push('/rezervace/email-o-terminech');
@@ -63,6 +63,7 @@ const TermsCard = ({ images }) => {
             minHeight: timesHeight + 'px',
           }}
         >
+          {selectedDay?.city && <h2>{selectedDay.city.name}</h2>}
           {times ? (
             times.map((time) => {
               return <Time key={time.id} time={time} />;
@@ -70,12 +71,37 @@ const TermsCard = ({ images }) => {
           ) : (
             <Loader />
           )}
+          {selectedDay?.city ? (
+            <div className={styles.adress}>
+              <hr />
+              <h3>Cena</h3>
+              <p> {selectedDay.city.price},- Kč</p>
+              <h3>Adresa</h3>
+              <p>
+                {selectedDay.city.addressLine1 && (
+                  <>
+                    {selectedDay.city.addressLine1} <br />
+                  </>
+                )}
+                {selectedDay.city.addressLine2 && (
+                  <>
+                    {selectedDay.city.addressLine2} <br />
+                  </>
+                )}
+                {selectedDay.city.addressLine3 && (
+                  <>
+                    {selectedDay.city.addressLine3} <br />
+                  </>
+                )}{' '}
+              </p>{' '}
+            </div>
+          ) : null}
         </ul>
       </div>
 
       <p className={[styles.paragraph, styles.paragraphBg].join(' ')}>
         Pokud jste si nevybrali žádný z aktuálně dostupných termínů , můžete{' '}
-        <Link href='/rezervace/email-o-terminech'>vyplnit formulář</Link> pro
+        <Link href="/rezervace/email-o-terminech">vyplnit formulář</Link> pro
         zasílání upozornění o vypsání nových termínů.
       </p>
 

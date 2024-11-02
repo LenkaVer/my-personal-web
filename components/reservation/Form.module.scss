@@ -1,8 +1,18 @@
-@use "./../../styles/settings/variables.scss" as variables;
+@use './../../styles/settings/variables.scss' as variables;
 
 .title {
   span {
     margin-right: variables.$spacing * 2;
+  }
+}
+.adress {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: variables.$spacing * 5;
+
+  hr {
+    margin: 16px 0;
   }
 }
 
