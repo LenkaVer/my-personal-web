@@ -9,7 +9,7 @@ const Home = ({ images }) => {
   return (
     <>
       <Head>
-        <title>Watsu České Budějovice</title>
+        <title>Watsu České Budějovice a Praha</title>
         <meta
           name='description'
           content='Objevte léčivou sílu Watsu®. Terapeutická metoda z 80. let spojuje Shiatsu masáž, čínskou medicínu a teplou vodu pro uvolnění, zdraví a hlubokou relaxaci.'

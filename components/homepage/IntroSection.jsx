@@ -6,7 +6,7 @@ import { imageLoader } from '../../functions/imageLoader';
 const IntroSection = ({ images }) => {
   return (
     <SectionCard
-      mainTitle={'Watsu v Českých Budějovicích'}
+      mainTitle={'Watsu v Praze a Českých Budějovicích'}
       extraClass={'introSection'}
     >
       <div className={styles.description}>
