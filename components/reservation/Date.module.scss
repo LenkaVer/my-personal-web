@@ -36,4 +36,8 @@
   font-size: 16px;
   color: variables.$primary;
   font-weight: 400;
+
+  @media (max-width: 576px) {
+    font-size: 13px;
+  }
 }

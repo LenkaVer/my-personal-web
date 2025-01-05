@@ -5,20 +5,41 @@ import { imageLoader } from '../../functions/imageLoader';
 const PriceSection = ({ images }) => {
   return (
     <section className={styles.price}>
-      {/* <h2 className={[styles.title, "titleDecoration", "subheading"].join(" ")}>
+      <h2 className={[styles.title, 'titleDecoration', 'subheading'].join(' ')}>
         Cena
       </h2>
       <p>
-        Terapie probíhají v Baby Centru Šikulka (Rudolfovská 634,
+        Terapie probíhají v Českých Budějovicích v &nbsp;
         <a
-          href="http://www.sikulka.com/"
-          target="_blank"
-          rel="noreferrer noopener"
+          href='http://www.sikulka.com/'
+          target='_blank'
+          rel='noreferrer noopener'
         >
-          www.sikulka.com
+          Baby Centru Šikulka
         </a>
-        ) v Českých Budějovicích, cena je 1.500,- Kč.
-      </p> */}
+        &nbsp; za cenu 1.500,- Kč.
+        <br /> Dále v Praze v &nbsp;
+        <a
+          href='https://www.plavacek-deti.cz/kurzy/praha/uvod/'
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          Plaváčku - Slunečný vršek
+        </a>
+        &nbsp; za cenu 1.800,- Kč.
+      </p>
+      <h3 className={[styles.title, 'titleDecoration', 'subheading'].join(' ')}>
+        Storno
+      </h3>
+      <p>
+        V případě, že se nemůžete dostavit v objednaném termínu, je možné za
+        sebe poslat náhradníka. Pokud ani tato možnost není realizovatelná, lze
+        rezervaci bezplatně zrušit nejpozději{' '}
+        <span>72 hodin před plánovaným termínem</span> . V případě zrušení méně
+        než <span>72 hodin před termínem</span> je účtován storno poplatek ve
+        výši <span>50 % ceny služby</span>.
+      </p>
+
       <p className={styles.paragraphBg}>
         Terapie trvá přibližně 50-60 minut, doporučuji přijít 15 minut předem,
         abyste měli dostatek času na přípravu a ve sjednaný čas jste mohli být v
