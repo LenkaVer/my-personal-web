@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import TermsSection from '../../components/terms/termsSection';
+import TermsSection from '../../components/terms/TermsSection';
 import Layout from '../../components/layout/Layout';
 
 const Terms = () => {
