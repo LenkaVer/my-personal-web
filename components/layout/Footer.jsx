@@ -16,6 +16,9 @@ const Footer = () => {
         </p>
         <p className={styles.gdpr}>
           <Link href='/gdpr'>Ochrana osobních údajů</Link>
+        </p>{' '}
+        <p className={styles.gdpr}>
+          <Link href='/obchodni-podminky'>Obchodní podmínky</Link>
         </p>
       </div>
     </footer>

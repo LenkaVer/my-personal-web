@@ -40,6 +40,9 @@ export const getServerSideProps = async ({ res }) => {
       url: '/gdpr',
     },
     {
+      url: '/obchodni-podminky',
+    },
+    {
       url: '/o-watsu/ucinky',
     },
     {

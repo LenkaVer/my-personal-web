@@ -1,0 +1,21 @@
+@use './../../styles/settings/variables.scss' as variables;
+
+.list {
+  li {
+    margin-bottom: variables.$spacing;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: variables.$primary;
+
+    &:hover {
+      text-decoration-color: transparent;
+    }
+  }
+}
