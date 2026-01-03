@@ -17,7 +17,7 @@ const PriceSection = ({ images }) => {
         >
           Baby Centru Šikulka
         </a>
-        &nbsp; za cenu 1.500,- Kč.
+        &nbsp; za cenu 1.600,- Kč.
         <br /> Dále v Praze v &nbsp;
         <a
           href='https://www.plavacek-deti.cz/kurzy/praha/uvod/'
@@ -26,7 +26,7 @@ const PriceSection = ({ images }) => {
         >
           Plaváčku - Slunečný vršek
         </a>
-        &nbsp; za cenu 1.800,- Kč.
+        &nbsp; za cenu 1.900,- Kč.
       </p>
       <h3 className={[styles.title, 'titleDecoration', 'subheading'].join(' ')}>
         Storno
