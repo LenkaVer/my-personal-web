@@ -9,6 +9,7 @@ export async function loadImageData(hash) {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_ADMIN_URL}/api/${process.env.NEXT_PUBLIC_ADMIN_HASH}/image/data/${hash}`,
+      { headers: { 'User-Agent': 'watsu-frontend/1.0' } },
     );
 
     if (!res.ok) {
