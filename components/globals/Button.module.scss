@@ -3,10 +3,13 @@
 .button {
   color:variables.$white;
   padding: variables.$spacing * 2 variables.$spacing * 3;
+  border: none;
   border-radius: 8px;
   background-color: variables.$secondary;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font: inherit;
+  cursor: pointer;
   box-shadow: 4px 6px 10px variables.$primary;
   transition:background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 

@@ -93,3 +93,9 @@
 .tableWrapper {
   display: flex;
 }
+
+.error {
+  display: grid;
+  justify-items: center;
+  row-gap: variables.$spacing * 2;
+}

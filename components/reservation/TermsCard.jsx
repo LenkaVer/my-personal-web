@@ -3,6 +3,7 @@ import Date from './Date';
 import Time from './Time';
 import PriceSection from './PriceSection';
 import Loader from './../globals/Loader';
+import Button from './../globals/Button';
 import CalendarAnimated from '../calendar-animated/CalendarAnimated';
 //import Image from 'next/image';
 import Link from 'next/link';
@@ -16,26 +17,36 @@ const TermsCard = ({ images }) => {
   const [times, setTimes] = useState(null);
   const [datesData, setDatesData] = useState(null);
   const [timesHeight, setTimesHeight] = useState(defaultMinHeight);
+  const [hasError, setHasError] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
   const router = useRouter();
 
   useEffect(() => {
-    fetch('/api/therapy-times')
-      .then((response) => response.json())
-      .then((json) => {
-        const firstDay = json[0];
-        if (firstDay) {
-          setSelectedDay(firstDay);
-          setTimes(firstDay.times);
-          setDatesData(json);
-          if (json.length > 3) {
-            const daysIncreaseHinHeight = json.length - 3;
-            setTimesHeight(defaultMinHeight + daysIncreaseHinHeight * 85);
-          }
-        } else {
-          router.push('/rezervace/email-o-terminech');
+    setHasError(false);
+
+    const load = () =>
+      fetch('/api/therapy-times').then((response) => response.json());
+
+    const handleData = (json) => {
+      const firstDay = json[0];
+      if (firstDay) {
+        setSelectedDay(firstDay);
+        setTimes(firstDay.times);
+        setDatesData(json);
+        if (json.length > 3) {
+          const extraDays = json.length - 3;
+          setTimesHeight(defaultMinHeight + extraDays * 85);
         }
-      });
-  }, [router]);
+      } else {
+        router.push('/rezervace/email-o-terminech');
+      }
+    };
+
+    load()
+      .catch(() => load()) // jeden automatický pokus navíc při chybě
+      .then(handleData)
+      .catch(() => setHasError(true));
+  }, [router, reloadKey]);
   return (
     <>
       <div className={styles.terms}>
@@ -68,6 +79,14 @@ const TermsCard = ({ images }) => {
             times.map((time) => {
               return <Time key={time.id} time={time} />;
             })
+          ) : hasError ? (
+            <div className={styles.error}>
+              <p>Termíny se nepodařilo načíst.</p>
+              <Button
+                title="Zkusit znovu"
+                onClick={() => setReloadKey((key) => key + 1)}
+              />
+            </div>
           ) : (
             <Loader />
           )}
