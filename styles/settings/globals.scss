@@ -1,7 +1,7 @@
 @use './variables.scss' as variables;
-@import './../classes.scss';
+@use './../classes.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap');;
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 html,
 body {
